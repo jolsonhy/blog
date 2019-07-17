@@ -6,7 +6,6 @@ tags: [技术, blog]
 categories: [Tutorial]
 ---
 
-
 ## 前言
 
 记得是 16 年还在学校的时候开始折腾博客这个东西，而当时就觉得市面上所有现成的博客系统都做得不大好，要么太丑，要么太重。所以从一开始就走上了自建这么一条不归路，从买服务器，买域名，到接触不同的 Linux 系统，折腾过程中踩了很多坑，但也因此学会了很多东西。如今工作之后，由于没有继续干开发的工作，也很少花时间在这上面了，而以前写的一些东西也因此丢了，心里还是有点难过的。前两天突然心血来潮，觉着这种方式相比朋友圈、微博 Twitter 等东西，更能将过去的一些经验、日常沉淀下来，日后来看，说不定别有另一番滋味，于是，开搞。
@@ -38,7 +37,7 @@ categories: [Tutorial]
 
 由于 Hugo 提供了另一种方式来管理源代码与站点文件，即在配置文件 `config.yoml` 中加一条 `publishDir = "docs"` 的选项，便可把所有编译生成的站点文件放在docs文件夹里，而 GitHub 能在设置中手动将 Pages 的目录选为 docs，这样便能达成一次 push，同时保存源代码与站点文件的结果，我很喜欢。
 
-![Select Source](https://i.imgur.com/ThImuiY.jpg)
+![Select Source](https://i.loli.net/2019/07/17/5d2e8eea2cde391382.jpg)
 
 稍等片刻，便能输入 `yourname.github.io` 看到你的博客了。
 
@@ -46,11 +45,11 @@ categories: [Tutorial]
 
 当然还是和以前一样自己弄了个域名，并且发现现在不需要手动增加一个 CNAME 文件，可以直接在设置里填写域名便会自动生成，很方便，好评。
 
-![Custom domain](https://i.imgur.com/KAUTgAH.jpg)
+![Custom domain](https://i.loli.net/2019/07/17/5d2e8eea3db9973301.jpg)
 
 接着只需要在域名服务商那里设置一下 DNS 解析，由于我这次没有继续选择 DNSPOD，而是直接用的 NameSilo 后台的解析，所以改用 A 解析，四个 ip 地址都是 GitHub 提供的，如下：
 
-![DNS Records](https://i.imgur.com/pyPMXvG.jpg)
+![DNS Records](https://i.loli.net/2019/07/17/5d2e8eea4c02a44820.jpg)
 
 
 至此，基本就全部完成，其它都是一些小东西的改动，日后慢慢来。
