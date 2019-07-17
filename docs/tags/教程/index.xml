@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>教程 on Jiegao</title>
+    <link>https://hestation.com/tags/%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content in 教程 on Jiegao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Nov 2018 12:30:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://hestation.com/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何注册并使用美区 Apple ID</title>
+      <link>https://hestation.com/2018/reg-appleid/</link>
+      <pubDate>Thu, 15 Nov 2018 12:30:03 +0800</pubDate>
+      
+      <guid>https://hestation.com/2018/reg-appleid/</guid>
+      <description>前言 因为每个人的使用需求不同，比如 SS、SSR、V2 等都需要相对应的网络代理工具 App。但由于某些特殊原因，中国区 App Store 基本上下架了大部分的网络代理工具 App（例如用的比较多的小火箭 Shadowrocket 和圈 Quantumult 等等）。
+因为中国区无法下载到自己所需要使用的App，则大部分人都需要注册非中国区（如美区、港区等）的应用商店付费进行下载（出于尊重作者的角度出发，请尽量不要使用共享 Apple ID 账号下载软件，正版 App 其实也就几十块钱）。
+本文以注册美区 Apple ID 账号为例（其他地区账号同理），但关于美区 Apple ID 账号和绑定 PayPal 自行 Google 搜索相关教程，如需求较大后续我可以再出相关教程。
+ 美区 Apple ID 账户可绑定美区（只能美区，其他地区不行） Paypal 进行付款。 港区 Apple ID 账户可注册 Tap and Go 香港 MS 虚拟预付信用卡并绑定港区 Apple ID 账户进行付款（前提你要有港澳通行证）。具体操作可参考 BIGDONGDONG 的视频教学：5分钟让你拥有一张 Mastercard 外币种卡 日区 Apple ID 账户可直接绑定 JCB 信用卡进行付款。  注册美区 Apple ID 账户 登陆苹果账户官网 首先打开 appleid.apple.com，首次打开时首页展示图如下：
+点击底部 Create your Apple ID 进入注册账户界面，示意图如下：</description>
+    </item>
+    
+    <item>
+      <title>华硕 RT-AC86U 刷梅林改版系统</title>
+      <link>https://hestation.com/2018/merlin/</link>
+      <pubDate>Thu, 01 Nov 2018 11:18:03 +0800</pubDate>
+      
+      <guid>https://hestation.com/2018/merlin/</guid>
+      <description>前几天刚把 K2P 换成 86U，以下是 86U 刷梅林系统的步骤，非常简单：
+刷机前的准备  EXT 格式的 1G 以上 U盘一个，如果不知道怎么格式化，可以查看此文章附录。 改版梅林安装包，下载地址为：这里，或直接到Coolshare论坛下载：这里 科学上网工具离线安装包，下载地址为这里，或直接到GitHub上找到与你机器相匹配的 一根网线，用于连接电脑与路由器 一杯茶，用于等待的时候喝哈哈哈  正式开刷 系统初始化  拿到机器后，打开机器背后开关键，然后连上电源，开机。
+ 找到一根网线，一头接自己的电脑，另一头接路由器的LAN口。
+ 在浏览器地址栏中输入router.asus.com进入管理后台。
+ 依次设置自己的PPPoE、无线WIFI、管理后台账号，设置完之后会进入到官方原版的后台界面。
+  刷改版梅林固件  在后台管理界面中找到高级设置-系统管理-固件升级，选择刚才将已准备好的梅林固件（格式为.w），然后点击上传，等待两三分钟即可，当重启后重新进入后台时有一个 Powered by Asuswrt-Merlin &amp;amp; Coolshare 代表成功。
+ 双清路由器。进入高级设置-系统设置，找到Presistent JFFS2 parttition，将Format JFFS partition at next boot和Enable JFFS custom scripts and configs两项都设置为是，并点击应用本页面设置按钮，然后重启路由器即可。
+  安装科学上网工具  由于梅林已经取消软件中心的科学上网工具在线安装，所以可采取离线安装的方式。
+ 从这里上下载离线安装包，打开软件中心，先点击更新将软件中心升级到最新版本，然后点击离线安装，上传刚才下载的安装包，注意格式需要为.tar.gz，如果不对，手动将其补全后再上传。
+ 等待安装成功后，再打开科学上网，再配置自己的节点即可。
+  挂载虚拟内存  将已准备好的EXT格式U盘插入路由器背部接口（2.0或3.0都可以）
+ 打开软件中心，将虚拟内存这个软件安装上</description>
+    </item>
+    
+  </channel>
+</rss>

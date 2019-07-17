@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生活 on Jiegao</title>
+    <link>https://hestation.com/categories/%E7%94%9F%E6%B4%BB/</link>
+    <description>Recent content in 生活 on Jiegao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jul 2017 18:31:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://hestation.com/categories/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>第一篇文章用于测试</title>
+      <link>https://hestation.com/2017/my-first-post/</link>
+      <pubDate>Fri, 14 Jul 2017 18:31:53 +0800</pubDate>
+      
+      <guid>https://hestation.com/2017/my-first-post/</guid>
+      <description>Welcome to GitHub Pages You can use the editor on GitHub to maintain and preview the content for your website in Markdown files.
+Whenever you commit to this repository, GitHub Pages will run Jekyll to rebuild the pages in your site, from the content in your Markdown files.
+Markdown Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Syntax highlighted code block # Header 1 ## Header 2 ### Header 3 - Bulleted - List 1.</description>
+    </item>
+    
+  </channel>
+</rss>

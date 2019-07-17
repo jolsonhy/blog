@@ -13,7 +13,7 @@ preserveTaxonomyNames = true
 
 # disqusShortname = "jolsonmiller"
 
-# publishDir = "docs"
+publishDir = "docs"
 
 [blackfriday]
   hrefTargetBlank = true

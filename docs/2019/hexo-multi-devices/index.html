@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Jiegao">
+  
+  
+  
+  <link rel="prev" href="https://hestation.com/2018/reg-appleid/" />
+  
+  <link rel="canonical" href="https://hestation.com/2019/hexo-multi-devices/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           多设备使用 Hexo 写博客的解决方案 | Jiegao
+       
+  </title>
+  <meta name="title" content="多设备使用 Hexo 写博客的解决方案 | Jiegao">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hestation.com"
+    },
+    "articleSection" : "posts",
+    "name" : "多设备使用 Hexo 写博客的解决方案",
+    "headline" : "多设备使用 Hexo 写博客的解决方案",
+    "description" : "最近弄了一台 XPS 13，但同时原来的 MacBook Pro也在使用，就涉及到两台设备需要同时使用 Hexo 编辑、上传 Blog 文件的问题，所以想到把源文件放到服务器上，以下解决方案的记录。\n了解 Hexo 机制 首先，要搞清楚使用 Hexo 搭建博客的基本机制，本地 git clone 自 Hexo 的并非我们要部署的文件，而通过 hexo d 上传部署到 GitHub 的其实是它编译之后的文件，基本就是一个纯静态的 html \x2b css \x2b js 页面，不包括源文件，实际体现在我们本地就是 .deploy_git 这个文件夹里的。\n了解其机制之后就好办了，一般情况通过 GitHub 作为中转站有两种方式，一种是在你 name.github.io 基础上直接新建一个 hexo 分支，并将它设置为默认分支，这样每次先将源文件推到 hexo 默认分支上，再编译部署实际内容到 master 分支，从而实现一个仓库同时管理源文件与博客文件。\n不过我比较喜欢单独建一个私有仓库来存储这些内容，以下是我的步骤：\n新建仓库存储源文件 1、先定义原博客文件夹目录为 blog，blog 下新建一个 .gitignore，将一些不需要上传保存的内容忽略掉：\n.DS_Store Thumbs.db db.json *.log node_modules\/ public\/ .deploy*\/  2、Github 新建一个用于保存源文件的仓库，这里设置为 blog_backup（不需要添加 README 文件，直接空白的），然后将本地与远程仓库关联，并推上去。\ngit init git commit -m “first commit” git remote add origin git@github.",
+    "inLanguage" : "en-us",
+    "author" : "Jiegao",
+    "creator" : "Jiegao",
+    "publisher": "Jiegao",
+    "accountablePerson" : "Jiegao",
+    "copyrightHolder" : "Jiegao",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-06-16 15:39:47 \x2b0800 CST",
+    "dateModified" : "2019-06-16 15:39:47 \x2b0800 CST",
+    "url" : "https:\/\/hestation.com\/2019\/hexo-multi-devices\/",
+    "wordCount" : "188",
+    "keywords" : [ "hexo","blog","技术", "Jiegao"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">多设备使用 Hexo 写博客的解决方案</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://hestation.com" rel="author">Jiegao</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-06-16 itemprop="datePublished">June 16, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hestation.com/categories/tutorial/"> Tutorial </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>最近弄了一台 XPS 13，但同时原来的 MacBook Pro也在使用，就涉及到两台设备需要同时使用 Hexo 编辑、上传 Blog 文件的问题，所以想到把源文件放到服务器上，以下解决方案的记录。</p>
+
+<h2 id="了解-hexo-机制">了解 Hexo 机制</h2>
+
+<p>首先，要搞清楚使用 Hexo 搭建博客的基本机制，本地 git clone 自 Hexo 的并非我们要部署的文件，而通过 <code>hexo d</code> 上传部署到 GitHub 的其实是它编译之后的文件，基本就是一个纯静态的 html + css + js 页面，不包括源文件，实际体现在我们本地就是 <code>.deploy_git</code> 这个文件夹里的。</p>
+
+<p>了解其机制之后就好办了，一般情况通过 GitHub 作为中转站有两种方式，一种是在你 name.github.io 基础上直接新建一个 hexo 分支，并将它设置为默认分支，这样每次先将源文件推到 hexo 默认分支上，再编译部署实际内容到 master 分支，从而实现一个仓库同时管理源文件与博客文件。</p>
+
+<p>不过我比较喜欢单独建一个私有仓库来存储这些内容，以下是我的步骤：</p>
+
+<h2 id="新建仓库存储源文件">新建仓库存储源文件</h2>
+
+<p>1、先定义原博客文件夹目录为 blog，blog 下新建一个 .gitignore，将一些不需要上传保存的内容忽略掉：</p>
+
+<pre><code class="language-txt">.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+</code></pre>
+
+<p>2、Github 新建一个用于保存源文件的仓库，这里设置为 blog_backup（不需要添加 README 文件，直接空白的），然后将本地与远程仓库关联，并推上去。</p>
+
+<pre><code class="language-bash">git init
+git commit -m “first commit”
+git remote add origin git@github.com:&lt;github_name&gt;/blog_backup.git
+git push -u origin master
+</code></pre>
+
+<p>3、完成之后，可以检查下是否成功，是否一些主动忽略的文件夹没有上传上去，确认没有问题之后，再去其它机器操作。</p>
+
+<h2 id="服务器操作">服务器操作</h2>
+
+<p>解决了源文件上传同步问题，接下来就是 ssh 到服务器把文件 down 下载，然后安装好本地部署需要的环境，再编译上传即可，这里以 GCP 为例：</p>
+
+<p>1、直接在 <code>VM 实例</code> 页面点击 SSH 连接，登陆到终端，然后搭建 git 环境</p>
+
+<ul>
+<li>安装 Git</li>
+</ul>
+
+<pre><code class="language-bash">sudo apt-get install git
+</code></pre>
+
+<ul>
+<li>设置 Git 全局邮箱和用户名</li>
+</ul>
+
+<pre><code class="language-bash">git config --global user.name &quot;yourgithubname&quot;
+git config --global user.email &quot;yourgithubemail&quot;
+</code></pre>
+
+<ul>
+<li>设置ssh</li>
+</ul>
+
+<pre><code class="language-bash">keyssh-keygen -t rsa -C &quot;youremail&quot;
+</code></pre>
+
+<ul>
+<li>将 id_rsa 公钥粘贴到 Github</li>
+</ul>
+
+<pre><code class="language-bash">cat ~/.ssh/id_rsa.pub
+</code></pre>
+
+<ul>
+<li>安装 Node.js</li>
+</ul>
+
+<pre><code class="language-bash">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+</code></pre>
+
+<ul>
+<li>重启终端，然后通过 nvm 安装</li>
+</ul>
+
+<pre><code class="language-bash">nvm install stable
+</code></pre>
+
+<ul>
+<li>全局安装 Hexo</li>
+</ul>
+
+<pre><code class="language-bash">npm install -g hexo-cli
+</code></pre>
+
+<p>至此，本地环境已经安装完毕，接着下载源文件</p>
+
+<pre><code class="language-bash">git clone git@github.com:&lt;github_name&gt;/blog_backup.git
+cd blog_backup
+npm install
+npm install hexo-deployer-git --save
+</code></pre>
+
+<h4 id="注意-这里由于原有的-git-源文件仓库里的-themes-还包含了主题的-git-仓库-所以实际主题的东西没有被下载下来-需要手动再-clone-一次">注意，这里由于原有的 Git 源文件仓库里的 themes 还包含了主题的 git 仓库，所以实际主题的东西没有被下载下来，需要手动再 clone 一次。</h4>
+
+<pre><code class="language-bash">cd your-hexo-site
+git clone https://github.com/iissnan/hexo-theme-next themes/next
+</code></pre>
+
+<p>至此，新机器就与旧的环境保持一致了，每次做了任何修改，先把源文件 Git 上传一下，然后再通过 <code>hexo g -d</code> 部署编译。</p>
+
+<p>而如果在另一个电脑上操作，就先 <code>git pull</code> 一下，保证与线上内容一致。</p>
+
+<h2 id="以上内容参考资料">以上内容参考资料</h2>
+
+<ul>
+<li><a href="https://www.zhihu.com/question/21193762" rel="nofollow noreferrer" target="_blank">https://www.zhihu.com/question/21193762</a></li>
+<li><a href="https://hexo.io/docs/index.html" rel="nofollow noreferrer" target="_blank">https://hexo.io/docs/index.html</a></li>
+<li><a href="https://theme-next.iissnan.com" rel="nofollow noreferrer" target="_blank">https://theme-next.iissnan.com</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Jiegao </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hestation.com/2019/hexo-multi-devices/>https://hestation.com/2019/hexo-multi-devices/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://hestation.com/tags/hexo/">
+                    #hexo</a></span>
+            
+            <span class="tag"><a href="https://hestation.com/tags/blog/">
+                    #blog</a></span>
+            
+            <span class="tag"><a href="https://hestation.com/tags/%E6%8A%80%E6%9C%AF/">
+                    #技术</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hestation.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hestation.com/2018/reg-appleid/" class="prev" rel="prev" title="如何注册并使用美区 Apple ID"><i class="iconfont icon-left"></i>&nbsp;如何注册并使用美区 Apple ID</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2016 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hestation.com">Jiegao</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

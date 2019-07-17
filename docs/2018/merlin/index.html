@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Jiegao">
+  
+  
+  
+  <link rel="prev" href="https://hestation.com/2017/yehuoji-30/" />
+  <link rel="next" href="https://hestation.com/2018/reg-appleid/" />
+  <link rel="canonical" href="https://hestation.com/2018/merlin/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           华硕 RT-AC86U 刷梅林改版系统 | Jiegao
+       
+  </title>
+  <meta name="title" content="华硕 RT-AC86U 刷梅林改版系统 | Jiegao">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hestation.com"
+    },
+    "articleSection" : "posts",
+    "name" : "华硕 RT-AC86U 刷梅林改版系统",
+    "headline" : "华硕 RT-AC86U 刷梅林改版系统",
+    "description" : "前几天刚把 K2P 换成 86U，以下是 86U 刷梅林系统的步骤，非常简单：\n刷机前的准备  EXT 格式的 1G 以上 U盘一个，如果不知道怎么格式化，可以查看此文章附录。 改版梅林安装包，下载地址为：这里，或直接到Coolshare论坛下载：这里 科学上网工具离线安装包，下载地址为这里，或直接到GitHub上找到与你机器相匹配的 一根网线，用于连接电脑与路由器 一杯茶，用于等待的时候喝哈哈哈  正式开刷 系统初始化  拿到机器后，打开机器背后开关键，然后连上电源，开机。\n 找到一根网线，一头接自己的电脑，另一头接路由器的LAN口。\n 在浏览器地址栏中输入router.asus.com进入管理后台。\n 依次设置自己的PPPoE、无线WIFI、管理后台账号，设置完之后会进入到官方原版的后台界面。\n  刷改版梅林固件  在后台管理界面中找到高级设置-系统管理-固件升级，选择刚才将已准备好的梅林固件（格式为.w），然后点击上传，等待两三分钟即可，当重启后重新进入后台时有一个 Powered by Asuswrt-Merlin \x26amp; Coolshare 代表成功。\n 双清路由器。进入高级设置-系统设置，找到Presistent JFFS2 parttition，将Format JFFS partition at next boot和Enable JFFS custom scripts and configs两项都设置为是，并点击应用本页面设置按钮，然后重启路由器即可。\n  安装科学上网工具  由于梅林已经取消软件中心的科学上网工具在线安装，所以可采取离线安装的方式。\n 从这里上下载离线安装包，打开软件中心，先点击更新将软件中心升级到最新版本，然后点击离线安装，上传刚才下载的安装包，注意格式需要为.tar.gz，如果不对，手动将其补全后再上传。\n 等待安装成功后，再打开科学上网，再配置自己的节点即可。\n  挂载虚拟内存  将已准备好的EXT格式U盘插入路由器背部接口（2.0或3.0都可以）\n 打开软件中心，将虚拟内存这个软件安装上",
+    "inLanguage" : "en-us",
+    "author" : "Jiegao",
+    "creator" : "Jiegao",
+    "publisher": "Jiegao",
+    "accountablePerson" : "Jiegao",
+    "copyrightHolder" : "Jiegao",
+    "copyrightYear" : "2018",
+    "datePublished": "2018-11-01 11:18:03 \x2b0800 CST",
+    "dateModified" : "2018-11-01 11:18:03 \x2b0800 CST",
+    "url" : "https:\/\/hestation.com\/2018\/merlin\/",
+    "wordCount" : "106",
+    "keywords" : [ "教程","技术", "Jiegao"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">华硕 RT-AC86U 刷梅林改版系统</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://hestation.com" rel="author">Jiegao</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2018-11-01 itemprop="datePublished">November 1, 2018</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hestation.com/categories/tutorial/"> Tutorial </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<p>前几天刚把 K2P 换成 86U，以下是 86U 刷梅林系统的步骤，非常简单：</p>
+
+<h2 id="刷机前的准备">刷机前的准备</h2>
+
+<ul>
+<li>EXT 格式的 1G 以上 U盘一个，如果不知道怎么格式化，可以查看此文章附录。</li>
+<li>改版梅林安装包，下载地址为：<a href="https://1drv.ms/u/s!ArS0nJ_RMzVYgtwvUNgsl7Q1Z9W75Q" rel="nofollow noreferrer" target="_blank">这里</a>，或直接到Coolshare论坛下载：<a href="http://koolshare.cn/thread-127878-1-1.html" rel="nofollow noreferrer" target="_blank">这里</a></li>
+<li>科学上网工具离线安装包，下载地址为<a href="https://1drv.ms/u/s!ArS0nJ_RMzVYgtwuoBmaqxYUM2UrxA" rel="nofollow noreferrer" target="_blank">这里</a>，或直接到<a href="https://github.com/hq450/fancyss" rel="nofollow noreferrer" target="_blank">GitHub</a>上找到与你机器相匹配的</li>
+<li>一根网线，用于连接电脑与路由器</li>
+<li>一杯茶，用于等待的时候喝哈哈哈</li>
+</ul>
+
+<h2 id="正式开刷">正式开刷</h2>
+
+<h3 id="系统初始化">系统初始化</h3>
+
+<ol>
+<li><p>拿到机器后，打开机器背后开关键，然后连上电源，开机。</p></li>
+
+<li><p>找到一根网线，一头接自己的电脑，另一头接路由器的LAN口。</p></li>
+
+<li><p>在浏览器地址栏中输入<a href="http://router.asus.com" rel="nofollow noreferrer" target="_blank">router.asus.com</a>进入管理后台。</p></li>
+
+<li><p>依次设置自己的PPPoE、无线WIFI、管理后台账号，设置完之后会进入到官方原版的后台界面。</p></li>
+</ol>
+
+<h3 id="刷改版梅林固件">刷改版梅林固件</h3>
+
+<ol>
+<li><p>在后台管理界面中找到<code>高级设置</code>-<code>系统管理</code>-<code>固件升级</code>，选择刚才将已准备好的梅林固件（格式为.w），然后点击上传，等待两三分钟即可，当重启后重新进入后台时有一个 <code>Powered by Asuswrt-Merlin &amp; Coolshare</code> 代表成功。</p></li>
+
+<li><p>双清路由器。进入<code>高级设置</code>-<code>系统设置</code>，找到<code>Presistent JFFS2 parttition</code>，将<code>Format JFFS partition at next boot</code>和<code>Enable JFFS custom scripts and configs</code>两项都设置为是，并点击<code>应用本页面设置</code>按钮，然后重启路由器即可。</p></li>
+</ol>
+
+<!-- more -->
+
+<h3 id="安装科学上网工具">安装科学上网工具</h3>
+
+<ol>
+<li><p>由于梅林已经取消软件中心的科学上网工具在线安装，所以可采取离线安装的方式。</p></li>
+
+<li><p>从<a href="https://1drv.ms/u/s!ArS0nJ_RMzVYgtwuoBmaqxYUM2UrxA" rel="nofollow noreferrer" target="_blank">这里</a>上下载离线安装包，打开软件中心，先点击更新将软件中心升级到最新版本，然后点击<code>离线安装</code>，上传刚才下载的安装包，注意格式需要为<code>.tar.gz</code>，如果不对，手动将其补全后再上传。</p></li>
+
+<li><p>等待安装成功后，再打开科学上网，再配置自己的节点即可。</p></li>
+</ol>
+
+<h3 id="挂载虚拟内存">挂载虚拟内存</h3>
+
+<ol>
+<li><p>将已准备好的EXT格式U盘插入路由器背部接口（2.0或3.0都可以）</p></li>
+
+<li><p>打开软件中心，将<code>虚拟内存</code>这个软件安装上</p></li>
+
+<li><p>打开该软件，选择这个磁盘，我这里叫做<code>sda</code>，选择虚拟内存大小为<code>512M</code>或<code>1G</code>，然后点创建虚拟内存，等待一段时间即可。</p></li>
+
+<li><p>再次打开软件中心-虚拟内存，确保状态显示为<code>在/mnt/sda下找到swapfile，且已成功挂载！</code>，表明已挂载成功。</p></li>
+</ol>
+
+<h2 id="附录-u盘格式化为ext格式">附录：U盘格式化为EXT格式</h2>
+
+<p>准备好一个1G以上的U盘（随便的都行，利用率不高），并格式化为EXT2,3,4任意的格式，我这边用的是EXT3。</p>
+
+<h3 id="windows系统">Windows系统</h3>
+
+<ul>
+<li><p>如果没有Linux基础，可使用软件进行操作，可参考百度经验：<a href="https://jingyan.baidu.com/article/fea4511a142846f7bb912522.html" rel="nofollow noreferrer" target="_blank">如何在windows下把硬盘格式化成EXT3格式？</a></p></li>
+
+<li><p>如果有一定Linux基础，可使用SSH连接到路由器通过路由器进行操作，具体步骤如下：</p>
+
+<ol>
+<li>打开路由器后台<code>高级设置</code>-<code>系统设置</code>，找到<code>服务</code>中的<code>启用SSH</code>，选择打开<code>LAN+WAN</code>，然后保存设置。</li>
+<li>下载一个叫PuTTY的软件，hostname填<code>192.168.50.1</code>（路由器后台地址，可能不一样，自己查看下） 然后选择<code>SSH</code>。port端口号为<code>22</code>，然后点open。</li>
+<li>用自己前面设置的路由器账号密码登录即可，然后出现命令行界面。</li>
+<li>在U盘插入路由器后面的情况下，依次输入以下命令（两横杠后的是解释说明，不用输入），然后等待显示完成即可。</li>
+</ol></li>
+</ul>
+
+<pre><code class="language-bash">df -h // 找到你的盘符,如：sda1
+umount /dev/sda1 // 解除进程的占用
+/bin/mkntfs /dev/sda1 // 格式化硬盘为ntfs格式
+mkfs.ext4 -T largefile /dev/sda1 // 格式化硬盘为ext4格式
+</code></pre>
+
+<h3 id="macos系统">macOS系统</h3>
+
+<ul>
+<li>确保已经安装了Mac下的包管理软件Homebrew，如果没有，可以用以下命令安装</li>
+</ul>
+
+<pre><code class="language-bash">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre>
+
+<ul>
+<li>安装 e2fsprogs</li>
+</ul>
+
+<pre><code class="language-bash">brew install e2fsprogs
+</code></pre>
+
+<ul>
+<li>插上U盘，执行以下命令在执行结果中找到U盘盘符，我这里是<code>/dev/disk2s1</code></li>
+</ul>
+
+<pre><code class="language-bash">diskutil list
+</code></pre>
+
+<ul>
+<li>卸载U盘并将其格式化为 <code>ext2/3/4</code>格式，这里以ext3为例</li>
+</ul>
+
+<pre><code class="language-bash">diskutil unmountdisk /dev/disk2s1
+sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk2s1
+</code></pre>
+
+<ul>
+<li>中间可能会有确认提示，按提示操作即可。格式化完成就能直接拔掉U盘了。</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Jiegao </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hestation.com/2018/merlin/>https://hestation.com/2018/merlin/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://hestation.com/tags/%E6%95%99%E7%A8%8B/">
+                    #教程</a></span>
+            
+            <span class="tag"><a href="https://hestation.com/tags/%E6%8A%80%E6%9C%AF/">
+                    #技术</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hestation.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hestation.com/2017/yehuoji-30/" class="prev" rel="prev" title="《野火集》语录-第30页"><i class="iconfont icon-left"></i>&nbsp;《野火集》语录-第30页</a>
+         
+        
+        <a href="https://hestation.com/2018/reg-appleid/" class="next" rel="next" title="如何注册并使用美区 Apple ID">如何注册并使用美区 Apple ID&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2016 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hestation.com">Jiegao</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
