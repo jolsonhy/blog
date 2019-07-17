@@ -5,8 +5,72 @@
     <description>Recent content in Jiegao on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jul 2019 12:08:23 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jul 2019 10:47:06 +0800</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hello, Hugo</title>
+      <link>https://hestation.com/2019/hugo/</link>
+      <pubDate>Wed, 17 Jul 2019 10:47:06 +0800</pubDate>
+      
+      <guid>https://hestation.com/2019/hugo/</guid>
+      <description>
+
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;记得是 16 年还在学校的时候开始折腾博客这个东西，而当时就觉得市面上所有现成的博客系统都做得不大好，要么太丑，要么太重。所以从一开始就走上了自建这么一条不归路，从买服务器，买域名，到接触不同的 Linux 系统，折腾过程中踩了很多坑，但也因此学会了很多东西。如今工作之后，由于没有继续干开发的工作，也很少花时间在这上面了，而以前写的一些东西也因此丢了，心里还是有点难过的。前两天突然心血来潮，觉着这种方式相比朋友圈、微博 Twitter 等东西，更能将过去的一些经验、日常沉淀下来，日后来看，说不定别有另一番滋味，于是，开搞。&lt;/p&gt;
+
+&lt;p&gt;记得之前最后一个版本的博客是基于 Hexo 搞的，整体来讲还是不错的，不过记忆中那一堆 Nodejs 的依赖，各种乱七八糟的小问题，折腾了好久，再加上确实当内容多起来之后，每次编译生成的速度会比较慢，所以想着换一个试试，网上搜了一大圈，不少人都推荐 Hugo，于是做了下尝试，确实不错，暂时就用它了。以下是重新用它搭建的整体流程记录。&lt;/p&gt;
+
+&lt;h2 id=&#34;本地安装&#34;&gt;本地安装&lt;/h2&gt;
+
+&lt;h3 id=&#34;整个流程如下&#34;&gt;整个流程如下：&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;安装 Hugo&lt;/code&gt; -&amp;gt; &lt;code&gt;新建站点&lt;/code&gt; -&amp;gt; &lt;code&gt;选择并拷贝主题到 themes 目录&lt;/code&gt; -&amp;gt; &lt;code&gt;修改站点配置文件&lt;/code&gt; -&amp;gt; &lt;code&gt;本地测试运行&lt;/code&gt; -&amp;gt; &lt;code&gt;完成&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;整个站点各个目录的作用&#34;&gt;整个站点各个目录的作用：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;archetypes：给不同的类型定义默认FrontMatter，&lt;/li&gt;
+&lt;li&gt;content：源文件，相当于 hexo 的 source 目录&lt;/li&gt;
+&lt;li&gt;data：数据文件，一般用不上&lt;/li&gt;
+&lt;li&gt;layouts：模板&lt;/li&gt;
+&lt;li&gt;static：静态资源，也就是不需要Hugo处理的静态资源，比如图片等&lt;/li&gt;
+&lt;li&gt;themes：第三方主题，将第三方主题拷贝到这个文件夹下即可使用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;参考资料&#34;&gt;参考资料：&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/documentation/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hugo Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/liuzc/LeaveIt&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Hugo LeaveIt&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;部署上线&#34;&gt;部署上线&lt;/h2&gt;
+
+&lt;p&gt;这里还是选择了部署在 Github Pages 上，因为方便且能很好地管理源文件。&lt;/p&gt;
+
+&lt;p&gt;本地测试确认没问题后，直接在站点目录下输入命令 &lt;code&gt;hugo&lt;/code&gt; 即可编译，然后将所有内容 push 到 GitHub 上即可。&lt;/p&gt;
+
+&lt;p&gt;由于 Hugo 提供了另一种方式来管理源代码与站点文件，即在配置文件 &lt;code&gt;config.yoml&lt;/code&gt; 中加一条 &lt;code&gt;publishDir = &amp;quot;docs&amp;quot;&lt;/code&gt; 的选项，便可把所有编译生成的站点文件放在docs文件夹里，而 GitHub 能在设置中手动将 Pages 的目录选为 docs，这样便能达成一次 push，同时保存源代码与站点文件的结果，我很喜欢。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/ThImuiY.jpg&#34; alt=&#34;Select Source&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;稍等片刻，便能输入 &lt;code&gt;yourname.github.io&lt;/code&gt; 看到你的博客了。&lt;/p&gt;
+
+&lt;h3 id=&#34;自定义域名&#34;&gt;自定义域名&lt;/h3&gt;
+
+&lt;p&gt;当然还是和以前一样自己弄了个域名，并且发现现在不需要手动增加一个 CNAME 文件，可以直接在设置里填写域名便会自动生成，很方便，好评。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/KAUTgAH.jpg&#34; alt=&#34;Custom domain&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;接着只需要在域名服务商那里设置一下 DNS 解析，由于我这次没有继续选择 DNSPOD，而是直接用的 NameSilo 后台的解析，所以改用 A 解析，四个 ip 地址都是 GitHub 提供的，如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/pyPMXvG.jpg&#34; alt=&#34;DNS Records&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;至此，基本就全部完成，其它都是一些小东西的改动，日后慢慢来。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>About</title>
