@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Jiegao">
+  
+  
+  
+  <link rel="prev" href="https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" />
+  <link rel="next" href="https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
+  <link rel="canonical" href="https://hestation.com/2016/xiachufang/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           前端学习笔记 | Jiegao
+       
+  </title>
+  <meta name="title" content="前端学习笔记 | Jiegao">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hestation.com"
+    },
+    "articleSection" : "posts",
+    "name" : "前端学习笔记",
+    "headline" : "前端学习笔记",
+    "description" : "问题一：外容器的尺寸未知,内容器已知，实现水平垂直居中 html结构: \x26lt;div class=\x26quot;container\x26quot;\x26gt; \x26lt;div class=\x26quot;item\x26quot;\x26gt;\x26lt;\/div\x26gt; \x26lt;\/div\x26gt;  方法一：绝对定位 \x2b 负外边距 .container { position: relative; } .item { width: 200px; height: 200px; position: absolute; top: 50%; left: 50%; margin: -100px 0 0 -100px; }  方法二：绝对定位 \x2b 四周偏移量定位0， 外边距为auto .container { position: relative; } .item { width: 200px; height: 200px; position: absolute; margin: auto; top: 0; bottom: 0; left: 0; right: 0; }  方法三：Flex定位 .container { display: flex; justify-content: center; align-items: center; } .",
+    "inLanguage" : "en-us",
+    "author" : "Jiegao",
+    "creator" : "Jiegao",
+    "publisher": "Jiegao",
+    "accountablePerson" : "Jiegao",
+    "copyrightHolder" : "Jiegao",
+    "copyrightYear" : "2016",
+    "datePublished": "2016-04-13 22:42:28 \x2b0000 UTC",
+    "dateModified" : "2016-04-13 22:42:28 \x2b0000 UTC",
+    "url" : "https:\/\/hestation.com\/2016\/xiachufang\/",
+    "wordCount" : "381",
+    "keywords" : [ "学习笔记", "Jiegao"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">前端学习笔记</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://hestation.com" rel="author">Jiegao</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2016-04-13 itemprop="datePublished">April 13, 2016</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hestation.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="问题一-外容器的尺寸未知-内容器已知-实现水平垂直居中">问题一：外容器的尺寸未知,内容器已知，实现水平垂直居中</h2>
+
+<h3 id="html结构">html结构:</h3>
+
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="方法一-绝对定位-负外边距">方法一：绝对定位 + 负外边距</h3>
+
+<pre><code class="language-css">.container {
+    position: relative;
+}
+.item {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+}
+</code></pre>
+
+<h3 id="方法二-绝对定位-四周偏移量定位0-外边距为auto">方法二：绝对定位 + 四周偏移量定位0， 外边距为auto</h3>
+
+<pre><code class="language-css">.container {
+    position: relative;
+}
+.item {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+</code></pre>
+
+<h3 id="方法三-flex定位">方法三：Flex定位</h3>
+
+<pre><code class="language-css">.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item {
+    width: 200px;
+    height: 200px;
+}
+</code></pre>
+
+<h3 id="方法四-css3-tramsform属性">方法四： CSS3 tramsform属性</h3>
+
+<pre><code class="language-css">.container {
+    position: relative;
+}
+.item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+}
+</code></pre>
+
+<h3 id="方法五-tabel-cell">方法五： tabel-cell</h3>
+
+<pre><code class="language-css">.container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.item {
+    width: 200px;
+    height: 200px;
+}
+</code></pre>
+
+<h2 id="问题二-实现固定导航栏">问题二：实现固定导航栏</h2>
+
+<h3 id="方法一-fixed固定定位">方法一：fixed固定定位</h3>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;固定导航栏&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 2000px;
+            overflow-y: scroll;
+        }
+        .nav {
+            position: fixed;
+            width: 100%;
+            height: 200px;
+            top: 0;
+            background-color: lightskyblue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;nav&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="方法二-导航栏绝对定位-js监听滚动事件">方法二：导航栏绝对定位，js监听滚动事件</h3>
+
+<pre><code class="language-javascript">(function (){
+    var nav = document.getElementsByClassName('nav'),
+        offTop = document.offsetTop,
+        scrTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+    window.addEventListener('scroll', function () {
+
+        if (scrTop &gt; offTop) {
+            nav.style.position = 'absolute';
+            nav.style.top = scrTop;
+            nav.style.margin = '0';
+        }
+    }, false);
+}());
+</code></pre>
+
+<h2 id="问题三">问题三</h2>
+
+<p>在Chrome的控制台运行<code>var log = console.log; log(123)</code>，报错信息为：<code>Illegal invocation</code></p>
+
+<h3 id="错误原因">错误原因：</h3>
+
+<p>console对象是JavaScript的原生对象,这里在全局范围内定义一个log函数，实际上在浏览器的工作环境下是给window全局变量添加了一个window.log()方法，实际执行的是window.log(123),故报错。</p>
+
+<h3 id="一个可成功执行的log函数">一个可成功执行的log函数：</h3>
+
+<pre><code class="language-javascript">var log = function (a) {
+    console.log(a);
+};
+
+log(123);
+</code></pre>
+
+<h2 id="问题四">问题四</h2>
+
+<p>不使用jQuery让方块B实现与方块A完全相同的效果。
+由于没有研究过jQuery的源码，所以对其<code>.animate()</code>的实现没有了解，查询资料后得知，<code>.animate(prop [, speed] [, easing] [, callback])</code>接收四个参数，而题目中仅给了一个进行动画的样式，故<code>duration</code>参数为默认值<code>400ms</code>, <code>easing</code>为默认值余弦动画&rsquo;swing&rsquo;
+swing的动画函数为：</p>
+
+<pre><code class="language-javascript">swing: function( p, n, firstNum, diff ) {
+       return ( ( -Math.cos(p * Math.PI) / 2 ) + 0.5 ) * diff + firstNum;
+}
+</code></pre>
+
+<p>尝试后无法实现该余弦函数动画，以下是接近的非余弦的：</p>
+
+<pre><code class="language-javascript">(function () {
+    setInterval(function() {
+        var b = document.getElementById('b');
+        var speed = (500 - b.offsetLeft) / 15;
+        speed = speed &gt; 0 ? Math.ceil(speed) : Math.floor(speed);
+        b.style.left = b.offsetLeft + speed + 'px';
+    }, 13)
+}());
+</code></pre>
+
+<h2 id="问题五">问题五</h2>
+
+<p>使用现代浏览器的 Promise 编写一个ajax工具函数。</p>
+
+<pre><code class="language-javascript">/**
+ * 一个ajax工具函数
+ * @param {string} url - 请求的url
+ * @param {string} method - 请求的method，GET、POST等
+ * @return {Promise.&lt;string|Error&gt;}
+ */
+var ajax = function (url, method) {
+    var promise = new Promise(function (resolve, reject) {
+        var client = new XMLHttpRequest();
+        client.open(method, url);
+        client.onreadystatechange = handle;
+        client.responseType = 'json';
+        client.setRequestHeader('Accept', 'application/json');
+        client.send();
+
+        function handle() {
+            if (this.readyState !== 4) {
+                return;
+            }
+            if (this.status &gt;= 200 &amp;&amp; this.status &lt; 300) {
+                resolve(this.response);
+            } else {
+                reject(new Error(this.statusText));
+            }
+        }
+    });
+
+    return promise;
+};
+</code></pre>
+
+<h2 id="问题六">问题六</h2>
+
+<p>最近在读阮一峰老师的《ES6标准入门》一书，因为近期在跟着做百度ife前端学院的春季任务，希望一边学习使用ES6的新语法糖完成，目前用的比较多的有箭头函数、解构赋值、let等。</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Jiegao </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hestation.com/2016/xiachufang/>https://hestation.com/2016/xiachufang/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://hestation.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                    #学习笔记</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hestation.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="prev" rel="prev" title="Webpack使用"><i class="iconfont icon-left"></i>&nbsp;Webpack使用</a>
+         
+        
+        <a href="https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="next" rel="next" title="npm学习笔记">npm学习笔记&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2016 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hestation.com">Jiegao</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

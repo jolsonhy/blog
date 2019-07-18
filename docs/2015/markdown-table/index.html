@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Jiegao">
+  
+  
+  
+  <link rel="prev" href="https://hestation.com/2015/linux-tab/" />
+  <link rel="next" href="https://hestation.com/2015/centos-python/" />
+  <link rel="canonical" href="https://hestation.com/2015/markdown-table/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Vim 常用命令总结 | Jiegao
+       
+  </title>
+  <meta name="title" content="Vim 常用命令总结 | Jiegao">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hestation.com"
+    },
+    "articleSection" : "posts",
+    "name" : "Vim 常用命令总结",
+    "headline" : "Vim 常用命令总结",
+    "description" : "光标移动(Cursor Movement)    命令 作用（解释）     h,j,k,l h表示往左，j表示往下，k表示往右，l表示往上   Ctrl\x2bf 上一页   Ctrl\x2bb 下一页   w, e, W, E 跳到单词的后面，小写包括标点   b, B 以单词为单位往前跳动光标，小写包含标点   O 开启新的一行   ^ 一行的开始   $ 一行的结尾   gg 文档的第一行   [N]G 文档的第N行或者最后一行    \n插入模式(Insert Mode)    命令  　作用（解释)     i  插入到光标前面   I  插入到行的开始位置   a  插入到光标的后面   A  插入到行的最后位置   o, O  　新开一行   Esc  　关闭插入模式",
+    "inLanguage" : "en-us",
+    "author" : "Jiegao",
+    "creator" : "Jiegao",
+    "publisher": "Jiegao",
+    "accountablePerson" : "Jiegao",
+    "copyrightHolder" : "Jiegao",
+    "copyrightYear" : "2015",
+    "datePublished": "2015-10-25 10:06:28 \x2b0000 UTC",
+    "dateModified" : "2015-10-25 10:06:28 \x2b0000 UTC",
+    "url" : "https:\/\/hestation.com\/2015\/markdown-table\/",
+    "wordCount" : "121",
+    "keywords" : [ "Linux","Vim", "Jiegao"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Vim 常用命令总结</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://hestation.com" rel="author">Jiegao</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2015-10-25 itemprop="datePublished">October 25, 2015</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hestation.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="光标移动-cursor-movement">光标移动(Cursor Movement)</h2>
+
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用（解释）</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>h,j,k,l</td>
+<td>h表示往左，j表示往下，k表示往右，l表示往上</td>
+</tr>
+
+<tr>
+<td>Ctrl+f</td>
+<td>上一页</td>
+</tr>
+
+<tr>
+<td>Ctrl+b</td>
+<td>下一页</td>
+</tr>
+
+<tr>
+<td>w, e, W, E</td>
+<td>跳到单词的后面，小写包括标点</td>
+</tr>
+
+<tr>
+<td>b, B</td>
+<td>以单词为单位往前跳动光标，小写包含标点</td>
+</tr>
+
+<tr>
+<td>O</td>
+<td>开启新的一行</td>
+</tr>
+
+<tr>
+<td>^</td>
+<td>一行的开始</td>
+</tr>
+
+<tr>
+<td>$</td>
+<td>一行的结尾</td>
+</tr>
+
+<tr>
+<td>gg</td>
+<td>文档的第一行</td>
+</tr>
+
+<tr>
+<td>[N]G</td>
+<td>文档的第N行或者最后一行</td>
+</tr>
+</tbody>
+</table>
+
+<p><br/></p>
+
+<h2 id="插入模式-insert-mode">插入模式(Insert Mode)</h2>
+
+<table>
+<thead>
+<tr>
+<th>命令 　</th>
+<th>　作用（解释)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>i 　</td>
+<td>插入到光标前面</td>
+</tr>
+
+<tr>
+<td>I 　</td>
+<td>插入到行的开始位置</td>
+</tr>
+
+<tr>
+<td>a 　</td>
+<td>插入到光标的后面</td>
+</tr>
+
+<tr>
+<td>A 　</td>
+<td>插入到行的最后位置</td>
+</tr>
+
+<tr>
+<td>o, O 　</td>
+<td>　新开一行</td>
+</tr>
+
+<tr>
+<td>Esc 　</td>
+<td>　关闭插入模式</td>
+</tr>
+</tbody>
+</table>
+
+<p><br/></p>
+
+<h2 id="编辑-editing">编辑(Editing)</h2>
+
+<table>
+<thead>
+<tr>
+<th>命令 　</th>
+<th>　作用（解释)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>r</td>
+<td>在插入模式替换光标所在的一个字符</td>
+</tr>
+
+<tr>
+<td>J</td>
+<td>合并下一行到上一行</td>
+</tr>
+
+<tr>
+<td>s</td>
+<td>删除光标所在的一个字符, 光标还在当行</td>
+</tr>
+
+<tr>
+<td>S</td>
+<td>删除光标所在的一行，光标还在当行，不同于dd</td>
+</tr>
+
+<tr>
+<td>u</td>
+<td>撤销上一步操作</td>
+</tr>
+
+<tr>
+<td>ctrl+r</td>
+<td>恢复上一步操作</td>
+</tr>
+
+<tr>
+<td>.</td>
+<td>重复最后一个命令</td>
+</tr>
+
+<tr>
+<td>~</td>
+<td>变换为大写</td>
+</tr>
+
+<tr>
+<td>[N]&gt;&gt;</td>
+<td>一行或N行往右移动一个tab</td>
+</tr>
+
+<tr>
+<td>[N]&lt;&lt;</td>
+<td>一行或N行往左移动一个tab</td>
+</tr>
+</tbody>
+</table>
+
+<p><br/></p>
+
+<h2 id="关闭-exiting">关闭(Exiting)</h2>
+
+<table>
+<thead>
+<tr>
+<th>命令 　</th>
+<th>　作用（解释)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>:w</td>
+<td>保存</td>
+</tr>
+
+<tr>
+<td>:wq, :x</td>
+<td>保存并关闭</td>
+</tr>
+
+<tr>
+<td>:q</td>
+<td>关闭（已保存）</td>
+</tr>
+
+<tr>
+<td>:q!</td>
+<td>强制关闭</td>
+</tr>
+</tbody>
+</table>
+
+<p><br/></p>
+
+<h2 id="搜索-search">搜索(Search)</h2>
+
+<table>
+<thead>
+<tr>
+<th>命令 　</th>
+<th>　作用（解释)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>v</td>
+<td>选中一个或多个字符</td>
+</tr>
+
+<tr>
+<td>V</td>
+<td>选中一行</td>
+</tr>
+</tbody>
+</table>
+
+<p><br/></p>
+
+<h2 id="剪切和复制-cut-and-paste">剪切和复制(Cut and Paste)</h2>
+
+<table>
+<thead>
+<tr>
+<th>命令 　</th>
+<th>　作用（解释)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>dd</td>
+<td>删除一行</td>
+</tr>
+
+<tr>
+<td>dw</td>
+<td>删除一个单词</td>
+</tr>
+
+<tr>
+<td>x</td>
+<td>删除后一个字符</td>
+</tr>
+
+<tr>
+<td>X</td>
+<td>删除前一个字符</td>
+</tr>
+
+<tr>
+<td>D</td>
+<td>删除一行最后一个字符</td>
+</tr>
+
+<tr>
+<td>[N]yy</td>
+<td>复制一行或者N行</td>
+</tr>
+
+<tr>
+<td>yw</td>
+<td>复制一个单词</td>
+</tr>
+
+<tr>
+<td>p</td>
+<td>粘贴</td>
+</tr>
+</tbody>
+</table>
+
+<p><br/></p>
+
+<h2 id="窗口操作">窗口操作</h2>
+
+<table>
+<thead>
+<tr>
+<th>命令 　</th>
+<th>　作用（解释)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>:split</td>
+<td>水平方向分割出一个窗口</td>
+</tr>
+
+<tr>
+<td>:vsplit</td>
+<td>垂直方向分割出一个窗口</td>
+</tr>
+
+<tr>
+<td>:close</td>
+<td>关闭窗口</td>
+</tr>
+
+<tr>
+<td>Ctrl+W</td>
+<td>切换窗口, h到左边窗口，j到下方窗口，k到上方窗口，l到右边窗口</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Jiegao </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hestation.com/2015/markdown-table/>https://hestation.com/2015/markdown-table/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://hestation.com/tags/linux/">
+                    #Linux</a></span>
+            
+            <span class="tag"><a href="https://hestation.com/tags/vim/">
+                    #Vim</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hestation.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hestation.com/2015/linux-tab/" class="prev" rel="prev" title="Linux vim设置tab缩进"><i class="iconfont icon-left"></i>&nbsp;Linux vim设置tab缩进</a>
+         
+        
+        <a href="https://hestation.com/2015/centos-python/" class="next" rel="next" title="CentOS 6.6下源码编译安装Python">CentOS 6.6下源码编译安装Python&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2016 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hestation.com">Jiegao</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Jiegao">
+  
+  
+  
+  <link rel="prev" href="https://hestation.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/" />
+  <link rel="next" href="https://hestation.com/2016/xiachufang/" />
+  <link rel="canonical" href="https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Webpack使用 | Jiegao
+       
+  </title>
+  <meta name="title" content="Webpack使用 | Jiegao">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hestation.com"
+    },
+    "articleSection" : "posts",
+    "name" : "Webpack使用",
+    "headline" : "Webpack使用",
+    "description" : "前言 最近在做百度前端技术学院的任务时，尝试接触使用了ES6新的语法糖，在这过程中，也顺便学习了一下近期很火的webpac的使用，以下是对近期学习的一个总结与归纳。\n概要 Webpack不同于Gulp或者Grunt，后者是一种自动化处理工具，而Webpack是一个种模块化解决方案，名为MODULE BUNDLER。\n在 webpack 里，所有类型的文件都可以是模块，包含最常见的 JavaScript，以及 css 文件、图片、json 文件等等。通过 webpack 的各种加载器，可以更有效地管理这些文件。\n安装  全局安装\nnpm install webpack -g   本地安装 bash npm init npm install webpack --save-dev   查看所有命令\nwebpack --help  Webpack配置 Webpack默认的配置文件名称为webpack.config.js，其中包含了一个entry入口和一个output出口\n\/\/ webpack.config.js module.exports = { entry: \x27.\/main.js\x27, output: { filename: \x27bundle.js\x27 } };   在创建好webpack.config.js文件后，直接使用webpack命令即可，下面是命令的几种模式：\nwebpack \/\/ 构建为开发环境输出 webpack -p \/\/ 构建为生产环境输出（压缩混淆脚本） webpack --watch \/\/ 监听变动并自动打包 webpack -d \/\/ 生成map映射文件，告知哪些模块被最终打包到哪里了  模块化 模块化JavaScript  安装babel-loader",
+    "inLanguage" : "en-us",
+    "author" : "Jiegao",
+    "creator" : "Jiegao",
+    "publisher": "Jiegao",
+    "accountablePerson" : "Jiegao",
+    "copyrightHolder" : "Jiegao",
+    "copyrightYear" : "2016",
+    "datePublished": "2016-04-09 11:55:55 \x2b0000 UTC",
+    "dateModified" : "2016-04-09 11:55:55 \x2b0000 UTC",
+    "url" : "https:\/\/hestation.com\/2016\/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B\/",
+    "wordCount" : "313",
+    "keywords" : [ "教程","Webpack", "Jiegao"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Webpack使用</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://hestation.com" rel="author">Jiegao</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2016-04-09 itemprop="datePublished">April 9, 2016</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hestation.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="前言">前言</h2>
+
+<p>最近在做百度前端技术学院的任务时，尝试接触使用了ES6新的语法糖，在这过程中，也顺便学习了一下近期很火的webpac的使用，以下是对近期学习的一个总结与归纳。</p>
+
+<h2 id="概要">概要</h2>
+
+<p><code>Webpack</code>不同于<code>Gulp</code>或者<code>Grunt</code>，后者是一种自动化处理工具，而<code>Webpack</code>是一个种模块化解决方案，名为<code>MODULE BUNDLER</code>。</p>
+
+<p>在 webpack 里，所有类型的文件都可以是模块，包含最常见的 JavaScript，以及 css 文件、图片、json 文件等等。通过 webpack 的各种加载器，可以更有效地管理这些文件。</p>
+
+<h2 id="安装">安装</h2>
+
+<ul>
+<li><p>全局安装</p>
+
+<pre><code class="language-bash">npm install webpack -g
+</code></pre>
+
+<ul>
+<li>本地安装
+<code>bash
+npm init
+npm install webpack --save-dev
+</code></li>
+</ul></li>
+
+<li><p>查看所有命令</p>
+
+<pre><code class="language-bash">webpack --help
+</code></pre>
+
+<h2 id="webpack配置">Webpack配置</h2>
+
+<p>Webpack默认的配置文件名称为<code>webpack.config.js</code>，其中包含了一个<code>entry</code>入口和一个<code>output</code>出口</p>
+
+<pre><code class="language-javascript">// webpack.config.js
+module.exports = {
+entry: './main.js',
+output: {
+filename: 'bundle.js'
+}
+};
+</code></pre></li>
+</ul>
+
+<p>在创建好<code>webpack.config.js</code>文件后，直接使用<code>webpack</code>命令即可，下面是命令的几种模式：</p>
+
+<pre><code class="language-bash">webpack // 构建为开发环境输出
+webpack -p // 构建为生产环境输出（压缩混淆脚本）
+webpack --watch // 监听变动并自动打包
+webpack -d // 生成map映射文件，告知哪些模块被最终打包到哪里了
+</code></pre>
+
+<h2 id="模块化">模块化</h2>
+
+<h3 id="模块化javascript">模块化JavaScript</h3>
+
+<ol>
+<li><p>安装babel-loader</p>
+
+<pre><code class="language-bash">npm install babel-loader babel-core babel-preset-es2015 --save-dev
+</code></pre>
+
+<ol>
+<li>配置 <code>webpack.config.js</code>
+在 <code>module.exports</code> 值中添加 module：</li>
+</ol>
+
+<pre><code class="language-javascript">module.exports = {
+entry: {
+app: ['./main.js']
+},
+output: {
+filename: 'bundle.js'
+},
+module: {
+loaders: [{
+    test: /\.js$/,
+    loaders: ['babel?presets[]=es2015'],
+    exclude: /node_modules/
+}]
+}
+}
+</code></pre></li>
+</ol>
+
+<h3 id="css加载器">CSS加载器</h3>
+
+<p>我们可以按传统方法使用 CSS，即在 HTML 文件中添加：</p>
+
+<pre><code class="language-css">&lt;link rel=&quot;stylesheet&quot; href=&quot;style/app.css&quot;&gt;
+</code></pre>
+
+<p>但 webpack 里，CSS 同样可以模块化，使用 import 导入。</p>
+
+<p>因此我们不再使用 link 标签来引用 CSS，而是通过 webpack 的 <a href="https://github.com/webpack/style-loader" rel="nofollow noreferrer" target="_blank">style-loader</a> 及 <a href="https://github.com/webpack/css-loader" rel="nofollow noreferrer" target="_blank">css-loader</a>。前者将 css 文件以 <code>&lt;style&gt;&lt;/style&gt;</code> 标签插入 <code>&lt;head&gt;</code> 头部，后者负责解读、加载 CSS 文件。</p>
+
+<h4 id="安装-css-相关的加载器">安装 CSS 相关的加载器</h4>
+
+<pre><code class="language-bash">npm install style-loader css-loader --save-dev
+</code></pre>
+
+<h4 id="配置-webpack-config-js-文件">配置 webpack.config.js 文件</h4>
+
+<pre><code class="language-javascript">{
+// ...
+module: {
+    loaders: [
+        { test: /\.css$/, loaders: ['style', 'css'] }
+    ]
+}
+}
+</code></pre>
+
+<h4 id="在-main-js-文件中引入-css">在 main.js 文件中引入 css</h4>
+
+<pre><code class="language-javascript">import'./style/app.css';
+</code></pre>
+
+<p>这样，在执行 <code>webpack</code> 后，我们的 CSS 文件就会被打包进 <code>bundle.js</code> 文件中，如果不想它们被打包进去，可以使用 <a href="https://github.com/webpack/extract-text-webpack-plugin" rel="nofollow noreferrer" target="_blank">extract text</a>扩展。</p>
+
+<h3 id="autoprefixer">autoprefixer</h3>
+
+<p>我们在写 CSS 时，按 CSS 规范写，构建时利用 autoprefixer 可以输出 -webkit、-moz 这样的浏览器前缀，webpack 同样是通过 loader 提供该功能。</p>
+
+<h4 id="安装-autoprefixer-loader">安装 autoprefixer-loader</h4>
+
+<pre><code class="language-bash">npm install autoprefixer-loader --save-dev
+</code></pre>
+
+<h4 id="配置-webpack-config-js">配置 webpack.config.js</h4>
+
+<pre><code class="language-bash">loaders: [{
+test: /\.css$/,
+loader: 'style!css!autoprefixer?{browsers:[&quot;last 2 version&quot;, &quot;&gt; 1%&quot;]}',
+//...
+}]
+</code></pre>
+
+<h2 id="完整示例">完整示例</h2>
+
+<pre><code class="language-javascript">var webpack = require('webpack');
+var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
+
+module.exports = {
+    //插件项
+    plugins: [commonsPlugin],
+    //页面入口文件配置
+    entry: {
+        index : './src/js/page/index.js'
+    },
+    //入口文件输出配置
+    output: {
+        path: 'dist/js/page',
+        filename: '[name].js'
+    },
+    module: {
+        //加载器配置
+        loaders: [
+            //.css 文件使用 style-loader 和 css-loader 来处理
+            { test: /\.css$/, loader: 'style-loader!css-loader' },
+            //.js 文件使用 jsx-loader 来编译处理
+            { test: /\.js$/, loader: 'jsx-loader?harmony' },
+            //.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理
+            { test: /\.scss$/, loader: 'style!css!sass?sourceMap'},
+            //图片文件使用 url-loader 来处理，小于8kb的直接转为base64
+            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
+        ]
+    }
+    //其它解决方案配置
+    resolve: {
+        root: 'E:/github/flux-example/src', //绝对路径
+        extensions: ['', '.js', '.json', '.scss'],
+        alias: {
+            AppStore : 'js/stores/AppStores.js',
+            ActionType : 'js/actions/ActionType.js',
+            AppAction : 'js/actions/AppAction.js'
+        }
+    }
+};
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Jiegao </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/>https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://hestation.com/tags/%E6%95%99%E7%A8%8B/">
+                    #教程</a></span>
+            
+            <span class="tag"><a href="https://hestation.com/tags/webpack/">
+                    #Webpack</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hestation.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hestation.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/" class="prev" rel="prev" title="ES6学习笔记（一）：Set和Map"><i class="iconfont icon-left"></i>&nbsp;ES6学习笔记（一）：Set和Map</a>
+         
+        
+        <a href="https://hestation.com/2016/xiachufang/" class="next" rel="next" title="前端学习笔记">前端学习笔记&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2016 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hestation.com">Jiegao</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

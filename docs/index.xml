@@ -553,5 +553,1271 @@ sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk2s1
 </description>
     </item>
     
+    <item>
+      <title>React学习笔记</title>
+      <link>https://hestation.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 11 Jun 2016 14:23:41 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>
+
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;前段时间看了一下React和react-router的文档，这几天用它们在做一个实时投票的Web App，这篇文章记录里面遇到的坑及其解决方法。&lt;/p&gt;
+
+&lt;h2 id=&#34;获取真实dom节点的引用&#34;&gt;获取真实DOM节点的引用&lt;/h2&gt;
+
+&lt;p&gt;添加ref属性&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;ref={(ref) =&amp;gt; this.name = ref}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Demo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;export default class Join extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.handleSubmit = (e) =&amp;gt; {
+            e.preventDefault();
+            let memberName = this.name.value;
+            console.log(&amp;quot;TODO: Join member &amp;quot; + memberName);
+        }
+    }
+    render() {
+        return (
+            &amp;lt;form onSubmit={this.handleSubmit}&amp;gt;
+                &amp;lt;label&amp;gt;Full Name&amp;lt;/label&amp;gt;
+                &amp;lt;input
+                    ref={(ref) =&amp;gt; this.name = ref}
+                    className=&amp;quot;form-control&amp;quot;
+                    placeholder=&amp;quot;Enter your full name...&amp;quot;
+                    required /&amp;gt;
+                &amp;lt;button className=&amp;quot;btn btn-primary&amp;quot;&amp;gt;Join&amp;lt;/button&amp;gt;
+            &amp;lt;/form&amp;gt;
+        );
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;使用react-router时父组件向子组件传递props&#34;&gt;使用React-Router时父组件向子组件传递props&lt;/h2&gt;
+
+&lt;p&gt;原本渲染所有路由组件的写法为：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{this.props.children}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;现可表示为：
+在父组件的return的最底部添加：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{React.cloneElement(this.props.children, {propsName: this.props.name})}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;react-router&#34;&gt;React-Router&lt;/h2&gt;
+
+&lt;h3 id=&#34;默认路由&#34;&gt;默认路由&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;IndexRoute component={Audience} /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;重定向&#34;&gt;重定向&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;Redirect from=&amp;quot;audience&amp;quot; to=&amp;quot;/&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Demo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;ReactDOM.render((
+    &amp;lt;Router history={hashHistory}&amp;gt;
+        &amp;lt;Route path=&amp;quot;/&amp;quot; component={App}&amp;gt;
+            &amp;lt;IndexRoute component={Audience} /&amp;gt;
+            &amp;lt;Route path=&amp;quot;board&amp;quot; component={Board} /&amp;gt;
+            &amp;lt;Route path=&amp;quot;speaker&amp;quot; component={Speaker} /&amp;gt;
+            &amp;lt;Redirect from=&amp;quot;audience&amp;quot; to=&amp;quot;/&amp;quot; /&amp;gt;
+            &amp;lt;Route path=&amp;quot;*&amp;quot; component={NotFound} /&amp;gt;
+        &amp;lt;/Route&amp;gt;
+    &amp;lt;/Router&amp;gt;
+), document.getElementById(&#39;container&#39;));
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Webpack--令人困惑的地方</title>
+      <link>https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</link>
+      <pubDate>Mon, 16 May 2016 09:15:00 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</guid>
+      <description>
+
+&lt;h2 id=&#34;原文&#34;&gt;原文&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9#.jaqo97f72&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Webpack—The Confusing Parts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/chemdemo/chemdemo.github.io/issues/13&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;【翻译】Webpack——令人困惑的地方&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Webpack是目前基于React和Redux开发的应用的主要打包工具。我想使用Angular 2或其他框架开发的应用也有很多在使用Webpack。&lt;/p&gt;
+
+&lt;p&gt;当我第一次看到Webpack的配置文件时，它看起来非常的陌生，我非常的疑惑。经过一段时间的尝试之后我认为这是因为Webpack只是使用了比较特别的语法和引入了新的原理，因此会让使用者感到疑惑。这些也是导致Webpack不被人熟悉的原因。&lt;/p&gt;
+
+&lt;p&gt;因为刚开始使用Webpack很让人疑惑，我觉得有必要写几篇介绍Webpack的功能和特性的文章以帮助初学者快速理解。此文是最开始的一篇。&lt;/p&gt;
+
+&lt;h2 id=&#34;webpack的核心原理&#34;&gt;Webpack的核心原理&lt;/h2&gt;
+
+&lt;p&gt;Webpack的两个最核心的原理分别是：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;一切皆模块
+正如js文件可以是一个“模块（module）”一样，其他的（如css、image或html）文件也可视作模 块。因此，你可以&lt;code&gt;require(&#39;myJSfile.js&#39;)&lt;/code&gt;亦可以&lt;code&gt;require(&#39;myCSSfile.css&#39;)&lt;/code&gt;。这意味着我们可以将事物（业务）分割成更小的易于管理的片段，从而达到重复利用等的目的。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;按需加载
+传统的模块打包工具（module bundlers）最终将所有的模块编译生成一个庞大的&lt;code&gt;bundle.js&lt;/code&gt;文件。但是在真实的app里边，“bundle.js”文件可能有10M到15M之大可能会导致应用一直处于加载中状态。因此Webpack使用许多特性来分割代码然后生成多个“bundle”文件，而且异步加载部分代码以实现按需加载。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;好了，下面来看看那些令人困惑的部分吧。&lt;/p&gt;
+
+&lt;h3 id=&#34;1-开发模式和生产模式&#34;&gt;1.开发模式和生产模式&lt;/h3&gt;
+
+&lt;p&gt;首先要知道的是Webpack有许许多多的特性，一些是”开发模式“下才有的，一些是”生产模式“下才有的，还有一些是两种模式下都有的。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://camo.githubusercontent.com/769d362aaca4e1bea0c9f3abd1fd67f656c649d1/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a574341644d69303449464557646e674b38626b4663772e706e67&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;通常使用到Webpack如此多特性的项目都会有两个比较大的Webpack配置文件&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;为了生成bundles文件你可能在&lt;code&gt;package.json&lt;/code&gt;文件加入如下的scripts项：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;&amp;quot;scripts&amp;quot;: {
+  // 运行npm run build 来编译生成生产模式下的bundles
+  &amp;quot;build&amp;quot;: &amp;quot;webpack --config webpack.config.prod.js&amp;quot;,
+  // 运行npm run dev来生成开发模式下的bundles以及启动本地server
+  &amp;quot;dev&amp;quot;: &amp;quot;webpack-dev-server&amp;quot;
+ }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-webpack-cli-和webpack-dev-server&#34;&gt;2.webpack CLI 和webpack-dev-server&lt;/h3&gt;
+
+&lt;p&gt;值得注意的是，Webpack作为模块打包工具，提供两种用户交互接口：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Webpack CLI tool：默认的交互方式（已随Webpack本身安装到本地）&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;webpack-dev-server：一个Node.js服务器（需要开发者从npm自行安装）&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&#34;webpack-cli-有利于生产模式下打包&#34;&gt;Webpack CLI（有利于生产模式下打包）&lt;/h4&gt;
+
+&lt;p&gt;这种方式可以从命令行获取参数也可以从配置文件（默认叫webpack.config.js）获取，将获取到的参数传入Webpack来打包。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;当然你也可以从命令行（CLI）开始学习Webpack，以后你可能主要在生产模式下使用到它。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;用法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;方式1: 
+// 全局模式安装webpack
+npm install webpack --g
+// 在终端输入
+$ webpack // &amp;lt;--使用webpack.config.js生成bundle
+
+方式 2 :
+// 费全局模式安装webpack然后添加到package.json依赖里边
+npm install webpack --save
+// 添加build命令到package.json的scripts配置项
+&amp;quot;scripts&amp;quot;: {
+ &amp;quot;build&amp;quot;: &amp;quot;webpack --config webpack.config.prod.js -p&amp;quot;,
+ ...
+ }
+// 用法：
+&amp;quot;npm run build&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;webpack-dev-server-有利于在开发模式下编译&#34;&gt;webpack-dev-server（有利于在开发模式下编译）&lt;/h4&gt;
+
+&lt;p&gt;这是一个基于Express.js框架开发的web server，默认监听8080端口。server内部调用Webpack，这样做的好处是提供了额外的功能如热更新“Live Reload”以及热替换“Hot Module Replacement”（即HMR）。&lt;/p&gt;
+
+&lt;p&gt;用法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;方式 1:
+// 全局安装
+npm install webpack-dev-server --save
+// 终端输入
+$ webpack-dev-server --inline --hot
+
+用法 2:
+// 添加到package.json scripts
+&amp;quot;scripts&amp;quot;: {
+ &amp;quot;start&amp;quot;: &amp;quot;webpack-dev-server --inline --hot&amp;quot;,
+ ...
+ }
+// 运行： 
+$ npm start
+
+// 浏览器预览：
+http://localhost:8080
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;webpack-vs-webpack-dev-server选项&#34;&gt;Webpack VS Webpack-dev-server选项&lt;/h4&gt;
+
+&lt;p&gt;注意像inline和hot这些选项是Webpack-dev-server特有的，而另外的如hide-modules则是CLI模式特有的选项。&lt;/p&gt;
+
+&lt;h4 id=&#34;webpack-dev-server-cli选项和配置项&#34;&gt;webpack-dev-server CLI选项和配置项&lt;/h4&gt;
+
+&lt;p&gt;另外值得注意的是你可以通过以下两种方式向webpack-dev-server传入参数：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;通过webpack.config.js文件的&amp;rdquo;devServer&amp;rdquo;对象&lt;/li&gt;
+&lt;li&gt;通过CLI选项&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;// 通过CLI传参
+webpack-dev-server --hot --inline
+// 通过webpack.config.js传参
+devServer: {
+  inline: true,
+  hot:true
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;我发现有时devServer配置项（hot: true 和inline: true）不生效，我更偏向使用如下的方式向CLI传递参数：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;// package.json
+{
+    &amp;quot;scripts&amp;quot;: &amp;quot;webpack-dev-server --hot --inline&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;注意：确定你没有同时传入hot:true和-hot&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&#34;webpack-dev-server的-hot-和-inline-选项&#34;&gt;webpack-dev-server的“hot” 和 “inline”选项&lt;/h4&gt;
+
+&lt;p&gt;“inline”选项会为入口页面添加“热加载”功能，“hot”选项则开启“热替换（Hot Module Reloading）”，即尝试重新加载组件改变的部分（而不是重新加载整个页面）。如果两个参数都传入，当资源改变时，webpack-dev-server将会先尝试HRM（即热替换），如果失败则重新加载整个入口页面。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;// 当资源发生改变，以下三种方式都会生成新的bundle，但是又有区别：
+
+// 1. 不会刷新浏览器
+$ webpack-dev-server
+//2. 刷新浏览器
+$ webpack-dev-server --inline
+//3. 重新加载改变的部分，HRM失败则刷新页面
+$ webpack-dev-server  --inline --hot
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;entry-值分别是字符串-数组和对象的情况&#34;&gt;“entry”：值分别是字符串、数组和对象的情况&lt;/h2&gt;
+
+&lt;p&gt;Enter配置项告诉Webpack应用的根模块或起始点在哪里，它的值可以是字符串、数组或对象。这看起来可能令人困惑，因为不同类型的值有着不同的目的。&lt;/p&gt;
+
+&lt;p&gt;像绝大多数app一样，倘若你的应用只有一个单一的入口，enter项的值你可以使用任意类型，最终输出的结果都是一样的。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://camo.githubusercontent.com/94d5882d5d4c236cf6a550f604358193fd9a8ec4/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a4f6e58706676347a6a4c2d357a4f324861366d5844772e706e67&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;enter-数组类型&#34;&gt;enter：数组类型&lt;/h3&gt;
+
+&lt;p&gt;但是，如果你想添加多个彼此不互相依赖的文件，你可以使用数组格式的值。&lt;/p&gt;
+
+&lt;p&gt;例如，你可能在html文件里引用了“googleAnalytics.js”文件，可以告诉Webpack将其加到bundle.js的最后。
+&lt;img src=&#34;https://camo.githubusercontent.com/cbc2ac1d6c1059654ddc9ab03d0fd5e3369c6d9a/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a794c566453336f4e34586f384b496e6f5449666930412e706e67&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;enter-对象&#34;&gt;enter：对象&lt;/h3&gt;
+
+&lt;p&gt;现在，假设你的应用是多页面的（multi-page application）而不是SPA，有多个html文件（index.html和profile.html）。然后你通过一个对象告诉Webpack为每一个html生成一个bundle文件。&lt;/p&gt;
+
+&lt;p&gt;以下的配置将会生成两个js文件：indexEntry.js和profileEntry.js分别会在index.html和profile.html中被引用。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://camo.githubusercontent.com/2ee6bc5c88b5cdb9452f3389a6e2e7060402b3f0/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a7842353152524334696b36424250326c4a39304975772e706e67&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;用法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;//profile.html
+&amp;lt;script src=”dist/profileEntry.js”&amp;gt;&amp;lt;/script&amp;gt;
+//index.html
+&amp;lt;script src=”dist/indexEntry.js”&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;注意：文件名取自“entry”对象的键名。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;enter-混合类型&#34;&gt;enter：混合类型&lt;/h3&gt;
+
+&lt;p&gt;你也可以在enter对象里使用数组类型，例如下面的配置将会生成3个文件：vender.js（包含三个文件），index.js和profile.js文件。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://camo.githubusercontent.com/7cb0c356dff08cfca479e68a5165a381c70aa613/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a797a373651593166567a42474b4a2d365836456c65672e706e67&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;output-path-项和-publicpath-项&#34;&gt;output：“path”项和“publicPath”项&lt;/h2&gt;
+
+&lt;p&gt;output项告诉webpack怎样存储输出结果以及存储到哪里。output的两个配置项“path”和“publicPath”可能会造成困惑。&lt;/p&gt;
+
+&lt;p&gt;“path”仅仅告诉Webpack结果存储在哪里，然而“publicPath”项则被许多Webpack的插件用于在生产模式下更新内嵌到css、html文件里的url值。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://camo.githubusercontent.com/4802b6cfbcdfbb7cada7121ae14ba616c716edab/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a36335a7461346d62435f336f343451647963724437512e706e67&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;例如，在localhost（译者注：即本地开发模式）里的css文件中边你可能用“./test.png”这样的url来加载图片，但是在生产模式下“test.png”文件可能会定位到CDN上并且你的Node.js服务器可能是运行在HeroKu上边的。这就意味着在生产环境你必须手动更新所有文件里的url为CDN的路径。&lt;/p&gt;
+
+&lt;p&gt;然而你也可以使用Webpack的“publicPath”选项和一些插件来在生产模式下编译输出文件时自动更新这些url。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://camo.githubusercontent.com/3cc10014e06c18fda61c2f5fa6b31f5275d4cafd/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a614f4d355a4638616c574c723442433043665a6530772e706e67&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;// 开发环境：Server和图片都是在localhost（域名）下
+.image { 
+background-image: url(&#39;./test.png&#39;);
+}
+// 生产环境：Server部署下HeroKu但是图片在CDN上
+.image { 
+background-image: url(&#39;https://someCDN/test.png&#39;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;模块加载和链式模块加载&#34;&gt;模块加载和链式模块加载&lt;/h2&gt;
+
+&lt;p&gt;模块加载器是可自由添加的Node模块，用于将不同类型的文件“load”或“import”并转换成浏览器可以识别的类型，如js、Stylesheet等。更高级的模块加载器甚至可以支持使用ES6里边的“require”或“import”引入模块。&lt;/p&gt;
+
+&lt;p&gt;例如，你可以使用&lt;code&gt;babel-loader&lt;/code&gt;来将使用ES6语法写成的文件转换成ES5：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;module: {
+ loaders: [{
+  test: /\.js$/, // 匹配.js文件，如果通过则使用下面的loader
+  exclude: /node_modules/, // 排除node_modules文件夹
+  loader: &#39;babel&#39; // 使用babel（babel-loader的简写）作为loader
+ }]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;链式-管道式-的加载器-从右往左执行&#34;&gt;链式（管道式）的加载器（从右往左执行）&lt;/h3&gt;
+
+&lt;p&gt;多个loader可以用在同一个文件上并且被链式调用。链式调用时从右到左执行且loader之间用“!”来分割。&lt;/p&gt;
+
+&lt;p&gt;例如，假设我们有一个名为“myCssFile.css”的css文件，然后我们想将它的内容使用style标签内联到最终输出的html里边。我们可以使用css-loader和style-loader两个loader来达到目的。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;module: {
+ loaders: [{
+  test: /\.css$/,
+  loader: &#39;style!css&#39; //(short for style-loader!css-loader)
+ }]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里展示它是如何工作的：
+&lt;img src=&#34;https://camo.githubusercontent.com/9c306d1bcc8f5fc732f772afd6101dcc88309eba/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a6e657339694c6d736b6d734438467034456b33752d412e706e67&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Webpack在模块颞部搜索在css的依赖项，即Webpack检查js文件是否有“require(&amp;lsquo;myCssFile.css&amp;rsquo;)”的引用，如果它发现有css的依赖，Webpack将css文件交给“css-loader”去处理&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;css-loader加载所有的css文件以及css自身的依赖（如，@import 其他css）到JSON对象里，Webpack然后将处理结果传给“style-loader”&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;style-loader接受JSON值然后添加一个style标签并将其内嵌到html文件里&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;loader自身可以配置&#34;&gt;loader自身可以配置&lt;/h2&gt;
+
+&lt;p&gt;模块加载器（loader）自身可以根据传入不同的参数进行配置。&lt;/p&gt;
+
+&lt;p&gt;在下面的例子中，我们可以配置url-loader来将小于1024字节的图片使用DataUrl替换而大于1024字节的图片使用url，我们可以用如下两种方式通过传入“limit“参数来实现这一目的：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://camo.githubusercontent.com/df52305c7926e1071636fa6ad8e60a6da91df9cc/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a2d71566463413345384a536474737a784871664964412e706e67&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;babelrc-文件&#34;&gt;babelrc 文件&lt;/h2&gt;
+
+&lt;p&gt;babal-loader使用”presets“配置项来标识如何将ES6语法转成ES5以及如何转换React的JSX成js文件。我们可以用如下的方式使用”query“参数传入配置：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;module: {
+  loaders: [
+    {
+      test: /\.jsx?$/,
+      exclude: /(node_modules|bower_components)/,
+      loader: &#39;babel&#39;,
+      query: {
+        presets: [&#39;react&#39;, &#39;es2015&#39;]
+      }
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然而在很多项目里babel的配置可能比较大，因此你可以把babel-loader的配置项单独保存在一个名为”.babelrc“的文件中，在执行时babel-loader将会自动加载.babelrc文件。&lt;/p&gt;
+
+&lt;p&gt;所以在很多例子里，你可能会看到：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;//webpack.config.js 
+module: {
+  loaders: [
+    {
+      test: /\.jsx?$/,
+      exclude: /(node_modules|bower_components)/,
+      loader: &#39;babel&#39;
+    }
+  ]
+}
+
+//.bablerc
+{
+ presets: [&#39;react&#39;, &#39;es2015&#39;]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;插件&#34;&gt;插件&lt;/h2&gt;
+
+&lt;p&gt;插件一般都是用于输出bundle的node模块。&lt;/p&gt;
+
+&lt;p&gt;例如，uglifyJSPlugin获取bundle.js然后压缩和混淆内容以减小文件体积。&lt;/p&gt;
+
+&lt;p&gt;类似的extract-text-webpack-plugin内部使用css-loader和style-loader来收集所有的css到一个地方最终将结果提取结果到一个独立的”styles.css“文件，并且在html里边引用style.css文件。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;//webpack.config.js
+// 获取所有的.css文件，合并它们的内容然后提取css内容到一个独立的”styles.css“里
+var ETP = require(&amp;quot;extract-text-webpack-plugin&amp;quot;);
+
+module: {
+ loaders: [
+  {test: /\.css$/, loader:ETP.extract(&amp;quot;style-loader&amp;quot;,&amp;quot;css-loader&amp;quot;) }
+  ]
+},
+plugins: [
+    new ExtractTextPlugin(&amp;quot;styles.css&amp;quot;) //Extract to styles.css file
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;注意：如果你只是想把css使用style标签内联到html里，你不必使用extract-text-webpack-plugin，仅仅使用css loader和style loader即可：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;module: {
+ loaders: [{
+  test: /\.css$/,
+  loader: &#39;style!css&#39; // (short for style-loader!css-loader)
+ }]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;加载器-loader-和插件&#34;&gt;加载器（loader）和插件&lt;/h2&gt;
+
+&lt;p&gt;你可能已经意识到了，Loader处理单独的文件级别并且通常作用于包生成之前或生成的过程中。&lt;/p&gt;
+
+&lt;p&gt;而插件则是处理包（bundle）或者chunk级别，且通常是bundle生成的最后阶段。一些插件如commonschunkplugin甚至更直接修改bundle的生成方式。&lt;/p&gt;
+
+&lt;h2 id=&#34;处理文件的扩展名&#34;&gt;处理文件的扩展名&lt;/h2&gt;
+
+&lt;p&gt;很多Webpack的配置文件都有一个resolve属性，然后就像下面代码所示有一个空字符串的值。空字符串在此是为了resolve一些在import文件时不带文件扩展名的表达式，如&lt;code&gt;require(&#39;./myJSFile&#39;)&lt;/code&gt;或者&lt;code&gt;import myJSFile from &#39;./myJSFile&#39;&lt;/code&gt;（译者注：实际就是自动添加后缀，默认是当成js文件来查找路径）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
+ resolve: {
+   extensions: [&#39;&#39;, &#39;.js&#39;, &#39;.jsx&#39;]
+ }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>npm学习笔记</title>
+      <link>https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 16 May 2016 08:59:00 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>
+
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;近期在做一个投票项目的应用时，突然发现对npm的认识很少，故查询了一些资料，现将自己的笔记总结在此。&lt;/p&gt;
+
+&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
+
+&lt;p&gt;npm是Node.js的包管理工具&lt;/p&gt;
+
+&lt;h2 id=&#34;命令&#34;&gt;命令&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;查看用户手册&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm -h
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;生成package.json
+&lt;code&gt;bash
+npm init
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;save-dev与-save的区别&#34;&gt;&amp;ndash;save-dev与&amp;ndash;save的区别&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npm install module-name --save-dev&lt;/code&gt; // 把模块和版本号添加到dependencies部分&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm install module-name --save&lt;/code&gt; // 把模块和版本号添加到devDependencies部分&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;devDependencies下列出的模块，是我们开发时用的，比如grunt-contrib-uglify，我们用它混淆js文件，它们不会被部署到生产环境。dependencies下的模块，则是我们生产环境中需要的依赖。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>前端学习笔记</title>
+      <link>https://hestation.com/2016/xiachufang/</link>
+      <pubDate>Wed, 13 Apr 2016 22:42:28 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/xiachufang/</guid>
+      <description>
+
+&lt;h2 id=&#34;问题一-外容器的尺寸未知-内容器已知-实现水平垂直居中&#34;&gt;问题一：外容器的尺寸未知,内容器已知，实现水平垂直居中&lt;/h2&gt;
+
+&lt;h3 id=&#34;html结构&#34;&gt;html结构:&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;item&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;方法一-绝对定位-负外边距&#34;&gt;方法一：绝对定位 + 负外边距&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.container {
+    position: relative;
+}
+.item {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;方法二-绝对定位-四周偏移量定位0-外边距为auto&#34;&gt;方法二：绝对定位 + 四周偏移量定位0， 外边距为auto&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.container {
+    position: relative;
+}
+.item {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;方法三-flex定位&#34;&gt;方法三：Flex定位&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item {
+    width: 200px;
+    height: 200px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;方法四-css3-tramsform属性&#34;&gt;方法四： CSS3 tramsform属性&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.container {
+    position: relative;
+}
+.item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;方法五-tabel-cell&#34;&gt;方法五： tabel-cell&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.item {
+    width: 200px;
+    height: 200px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;问题二-实现固定导航栏&#34;&gt;问题二：实现固定导航栏&lt;/h2&gt;
+
+&lt;h3 id=&#34;方法一-fixed固定定位&#34;&gt;方法一：fixed固定定位&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;固定导航栏&amp;lt;/title&amp;gt;
+    &amp;lt;style&amp;gt;
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 2000px;
+            overflow-y: scroll;
+        }
+        .nav {
+            position: fixed;
+            width: 100%;
+            height: 200px;
+            top: 0;
+            background-color: lightskyblue;
+        }
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div class=&amp;quot;nav&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;方法二-导航栏绝对定位-js监听滚动事件&#34;&gt;方法二：导航栏绝对定位，js监听滚动事件&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;(function (){
+    var nav = document.getElementsByClassName(&#39;nav&#39;),
+        offTop = document.offsetTop,
+        scrTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+    window.addEventListener(&#39;scroll&#39;, function () {
+
+        if (scrTop &amp;gt; offTop) {
+            nav.style.position = &#39;absolute&#39;;
+            nav.style.top = scrTop;
+            nav.style.margin = &#39;0&#39;;
+        }
+    }, false);
+}());
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;问题三&#34;&gt;问题三&lt;/h2&gt;
+
+&lt;p&gt;在Chrome的控制台运行&lt;code&gt;var log = console.log; log(123)&lt;/code&gt;，报错信息为：&lt;code&gt;Illegal invocation&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;错误原因&#34;&gt;错误原因：&lt;/h3&gt;
+
+&lt;p&gt;console对象是JavaScript的原生对象,这里在全局范围内定义一个log函数，实际上在浏览器的工作环境下是给window全局变量添加了一个window.log()方法，实际执行的是window.log(123),故报错。&lt;/p&gt;
+
+&lt;h3 id=&#34;一个可成功执行的log函数&#34;&gt;一个可成功执行的log函数：&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var log = function (a) {
+    console.log(a);
+};
+
+log(123);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;问题四&#34;&gt;问题四&lt;/h2&gt;
+
+&lt;p&gt;不使用jQuery让方块B实现与方块A完全相同的效果。
+由于没有研究过jQuery的源码，所以对其&lt;code&gt;.animate()&lt;/code&gt;的实现没有了解，查询资料后得知，&lt;code&gt;.animate(prop [, speed] [, easing] [, callback])&lt;/code&gt;接收四个参数，而题目中仅给了一个进行动画的样式，故&lt;code&gt;duration&lt;/code&gt;参数为默认值&lt;code&gt;400ms&lt;/code&gt;, &lt;code&gt;easing&lt;/code&gt;为默认值余弦动画&amp;rsquo;swing&amp;rsquo;
+swing的动画函数为：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;swing: function( p, n, firstNum, diff ) {
+       return ( ( -Math.cos(p * Math.PI) / 2 ) + 0.5 ) * diff + firstNum;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;尝试后无法实现该余弦函数动画，以下是接近的非余弦的：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;(function () {
+    setInterval(function() {
+        var b = document.getElementById(&#39;b&#39;);
+        var speed = (500 - b.offsetLeft) / 15;
+        speed = speed &amp;gt; 0 ? Math.ceil(speed) : Math.floor(speed);
+        b.style.left = b.offsetLeft + speed + &#39;px&#39;;
+    }, 13)
+}());
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;问题五&#34;&gt;问题五&lt;/h2&gt;
+
+&lt;p&gt;使用现代浏览器的 Promise 编写一个ajax工具函数。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;/**
+ * 一个ajax工具函数
+ * @param {string} url - 请求的url
+ * @param {string} method - 请求的method，GET、POST等
+ * @return {Promise.&amp;lt;string|Error&amp;gt;}
+ */
+var ajax = function (url, method) {
+    var promise = new Promise(function (resolve, reject) {
+        var client = new XMLHttpRequest();
+        client.open(method, url);
+        client.onreadystatechange = handle;
+        client.responseType = &#39;json&#39;;
+        client.setRequestHeader(&#39;Accept&#39;, &#39;application/json&#39;);
+        client.send();
+
+        function handle() {
+            if (this.readyState !== 4) {
+                return;
+            }
+            if (this.status &amp;gt;= 200 &amp;amp;&amp;amp; this.status &amp;lt; 300) {
+                resolve(this.response);
+            } else {
+                reject(new Error(this.statusText));
+            }
+        }
+    });
+
+    return promise;
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;问题六&#34;&gt;问题六&lt;/h2&gt;
+
+&lt;p&gt;最近在读阮一峰老师的《ES6标准入门》一书，因为近期在跟着做百度ife前端学院的春季任务，希望一边学习使用ES6的新语法糖完成，目前用的比较多的有箭头函数、解构赋值、let等。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Webpack使用</title>
+      <link>https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sat, 09 Apr 2016 11:55:55 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+      <description>
+
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;最近在做百度前端技术学院的任务时，尝试接触使用了ES6新的语法糖，在这过程中，也顺便学习了一下近期很火的webpac的使用，以下是对近期学习的一个总结与归纳。&lt;/p&gt;
+
+&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;Webpack&lt;/code&gt;不同于&lt;code&gt;Gulp&lt;/code&gt;或者&lt;code&gt;Grunt&lt;/code&gt;，后者是一种自动化处理工具，而&lt;code&gt;Webpack&lt;/code&gt;是一个种模块化解决方案，名为&lt;code&gt;MODULE BUNDLER&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;在 webpack 里，所有类型的文件都可以是模块，包含最常见的 JavaScript，以及 css 文件、图片、json 文件等等。通过 webpack 的各种加载器，可以更有效地管理这些文件。&lt;/p&gt;
+
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;全局安装&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install webpack -g
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;本地安装
+&lt;code&gt;bash
+npm init
+npm install webpack --save-dev
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;查看所有命令&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;webpack --help
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;webpack配置&#34;&gt;Webpack配置&lt;/h2&gt;
+
+&lt;p&gt;Webpack默认的配置文件名称为&lt;code&gt;webpack.config.js&lt;/code&gt;，其中包含了一个&lt;code&gt;entry&lt;/code&gt;入口和一个&lt;code&gt;output&lt;/code&gt;出口&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// webpack.config.js
+module.exports = {
+entry: &#39;./main.js&#39;,
+output: {
+filename: &#39;bundle.js&#39;
+}
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在创建好&lt;code&gt;webpack.config.js&lt;/code&gt;文件后，直接使用&lt;code&gt;webpack&lt;/code&gt;命令即可，下面是命令的几种模式：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;webpack // 构建为开发环境输出
+webpack -p // 构建为生产环境输出（压缩混淆脚本）
+webpack --watch // 监听变动并自动打包
+webpack -d // 生成map映射文件，告知哪些模块被最终打包到哪里了
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;模块化&#34;&gt;模块化&lt;/h2&gt;
+
+&lt;h3 id=&#34;模块化javascript&#34;&gt;模块化JavaScript&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;安装babel-loader&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install babel-loader babel-core babel-preset-es2015 --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;配置 &lt;code&gt;webpack.config.js&lt;/code&gt;
+在 &lt;code&gt;module.exports&lt;/code&gt; 值中添加 module：&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;module.exports = {
+entry: {
+app: [&#39;./main.js&#39;]
+},
+output: {
+filename: &#39;bundle.js&#39;
+},
+module: {
+loaders: [{
+    test: /\.js$/,
+    loaders: [&#39;babel?presets[]=es2015&#39;],
+    exclude: /node_modules/
+}]
+}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;css加载器&#34;&gt;CSS加载器&lt;/h3&gt;
+
+&lt;p&gt;我们可以按传统方法使用 CSS，即在 HTML 文件中添加：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;style/app.css&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;但 webpack 里，CSS 同样可以模块化，使用 import 导入。&lt;/p&gt;
+
+&lt;p&gt;因此我们不再使用 link 标签来引用 CSS，而是通过 webpack 的 &lt;a href=&#34;https://github.com/webpack/style-loader&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;style-loader&lt;/a&gt; 及 &lt;a href=&#34;https://github.com/webpack/css-loader&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;css-loader&lt;/a&gt;。前者将 css 文件以 &lt;code&gt;&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;&lt;/code&gt; 标签插入 &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; 头部，后者负责解读、加载 CSS 文件。&lt;/p&gt;
+
+&lt;h4 id=&#34;安装-css-相关的加载器&#34;&gt;安装 CSS 相关的加载器&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install style-loader css-loader --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;配置-webpack-config-js-文件&#34;&gt;配置 webpack.config.js 文件&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
+// ...
+module: {
+    loaders: [
+        { test: /\.css$/, loaders: [&#39;style&#39;, &#39;css&#39;] }
+    ]
+}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;在-main-js-文件中引入-css&#34;&gt;在 main.js 文件中引入 css&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;import&#39;./style/app.css&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样，在执行 &lt;code&gt;webpack&lt;/code&gt; 后，我们的 CSS 文件就会被打包进 &lt;code&gt;bundle.js&lt;/code&gt; 文件中，如果不想它们被打包进去，可以使用 &lt;a href=&#34;https://github.com/webpack/extract-text-webpack-plugin&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;extract text&lt;/a&gt;扩展。&lt;/p&gt;
+
+&lt;h3 id=&#34;autoprefixer&#34;&gt;autoprefixer&lt;/h3&gt;
+
+&lt;p&gt;我们在写 CSS 时，按 CSS 规范写，构建时利用 autoprefixer 可以输出 -webkit、-moz 这样的浏览器前缀，webpack 同样是通过 loader 提供该功能。&lt;/p&gt;
+
+&lt;h4 id=&#34;安装-autoprefixer-loader&#34;&gt;安装 autoprefixer-loader&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install autoprefixer-loader --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;配置-webpack-config-js&#34;&gt;配置 webpack.config.js&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;loaders: [{
+test: /\.css$/,
+loader: &#39;style!css!autoprefixer?{browsers:[&amp;quot;last 2 version&amp;quot;, &amp;quot;&amp;gt; 1%&amp;quot;]}&#39;,
+//...
+}]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;完整示例&#34;&gt;完整示例&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var webpack = require(&#39;webpack&#39;);
+var commonsPlugin = new webpack.optimize.CommonsChunkPlugin(&#39;common.js&#39;);
+
+module.exports = {
+    //插件项
+    plugins: [commonsPlugin],
+    //页面入口文件配置
+    entry: {
+        index : &#39;./src/js/page/index.js&#39;
+    },
+    //入口文件输出配置
+    output: {
+        path: &#39;dist/js/page&#39;,
+        filename: &#39;[name].js&#39;
+    },
+    module: {
+        //加载器配置
+        loaders: [
+            //.css 文件使用 style-loader 和 css-loader 来处理
+            { test: /\.css$/, loader: &#39;style-loader!css-loader&#39; },
+            //.js 文件使用 jsx-loader 来编译处理
+            { test: /\.js$/, loader: &#39;jsx-loader?harmony&#39; },
+            //.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理
+            { test: /\.scss$/, loader: &#39;style!css!sass?sourceMap&#39;},
+            //图片文件使用 url-loader 来处理，小于8kb的直接转为base64
+            { test: /\.(png|jpg)$/, loader: &#39;url-loader?limit=8192&#39;}
+        ]
+    }
+    //其它解决方案配置
+    resolve: {
+        root: &#39;E:/github/flux-example/src&#39;, //绝对路径
+        extensions: [&#39;&#39;, &#39;.js&#39;, &#39;.json&#39;, &#39;.scss&#39;],
+        alias: {
+            AppStore : &#39;js/stores/AppStores.js&#39;,
+            ActionType : &#39;js/actions/ActionType.js&#39;,
+            AppAction : &#39;js/actions/AppAction.js&#39;
+        }
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ES6学习笔记（一）：Set和Map</title>
+      <link>https://hestation.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</link>
+      <pubDate>Tue, 05 Apr 2016 20:58:41 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</guid>
+      <description>
+
+&lt;h2 id=&#34;set&#34;&gt;Set&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://7xkus6.com1.z0.glb.clouddn.com/ES6-Set.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;es6利用set数组去重&#34;&gt;ES6利用Set数组去重：&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;方法一：&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function dedupe(array) {
+  return Array.from(new Set(array));
+}
+
+dedupe([1, 1, 2, 3]); // [1, 2, 3]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;方法二(利用扩展运算符)：&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;let arr = [3, 5, 2, 2, 5, 5];
+let unique = [...new Set(arr)];
+// [3, 5, 2]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;特性&#34;&gt;特性&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Set结构没有键名，只有键值，所以&lt;code&gt;keys()&lt;/code&gt;和&lt;code&gt;values()&lt;/code&gt;的行为完全一致。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;let set = new Set([&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;]);
+
+for (let item of set.keys()) {
+    console.log(item);
+}
+// red
+// green
+// blue
+
+for (let item of set.values()) {
+    console.log(item);
+}
+//red
+//green
+//blue
+
+for (let item of set.entries()) {
+    console.log(item);
+}
+// [&amp;quot;red&amp;quot;, &amp;quot;red&amp;quot;]
+// [&amp;quot;green&amp;quot;, &amp;quot;green&amp;quot;]
+// [&amp;quot;blue&amp;quot;, &amp;quot;blue&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;可以省略&lt;code&gt;values()&lt;/code&gt;方法，直接用&lt;code&gt;for...of&lt;/code&gt;循环遍历Set，因为其默认遍历器生成函数就是它的&lt;code&gt;values()&lt;/code&gt;方法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;Set.prototype[Symbol.iterator] === Set.prototype.values
+//true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;###　Set实现并集、交集、差集&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;let a = new Set([1, 2, 3]);
+let b = new Set([4, 3, 2]);
+
+//并集
+let union = new Set([...a, ...b]);
+//[1, 2, 3, 4]
+
+//交集
+let intersect = new Set([...a].filter(x =&amp;gt; b.has(x)));
+//[2, 3]
+
+//差集
+let difference = new Set([...a].filter(x =&amp;gt; !b.has(x)));
+//[1]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;map&#34;&gt;Map&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://7xkus6.com1.z0.glb.clouddn.com/ES6-Map.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;和对象类似，&lt;code&gt;Object&lt;/code&gt;结构提供了&lt;code&gt;“字符串-值”&lt;/code&gt;的对应，Map结构提供了&lt;code&gt;“值-值”&lt;/code&gt;的对应，是一种更完善的Hash结构实现。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;map和其他数据结构的转换&#34;&gt;Map和其他数据结构的转换&lt;/h3&gt;
+
+&lt;h4 id=&#34;map-array&#34;&gt;Map -&amp;gt; Array&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;let myMap = new Map().set(true, 7).set({foo: 3}, [&#39;abc&#39;]);
+[...myMap];
+// [[true, 7], [{foo: 3}, [&#39;abc&#39;]]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;array-map&#34;&gt;Array -&amp;gt; Map&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;new Map([[true, 7], [{foo: 3}, [&#39;abc&#39;]]])
+// Map {true =&amp;gt; 7, Object {foo: 3} =&amp;gt; [&#39;abc&#39;]}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;map-object&#34;&gt;Map -&amp;gt; Object&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function strMapToObj(strMap) {
+    let obj = Object.create(null);
+    for (let [k,v] of strMap) {
+        obj[k] = v;
+    }
+    return obj;
+}
+
+let myMap = new Map().set(&#39;yes&#39;, true).set(&#39;no&#39;, false);
+strMapToObj(myMap)
+// { yes: true, no: false }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;object-map&#34;&gt;Object -&amp;gt; Map&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function objToStrMap(obj) {
+    let strMap = new Map();
+    for (let k of Object.keys(obj)) {
+        strMap.set(k, obj[k]);
+    }
+    return strMap;
+}
+
+objToStrMap({yes: true, no: false})
+// [ [ &#39;yes&#39;, true ], [ &#39;no&#39;, false ] ]
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>前端构建工具Gulp</title>
+      <link>https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</link>
+      <pubDate>Thu, 24 Mar 2016 22:32:00 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</guid>
+      <description>
+
+&lt;h2 id=&#34;第一步-安装node&#34;&gt;第一步：安装Node&lt;/h2&gt;
+
+&lt;p&gt;首先需要搭建node环境。访问&lt;a href=&#34;http://nodejs.org&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Node.js官网&lt;/a&gt;，然后点击大大的绿色的install按钮，下载完成后直接运行程序，就一切准备就绪。npm会随着安装包一起安装，稍后会用到它。&lt;/p&gt;
+
+&lt;h2 id=&#34;第二步-使用命令行&#34;&gt;第二步：使用命令行&lt;/h2&gt;
+
+&lt;p&gt;查看node版本号&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;node -v
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;查看npm版本&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm -v
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;第三步-安装gulp&#34;&gt;第三步：安装gulp&lt;/h2&gt;
+
+&lt;p&gt;NPM是基于命令行的node包管理工具，它可以将node的程序模块安装到项目中，在它的官网中可以查看和搜索所有可用的程序模块。
+在命令行中输入&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo npm install -g gulp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;sudo是以管理员身份执行命令，一般会要求输入电脑密码&lt;/li&gt;
+&lt;li&gt;npm是安装node模块的工具，执行install命令&lt;/li&gt;
+&lt;li&gt;-g表示在全局环境安装，以便任何项目都能使用它&lt;/li&gt;
+&lt;li&gt;最后，gulp是将要安装的node模块的名字&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;运行时注意查看命令行有没有错误信息，安装完成后，你可以使用下面的命令查看gulp的版本号以确保gulp已经被正确安装。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gulp -v
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接下来，我们需要将gulp安装到项目本地&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install —-save-dev gulp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里，我们使用*&amp;ndash;save-dev*来更新package.json文件，更新*devDependencies*值，以表明项目需要依赖gulp。&lt;/p&gt;
+
+&lt;p&gt;Dependencies可以向其他参与项目的人指明项目在开发环境和生产环境中的node模块依懒关系，想要更加深入的了解它可以看看&lt;a href=&#34;https://npmjs.org/doc/json.html#dependencies&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;package.json文档&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h2 id=&#34;第四步-新建gulpfile文件-运行gulp&#34;&gt;第四步：新建Gulpfile文件，运行gulp&lt;/h2&gt;
+
+&lt;p&gt;安装好gulp后我们需要告诉它要为我们执行哪些任务，首先，我们自己需要弄清楚项目需要哪些任务。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;检查Javascript&lt;/li&gt;
+&lt;li&gt;编译Sass（或Less之类的）文件&lt;/li&gt;
+&lt;li&gt;合并Javascript&lt;/li&gt;
+&lt;li&gt;压缩并重命名合并后的Javascript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;安装依赖&#34;&gt;安装依赖&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install gulp-jshint gulp-sass gulp-concat gulp-uglify gulp-rename --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;提醒下，如果以上命令提示权限错误，需要添加sudo再次尝试。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;新建gulpfile文件&#34;&gt;新建gulpfile文件&lt;/h3&gt;
+
+&lt;p&gt;现在，组件都安装完毕，我们需要新建gulpfile文件以指定gulp需要为我们完成什么任务。&lt;/p&gt;
+
+&lt;p&gt;gulp只有五个方法： *task*，*run*，*watch*，*src*，和*dest*，在项目根目录新建一个js文件并命名为*gulpfile.js*，把下面的代码粘贴进去：&lt;/p&gt;
+
+&lt;h4 id=&#34;gulpfile-js&#34;&gt;gulpfile.js&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// 引入 gulp
+var gulp = require(&#39;gulp&#39;);
+
+// 引入组件
+var jshint = require(&#39;gulp-jshint&#39;);
+var sass = require(&#39;gulp-sass&#39;);
+var concat = require(&#39;gulp-concat&#39;);
+var uglify = require(&#39;gulp-uglify&#39;);
+var rename = require(&#39;gulp-rename&#39;);
+
+// 检查脚本
+gulp.task(&#39;lint&#39;, function() {
+    gulp.src(&#39;./js/*.js&#39;)
+        .pipe(jshint())
+        .pipe(jshint.reporter(&#39;default&#39;));
+});
+
+// 编译Sass
+gulp.task(&#39;sass&#39;, function() {
+    gulp.src(&#39;./scss/*.scss&#39;)
+        .pipe(sass())
+        .pipe(gulp.dest(&#39;./css&#39;));
+});
+
+// 合并，压缩文件
+gulp.task(&#39;scripts&#39;, function() {
+    gulp.src(&#39;./js/*.js&#39;)
+        .pipe(concat(&#39;all.js&#39;))
+        .pipe(gulp.dest(&#39;./dist&#39;))
+        .pipe(rename(&#39;all.min.js&#39;))
+        .pipe(uglify())
+        .pipe(gulp.dest(&#39;./dist&#39;));
+});
+
+// 默认任务
+gulp.task(&#39;default&#39;, function(){
+    gulp.run(&#39;lint&#39;, &#39;sass&#39;, &#39;scripts&#39;);
+
+    // 监听文件变化
+    gulp.watch(&#39;./js/*.js&#39;, function(){
+        gulp.run(&#39;lint&#39;, &#39;sass&#39;, &#39;scripts&#39;);
+    });
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;现在，分段解释下这段代码。&lt;/p&gt;
+
+&lt;h3 id=&#34;引入组件&#34;&gt;引入组件&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var gulp = require(&#39;gulp&#39;);
+var jshint = require(&#39;gulp-jshint&#39;);
+var sass = require(&#39;gulp-sass&#39;);
+var concat = require(&#39;gulp-concat&#39;);
+var uglify = require(&#39;gulp-uglify&#39;);
+var rename = require(&#39;gulp-rename&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这一步，我们引入了核心的gulp和其他依赖组件，接下来，分开创建lint, sass, scripts 和 default这四个不同的任务。&lt;/p&gt;
+
+&lt;h3 id=&#34;lint任务&#34;&gt;Lint任务&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;gulp.task(&#39;lint&#39;, function() {
+    gulp.src(&#39;./js/*.js&#39;)
+        .pipe(jshint())
+        .pipe(jshint.reporter(&#39;default&#39;));
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Link任务会检查js/目录下得js文件有没有报错或警告。&lt;/p&gt;
+
+&lt;h3 id=&#34;sass任务&#34;&gt;Sass任务&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;gulp.task(&#39;sass&#39;, function() {
+    gulp.src(&#39;./scss/*.scss&#39;)
+        .pipe(sass())
+        .pipe(gulp.dest(&#39;./css&#39;));
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sass任务会编译scss/目录下的scss文件，并把编译完成的css文件保存到/css目录中。&lt;/p&gt;
+
+&lt;h3 id=&#34;scripts-任务&#34;&gt;Scripts 任务&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;gulp.task(&#39;scripts&#39;, function() {
+    gulp.src(&#39;./js/*.js&#39;)
+        .pipe(concat(&#39;all.js&#39;))
+        .pipe(gulp.dest(&#39;./dist&#39;))
+        .pipe(rename(&#39;all.min.js&#39;))
+        .pipe(uglify())
+        .pipe(gulp.dest(&#39;./dist&#39;));
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;scripts任务会合并js/目录下得所有得js文件并输出到dist/目录，然后gulp会重命名、压缩合并的文件，也输出到dist/目录。&lt;/p&gt;
+
+&lt;h3 id=&#34;default任务&#34;&gt;default任务&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;gulp.task(&#39;default&#39;, function(){
+    gulp.run(&#39;lint&#39;, &#39;sass&#39;, &#39;scripts&#39;);
+    gulp.watch(&#39;./js/*.js&#39;, function(){
+        gulp.run(&#39;lint&#39;, &#39;sass&#39;, &#39;scripts&#39;);
+    });
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这时，我们创建了一个基于其他任务的default任务。使用.run()方法关联和运行我们上面定义的任务，使用.watch()方法去监听指定目录的文件变化，当有文件变化时，会运行回调定义的其他任务。&lt;/p&gt;
+
+&lt;p&gt;现在，回到命令行，可以直接运行gulp任务了。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gulp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这将执行定义的default任务，换言之，这和以下的命令式同一个意思&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gulp default
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;当然，我们可以运行在*gulpfile.js*中定义的任意任务，比如，现在运行sass任务：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gulp sass
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

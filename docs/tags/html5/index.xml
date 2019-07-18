@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Html5 on Jiegao</title>
+    <link>https://hestation.com/tags/html5/</link>
+    <description>Recent content in Html5 on Jiegao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Aug 2015 18:34:25 +0000</lastBuildDate>
+    
+	<atom:link href="https://hestation.com/tags/html5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Html5之Canvas</title>
+      <link>https://hestation.com/2015/canvas/</link>
+      <pubDate>Wed, 26 Aug 2015 18:34:25 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/canvas/</guid>
+      <description> 绘制2D图形：  var canvas = document.getElementById(&#39;canvas&#39;); var context = canvas.getContext(&#39;2d&#39;);  一条路径开始：  context.beginPath(); //状态开始  结束：  context.closePath(); //状态结束  线段起始位置：  context.moveTo(100, 100); //起点坐标 context.lineTo(400, 400); //终点坐标  如果有多条相连的线段，可用多个lineTo直接首尾相连：  context.moveTo(100, 100); context.lineTo(400, 400); context.lineTo(100, 400); context.lineTo(100, 100);  设置线条属性：  context.lineWidth = 5; //线条宽度 context.strokeStyle = &#39;red&#39;; //线条颜色  对于一个封闭图形，可以填充颜色：  context.fillStyle = &#39;rbg(2, 100, 30)&#39;; //填充颜色 context.fill();  绘制图形：  context.stroke();  </description>
+    </item>
+    
+  </channel>
+</rss>

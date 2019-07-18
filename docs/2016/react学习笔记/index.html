@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Jiegao">
+  
+  
+  
+  <link rel="prev" href="https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/" />
+  <link rel="next" href="https://hestation.com/2017/my-first-post/" />
+  <link rel="canonical" href="https://hestation.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           React学习笔记 | Jiegao
+       
+  </title>
+  <meta name="title" content="React学习笔记 | Jiegao">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hestation.com"
+    },
+    "articleSection" : "posts",
+    "name" : "React学习笔记",
+    "headline" : "React学习笔记",
+    "description" : "前言 前段时间看了一下React和react-router的文档，这几天用它们在做一个实时投票的Web App，这篇文章记录里面遇到的坑及其解决方法。\n获取真实DOM节点的引用 添加ref属性\nref={(ref) =\x26gt; this.name = ref}  Demo:\nexport default class Join extends React.Component { constructor(props) { super(props); this.handleSubmit = (e) =\x26gt; { e.preventDefault(); let memberName = this.name.value; console.log(\x26quot;TODO: Join member \x26quot; \x2b memberName); } } render() { return ( \x26lt;form onSubmit={this.handleSubmit}\x26gt; \x26lt;label\x26gt;Full Name\x26lt;\/label\x26gt; \x26lt;input ref={(ref) =\x26gt; this.name = ref} className=\x26quot;form-control\x26quot; placeholder=\x26quot;Enter your full name...\x26quot; required \/\x26gt; \x26lt;button className=\x26quot;btn btn-primary\x26quot;\x26gt;Join\x26lt;\/button\x26gt; \x26lt;\/form\x26gt; ); } }  使用React-Router时父组件向子组件传递props 原本渲染所有路由组件的写法为：",
+    "inLanguage" : "en-us",
+    "author" : "Jiegao",
+    "creator" : "Jiegao",
+    "publisher": "Jiegao",
+    "accountablePerson" : "Jiegao",
+    "copyrightHolder" : "Jiegao",
+    "copyrightYear" : "2016",
+    "datePublished": "2016-06-11 14:23:41 \x2b0000 UTC",
+    "dateModified" : "2016-06-11 14:23:41 \x2b0000 UTC",
+    "url" : "https:\/\/hestation.com\/2016\/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/",
+    "wordCount" : "115",
+    "keywords" : [ "React","学习笔记", "Jiegao"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">React学习笔记</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://hestation.com" rel="author">Jiegao</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2016-06-11 itemprop="datePublished">June 11, 2016</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hestation.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="前言">前言</h2>
+
+<p>前段时间看了一下React和react-router的文档，这几天用它们在做一个实时投票的Web App，这篇文章记录里面遇到的坑及其解决方法。</p>
+
+<h2 id="获取真实dom节点的引用">获取真实DOM节点的引用</h2>
+
+<p>添加ref属性</p>
+
+<pre><code class="language-javascript">ref={(ref) =&gt; this.name = ref}
+</code></pre>
+
+<p>Demo:</p>
+
+<pre><code class="language-javascript">export default class Join extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.handleSubmit = (e) =&gt; {
+            e.preventDefault();
+            let memberName = this.name.value;
+            console.log(&quot;TODO: Join member &quot; + memberName);
+        }
+    }
+    render() {
+        return (
+            &lt;form onSubmit={this.handleSubmit}&gt;
+                &lt;label&gt;Full Name&lt;/label&gt;
+                &lt;input
+                    ref={(ref) =&gt; this.name = ref}
+                    className=&quot;form-control&quot;
+                    placeholder=&quot;Enter your full name...&quot;
+                    required /&gt;
+                &lt;button className=&quot;btn btn-primary&quot;&gt;Join&lt;/button&gt;
+            &lt;/form&gt;
+        );
+    }
+}
+</code></pre>
+
+<h2 id="使用react-router时父组件向子组件传递props">使用React-Router时父组件向子组件传递props</h2>
+
+<p>原本渲染所有路由组件的写法为：</p>
+
+<pre><code>{this.props.children}
+</code></pre>
+
+<p>现可表示为：
+在父组件的return的最底部添加：</p>
+
+<pre><code class="language-javascript">{React.cloneElement(this.props.children, {propsName: this.props.name})}
+</code></pre>
+
+<h2 id="react-router">React-Router</h2>
+
+<h3 id="默认路由">默认路由</h3>
+
+<pre><code>&lt;IndexRoute component={Audience} /&gt;
+</code></pre>
+
+<h3 id="重定向">重定向</h3>
+
+<pre><code class="language-html">&lt;Redirect from=&quot;audience&quot; to=&quot;/&quot; /&gt;
+</code></pre>
+
+<p>Demo:</p>
+
+<pre><code class="language-html">ReactDOM.render((
+    &lt;Router history={hashHistory}&gt;
+        &lt;Route path=&quot;/&quot; component={App}&gt;
+            &lt;IndexRoute component={Audience} /&gt;
+            &lt;Route path=&quot;board&quot; component={Board} /&gt;
+            &lt;Route path=&quot;speaker&quot; component={Speaker} /&gt;
+            &lt;Redirect from=&quot;audience&quot; to=&quot;/&quot; /&gt;
+            &lt;Route path=&quot;*&quot; component={NotFound} /&gt;
+        &lt;/Route&gt;
+    &lt;/Router&gt;
+), document.getElementById('container'));
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Jiegao </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hestation.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/>https://hestation.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://hestation.com/tags/react/">
+                    #React</a></span>
+            
+            <span class="tag"><a href="https://hestation.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                    #学习笔记</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hestation.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/" class="prev" rel="prev" title="Webpack--令人困惑的地方"><i class="iconfont icon-left"></i>&nbsp;Webpack--令人困惑的地方</a>
+         
+        
+        <a href="https://hestation.com/2017/my-first-post/" class="next" rel="next" title="第一篇文章用于测试">第一篇文章用于测试&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2016 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hestation.com">Jiegao</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

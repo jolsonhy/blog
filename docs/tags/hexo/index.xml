@@ -26,5 +26,34 @@
 git init git commit -m “first commit” git remote add origin git@github.</description>
     </item>
     
+    <item>
+      <title>自动备份Hexo博客源文件</title>
+      <link>https://hestation.com/2015/automatic-backup/</link>
+      <pubDate>Sun, 06 Dec 2015 08:38:24 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/automatic-backup/</guid>
+      <description>前言 这两天给电脑换上了SSD和内存，系统重装，一堆的软件和配置真是折腾死了。得益于之前加入的一个博文自动备份到Github上的脚本，让我没有再为这个费头脑。所以此文记录自动备份Hexo博客源文件到Github的过程。
+原文出自：自动备份Hexo博客源文件
+原理 通过通过监听Hexo的其它事件来完成自动执行Git命令完成自动备份。 通过查阅Hexo文档，找到了Hexo的主要事件，见下表：
+   事件名  事件发生时间     deployBefore 在部署完成前发布   deployAfter 在部署成功后发布   exit 在 Hexo 结束前发布   generateBefore 在静态文件生成前发布   generateAfter 在静态文件生成后发布   new 在文章文件建立后发布    于是我们就可以通过监听Hexo的deployAfter事件，待上传完成之后自动运行Git备份命令，从而达到自动备份的目的。
+实现 将Hexo目录加入Git仓库 1、在Github下创建一个新的repository，取名为HEXO。(与本地的Hexo源码文件夹同名即可)进入本地的Hexo文件夹，执行以下命令创建仓库:
+git init  2、设置远程仓库地址，并更新:
+git remote add origin git@github.com:XXX/XXX.git git pull origin master  3、修改.gitignore文件（如果没有请手动创建一个），在里面加入*.log 和 public/ 以及.deploy*/。因为每次执行hexo generate命令时，上述目录都会被重写更新。因此忽略这两个目录下的文件更新，加快push速度。
+4、执行命令以下命令，完成Hexo源码在本地的提交:
+git add .</description>
+    </item>
+    
+    <item>
+      <title>搭建Hexo博客过程</title>
+      <link>https://hestation.com/2015/build-a-blog/</link>
+      <pubDate>Sun, 04 Oct 2015 21:07:12 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/build-a-blog/</guid>
+      <description>搭建前的准备  安装Hexo前，电脑上需要有下面两个应用程序：  Node.js Git   Git和Node.js的安装过程在此不详细展开，可参照官网的教程。
+搭建过程 使用npm安装Hexo $ npm install -g hexo-cli ```` ps：此过程如果没有翻墙可能会出现一直在下载安装但很久都没有有提示成功的情况，这时候可以换一种方式： 采用淘宝街镜像源安装： ``` bash npm install -g hexo-cli --registry=https://registry.npm.taobao.org  建站 mkdir &amp;lt;folder&amp;gt; cd hexo hexo init npm install  新建完成后，制定文件夹的目录如下：
+. ├── _config.yml ├── package.json ├── scaffolds ├── scripts ├── source | ├── _drafts | └── _posts └── themes  （ps：此目录来自官网：Hexo建站）
+3. 本地生成和查看 hexo server  然后直接登录 http://localhost:4000 就可以看到本地的默认风格的 Hexo Blog 了。</description>
+    </item>
+    
   </channel>
 </rss>

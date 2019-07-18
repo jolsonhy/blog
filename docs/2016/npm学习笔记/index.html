@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Jiegao">
+  
+  
+  
+  <link rel="prev" href="https://hestation.com/2016/xiachufang/" />
+  <link rel="next" href="https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/" />
+  <link rel="canonical" href="https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           npm学习笔记 | Jiegao
+       
+  </title>
+  <meta name="title" content="npm学习笔记 | Jiegao">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hestation.com"
+    },
+    "articleSection" : "posts",
+    "name" : "npm学习笔记",
+    "headline" : "npm学习笔记",
+    "description" : "前言 近期在做一个投票项目的应用时，突然发现对npm的认识很少，故查询了一些资料，现将自己的笔记总结在此。\n介绍 npm是Node.js的包管理工具\n命令  查看用户手册\nnpm -h   生成package.json bash npm init    \x26ndash;save-dev与\x26ndash;save的区别  npm install module-name --save-dev \/\/ 把模块和版本号添加到dependencies部分 npm install module-name --save \/\/ 把模块和版本号添加到devDependencies部分  devDependencies下列出的模块，是我们开发时用的，比如grunt-contrib-uglify，我们用它混淆js文件，它们不会被部署到生产环境。dependencies下的模块，则是我们生产环境中需要的依赖。",
+    "inLanguage" : "en-us",
+    "author" : "Jiegao",
+    "creator" : "Jiegao",
+    "publisher": "Jiegao",
+    "accountablePerson" : "Jiegao",
+    "copyrightHolder" : "Jiegao",
+    "copyrightYear" : "2016",
+    "datePublished": "2016-05-16 08:59:00 \x2b0000 UTC",
+    "dateModified" : "2016-05-16 08:59:00 \x2b0000 UTC",
+    "url" : "https:\/\/hestation.com\/2016\/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0\/",
+    "wordCount" : "26",
+    "keywords" : [ "npm","学习笔记", "Jiegao"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">npm学习笔记</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://hestation.com" rel="author">Jiegao</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2016-05-16 itemprop="datePublished">May 16, 2016</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hestation.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="前言">前言</h2>
+
+<p>近期在做一个投票项目的应用时，突然发现对npm的认识很少，故查询了一些资料，现将自己的笔记总结在此。</p>
+
+<h2 id="介绍">介绍</h2>
+
+<p>npm是Node.js的包管理工具</p>
+
+<h2 id="命令">命令</h2>
+
+<ul>
+<li><p>查看用户手册</p>
+
+<pre><code class="language-bash">npm -h
+</code></pre>
+
+<ul>
+<li>生成package.json
+<code>bash
+npm init
+</code></li>
+</ul></li>
+</ul>
+
+<h2 id="save-dev与-save的区别">&ndash;save-dev与&ndash;save的区别</h2>
+
+<ul>
+<li><code>npm install module-name --save-dev</code> // 把模块和版本号添加到dependencies部分</li>
+<li><code>npm install module-name --save</code> // 把模块和版本号添加到devDependencies部分</li>
+</ul>
+
+<p>devDependencies下列出的模块，是我们开发时用的，比如grunt-contrib-uglify，我们用它混淆js文件，它们不会被部署到生产环境。dependencies下的模块，则是我们生产环境中需要的依赖。</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Jiegao </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/>https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://hestation.com/tags/npm/">
+                    #npm</a></span>
+            
+            <span class="tag"><a href="https://hestation.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                    #学习笔记</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hestation.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hestation.com/2016/xiachufang/" class="prev" rel="prev" title="前端学习笔记"><i class="iconfont icon-left"></i>&nbsp;前端学习笔记</a>
+         
+        
+        <a href="https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/" class="next" rel="next" title="Webpack--令人困惑的地方">Webpack--令人困惑的地方&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2016 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hestation.com">Jiegao</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

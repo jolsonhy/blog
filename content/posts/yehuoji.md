@@ -1,7 +1,7 @@
 ---
 title: "龙应台《 野火集》摘录"
 date: 2017-07-16T16:08:12+08:00
-categories: [读书学习]
+categories: [学习笔记]
 tags: [笔记]
 ---
 

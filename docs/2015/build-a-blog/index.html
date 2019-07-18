@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Jiegao">
+  
+  
+  
+  <link rel="prev" href="https://hestation.com/2015/chrome-flash-collapse/" />
+  <link rel="next" href="https://hestation.com/2015/http-learning/" />
+  <link rel="canonical" href="https://hestation.com/2015/build-a-blog/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           搭建Hexo博客过程 | Jiegao
+       
+  </title>
+  <meta name="title" content="搭建Hexo博客过程 | Jiegao">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hestation.com"
+    },
+    "articleSection" : "posts",
+    "name" : "搭建Hexo博客过程",
+    "headline" : "搭建Hexo博客过程",
+    "description" : "搭建前的准备  安装Hexo前，电脑上需要有下面两个应用程序：  Node.js Git   Git和Node.js的安装过程在此不详细展开，可参照官网的教程。\n搭建过程 使用npm安装Hexo $ npm install -g hexo-cli ```` ps：此过程如果没有翻墙可能会出现一直在下载安装但很久都没有有提示成功的情况，这时候可以换一种方式： 采用淘宝街镜像源安装： ``` bash npm install -g hexo-cli --registry=https:\/\/registry.npm.taobao.org  建站 mkdir \x26lt;folder\x26gt; cd hexo hexo init npm install  新建完成后，制定文件夹的目录如下：\n. ├── _config.yml ├── package.json ├── scaffolds ├── scripts ├── source | ├── _drafts | └── _posts └── themes  （ps：此目录来自官网：Hexo建站）\n3. 本地生成和查看 hexo server  然后直接登录 http:\/\/localhost:4000 就可以看到本地的默认风格的 Hexo Blog 了。",
+    "inLanguage" : "en-us",
+    "author" : "Jiegao",
+    "creator" : "Jiegao",
+    "publisher": "Jiegao",
+    "accountablePerson" : "Jiegao",
+    "copyrightHolder" : "Jiegao",
+    "copyrightYear" : "2015",
+    "datePublished": "2015-10-04 21:07:12 \x2b0000 UTC",
+    "dateModified" : "2015-10-04 21:07:12 \x2b0000 UTC",
+    "url" : "https:\/\/hestation.com\/2015\/build-a-blog\/",
+    "wordCount" : "352",
+    "keywords" : [ "hexo","教程", "Jiegao"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">搭建Hexo博客过程</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://hestation.com" rel="author">Jiegao</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2015-10-04 itemprop="datePublished">October 4, 2015</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hestation.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="搭建前的准备">搭建前的准备</h2>
+
+<ol>
+<li>安装Hexo前，电脑上需要有下面两个应用程序：
+
+<ul>
+<li><a href="http://nodejs.org/" rel="nofollow noreferrer" target="_blank">Node.js</a></li>
+<li><a href="http://git-scm.com/" rel="nofollow noreferrer" target="_blank">Git</a></li>
+</ul></li>
+</ol>
+
+<p>Git和Node.js的安装过程在此不详细展开，可参照官网的教程。</p>
+
+<h2 id="搭建过程">搭建过程</h2>
+
+<h3 id="使用npm安装hexo">使用npm安装Hexo</h3>
+
+<pre><code class="language-bash">$ npm install -g hexo-cli
+````
+
+ps：此过程如果没有翻墙可能会出现一直在下载安装但很久都没有有提示成功的情况，这时候可以换一种方式：
+采用淘宝街镜像源安装：
+
+``` bash
+npm install -g hexo-cli --registry=https://registry.npm.taobao.org
+</code></pre>
+
+<h3 id="建站">建站</h3>
+
+<pre><code class="language-bash">mkdir &lt;folder&gt;
+cd hexo
+hexo init
+npm install
+</code></pre>
+
+<p>新建完成后，制定文件夹的目录如下：</p>
+
+<pre><code class="language-bash">.
+├── _config.yml
+├── package.json
+├── scaffolds
+├── scripts
+├── source
+|   ├── _drafts
+|   └── _posts
+└── themes
+</code></pre>
+
+<p>（ps：此目录来自官网：<a href="https://hexo.io/zh-cn/docs/setup.html" rel="nofollow noreferrer" target="_blank">Hexo建站</a>）</p>
+
+<h3 id="3-本地生成和查看">3. 本地生成和查看</h3>
+
+<pre><code class="language-bash">hexo server
+</code></pre>
+
+<p>然后直接登录 <a href="http://127.0.0.1:4000" rel="nofollow noreferrer" target="_blank">http://localhost:4000</a> 就可以看到本地的默认风格的 Hexo Blog 了。</p>
+
+<h2 id="生成本地ssh-key">生成本地SSH Key</h2>
+
+<pre><code class="language-bash">$ssh-keygen -t rsa -C &quot;youremail@example.com&quot;  //创建SSH Key
+$git config --global user.name &quot;yourname&quot;  
+$git config --global user.email &quot;youremail@example.com&quot;  
+$cd ~/.ssh/  
+$cat id_rsa.pub  //这里的id_rsa.pub是公钥，可以告诉任何人
+</code></pre>
+
+<blockquote>
+<p>这里的SSH key之后绑定<code>Github</code>和<code>Gitcafe</code>都需要用到。</p>
+</blockquote>
+
+<h2 id="生成github-pages">生成Github Pages</h2>
+
+<p>1、给GitHub配置生成的SSH Key，路径是GitHub右上角的小齿轮(设置入口) -&gt; SSH keys -&gt; Add SSH Keys -&gt; 输入title -&gt; 把id_rsa.pub里的内容复制到Key里 -&gt; 提交。</p>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://7xkus6.com1.z0.glb.clouddn.com/build-a-blog-1.png" alt="添加SSH Key到Github里" class="lazyload"><figcaption class="image-caption">添加SSH Key到Github里</figcaption></figure></p>
+
+<p>2、新建一个Repository，假如你的Github名字为michael，这个仓库名就是：michael.github.io，即：</p>
+
+<pre><code class="language-bash">用户名.github.io
+</code></pre>
+
+<blockquote>
+<p>具体操作可直接参考<a href="https://pages.github.com/" rel="nofollow noreferrer" target="_blank">Github Pages官方教程</a>。</p>
+</blockquote>
+
+<h2 id="生成gitcafe-pages">生成Gitcafe Pages</h2>
+
+<p>Gitcafe Pages和Github的类似，但需要注意的是，其仓库名应该是与用户名完全一样，然后自己的代码都放在gitcafe-pages分支上，这一点与Github不同，其他操作类似。</p>
+
+<blockquote>
+<p>具体操作可直接参考<a href="https://gitcafe.com/GitCafe/Help/wiki/Pages-%E7%9B%B8%E5%85%B3%E5%B8%AE%E5%8A%A9?locale=zh-CN" rel="nofollow noreferrer" target="_blank">Gitcafe Pages官方教程</a>。</p>
+</blockquote>
+
+<h2 id="hexo全局配置">Hexo全局配置</h2>
+
+<p>用文本编辑器修改_config.yml这个文件，大致如下，只需要自行修改几个，其他保持默认即可。</p>
+
+<p>通常需要修改站点名称、URL格式、归档设置、disqus评论用户名、部署配置这几项就可以了，注意冒号后面都要添加一个半角空格，之后才是设置参数。</p>
+
+<p>自定义域名设置：</p>
+
+<p>在source文件夹下面新建CNAME文件，里面写入你的自定义域名，并设置您的DNS配置CNAME方式到服务提供商的给的地址即可。</p>
+
+<pre><code class="language-bash">//网站
+参数  //描述
+title   //网站标题
+subtitle    //网站副标题
+description //网站描述
+author  //您的名字
+language    //网站使用的语言
+timezone    //网站时区。Hexo 预设使用您电脑的时区。时区列表
+
+//网址
+//参数、描述、默认值
+url  //网址  
+root  //网站根目录   
+permalink  //文章的永久链接,格式 :year/:month/:day/:title/
+permalink_default  //永久链接中各部分的默认值    
+网站存放在子目录
+如果您的网站存放在子目录中，例如 http://yoursite.com/blog，则请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。
+
+// 目录
+//参数  描述  默认值
+source_dir  //资源文件夹，这个文件夹用来存放内容。  source
+public_dir  //公共文件夹，这个文件夹用于存放生成的站点文件。 public
+tag_dir 标签文件夹  //tags
+archive_dir 归档文件夹  // archives
+category_dir    分类文件夹  // categories
+code_dir    Include code 文件夹   // downloads/code
+i18n_dir    国际化（i18n）文件夹   // :lang
+skip_render 跳过指定文件的渲染，您可使用 glob 来配置路径。  
+
+// 文章
+//参数  描述  默认值
+new_post_name   //新文章的文件名称   :title.md
+default_layout  //预设布局   post
+auto_spacing    //在中文和英文之间加入空格    false
+titlecase  // 把标题转换为 title case   false
+external_link   //在新标签中打开链接   true
+filename_case  // 把文件名称转换为 (1) 小写或 (2) 大写 0
+render_drafts   //显示草稿    false
+post_asset_folder   //启动 Asset 文件夹    false
+relative_link   //把链接改为与根目录的相对位址  false
+future  //显示未来的文章 true
+highlight  // 代码块的设置  
+
+// 分类 &amp; 标签
+//参数  描述  默认值
+default_category  //  默认分类    uncategorized
+category_map   // 分类别名    
+tag_map //标签别名    
+日期 / 时间格式
+Hexo 使用 Moment.js 来解析和显示时间。
+
+//参数  描述  默认值
+date_format //日期格式    MMM D YYYY
+time_format //时间格式    H:mm:ss
+//分页
+//参数  描述  默认值
+per_page   // 每页显示的文章量 (0 = 关闭分页功能)   10
+pagination_dir  //分页目录    page
+
+// 扩展
+//参数  描述
+theme  // 当前主题名称
+deploy  //部署
+</code></pre>
+
+<h2 id="hexo部署">Hexo部署</h2>
+
+<h3 id="修改-hexo-根目录下-config-yml-文件-xxxx-为你的用户名">修改 hexo 根目录下 _config.yml 文件(‘xxxx’为你的用户名)：</h3>
+
+<pre><code class="language-bash"> deploy:
+   type: git
+   message: Site updated
+   repo:
+     github: https://github.com/xxxx/xxxx.github.io.git,master
+     gitcafe: https://gitcafe.com/xxxx/xxxx.git,gitcafe-pages
+</code></pre>
+
+<h3 id="安装-hexo-deployer-git">安装 hexo-deployer-git</h3>
+
+<pre><code class="language-bash"> npm install hexo-deployer-git --save
+</code></pre>
+
+<h3 id="更新hexo到最新版">更新hexo到最新版</h3>
+
+<pre><code class="language-bash"> npm update hexo -g
+</code></pre>
+
+<h3 id="写作命令">写作命令</h3>
+
+<ul>
+<li>建立新文章：<code>hexo n &quot;新文章名&quot;</code></li>
+<li>预览文章：<code>hexo s</code></li>
+<li>生成网页：<code>hexo g</code></li>
+<li>发布文章：<code>hexo d</code></li>
+<li>生成网页并发布文章：<code>hexo d -g</code></li>
+</ul>
+
+<h2 id="nameserver和dnspod">NameServer和DNSPod</h2>
+
+<ol>
+<li><p>去域名服务商页面把 NameServer 设为 DNSPod 的 NS：f1g1ns1.dnspod.net 和 f1g1ns2.dnspod.net.</p></li>
+
+<li><p>DNSPod 的设定见图(红色的部分是 GitHub 的账户名称)：</p></li>
+</ol>
+
+<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://7xkus6.com1.z0.glb.clouddn.com/build-a-blog-2.png" alt="pic1" class="lazyload"><figcaption class="image-caption">pic1</figcaption></figure>
+ <figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://7xkus6.com1.z0.glb.clouddn.com/build-a-blog-3.png" alt="pic2" class="lazyload"><figcaption class="image-caption">pic2</figcaption></figure></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Jiegao </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hestation.com/2015/build-a-blog/>https://hestation.com/2015/build-a-blog/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://hestation.com/tags/hexo/">
+                    #hexo</a></span>
+            
+            <span class="tag"><a href="https://hestation.com/tags/%E6%95%99%E7%A8%8B/">
+                    #教程</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hestation.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hestation.com/2015/chrome-flash-collapse/" class="prev" rel="prev" title="Chrome下Flash崩溃的解决方案"><i class="iconfont icon-left"></i>&nbsp;Chrome下Flash崩溃的解决方案</a>
+         
+        
+        <a href="https://hestation.com/2015/http-learning/" class="next" rel="next" title="图解HTTP学习笔记">图解HTTP学习笔记&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2016 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hestation.com">Jiegao</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gulp on Jiegao</title>
+    <link>https://hestation.com/tags/gulp/</link>
+    <description>Recent content in Gulp on Jiegao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Mar 2016 22:32:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hestation.com/tags/gulp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>前端构建工具Gulp</title>
+      <link>https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</link>
+      <pubDate>Thu, 24 Mar 2016 22:32:00 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</guid>
+      <description>第一步：安装Node 首先需要搭建node环境。访问Node.js官网，然后点击大大的绿色的install按钮，下载完成后直接运行程序，就一切准备就绪。npm会随着安装包一起安装，稍后会用到它。
+第二步：使用命令行 查看node版本号
+node -v  查看npm版本
+npm -v  第三步：安装gulp NPM是基于命令行的node包管理工具，它可以将node的程序模块安装到项目中，在它的官网中可以查看和搜索所有可用的程序模块。 在命令行中输入
+sudo npm install -g gulp   sudo是以管理员身份执行命令，一般会要求输入电脑密码 npm是安装node模块的工具，执行install命令 -g表示在全局环境安装，以便任何项目都能使用它 最后，gulp是将要安装的node模块的名字  运行时注意查看命令行有没有错误信息，安装完成后，你可以使用下面的命令查看gulp的版本号以确保gulp已经被正确安装。
+gulp -v  接下来，我们需要将gulp安装到项目本地
+npm install —-save-dev gulp  这里，我们使用*&amp;ndash;save-dev*来更新package.json文件，更新*devDependencies*值，以表明项目需要依赖gulp。
+Dependencies可以向其他参与项目的人指明项目在开发环境和生产环境中的node模块依懒关系，想要更加深入的了解它可以看看package.json文档。
+第四步：新建Gulpfile文件，运行gulp 安装好gulp后我们需要告诉它要为我们执行哪些任务，首先，我们自己需要弄清楚项目需要哪些任务。
+ 检查Javascript 编译Sass（或Less之类的）文件 合并Javascript 压缩并重命名合并后的Javascript  安装依赖 npm install gulp-jshint gulp-sass gulp-concat gulp-uglify gulp-rename --save-dev   提醒下，如果以上命令提示权限错误，需要添加sudo再次尝试。
+ 新建gulpfile文件 现在，组件都安装完毕，我们需要新建gulpfile文件以指定gulp需要为我们完成什么任务。
+gulp只有五个方法： *task*，*run*，*watch*，*src*，和*dest*，在项目根目录新建一个js文件并命名为*gulpfile.js*，把下面的代码粘贴进去：
+gulpfile.js // 引入 gulp var gulp = require(&#39;gulp&#39;); // 引入组件 var jshint = require(&#39;gulp-jshint&#39;); var sass = require(&#39;gulp-sass&#39;); var concat = require(&#39;gulp-concat&#39;); var uglify = require(&#39;gulp-uglify&#39;); var rename = require(&#39;gulp-rename&#39;); // 检查脚本 gulp.</description>
+    </item>
+    
+  </channel>
+</rss>

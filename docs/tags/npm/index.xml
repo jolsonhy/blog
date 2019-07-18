@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>npm on Jiegao</title>
+    <link>https://hestation.com/tags/npm/</link>
+    <description>Recent content in npm on Jiegao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 May 2016 08:59:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hestation.com/tags/npm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>npm学习笔记</title>
+      <link>https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 16 May 2016 08:59:00 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>前言 近期在做一个投票项目的应用时，突然发现对npm的认识很少，故查询了一些资料，现将自己的笔记总结在此。
+介绍 npm是Node.js的包管理工具
+命令  查看用户手册
+npm -h   生成package.json bash npm init    &amp;ndash;save-dev与&amp;ndash;save的区别  npm install module-name --save-dev // 把模块和版本号添加到dependencies部分 npm install module-name --save // 把模块和版本号添加到devDependencies部分  devDependencies下列出的模块，是我们开发时用的，比如grunt-contrib-uglify，我们用它混淆js文件，它们不会被部署到生产环境。dependencies下的模块，则是我们生产环境中需要的依赖。</description>
+    </item>
+    
+  </channel>
+</rss>

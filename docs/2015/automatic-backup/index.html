@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Jiegao">
+  
+  
+  
+  <link rel="prev" href="https://hestation.com/2015/centos-python/" />
+  <link rel="next" href="https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/" />
+  <link rel="canonical" href="https://hestation.com/2015/automatic-backup/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           自动备份Hexo博客源文件 | Jiegao
+       
+  </title>
+  <meta name="title" content="自动备份Hexo博客源文件 | Jiegao">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hestation.com"
+    },
+    "articleSection" : "posts",
+    "name" : "自动备份Hexo博客源文件",
+    "headline" : "自动备份Hexo博客源文件",
+    "description" : "前言 这两天给电脑换上了SSD和内存，系统重装，一堆的软件和配置真是折腾死了。得益于之前加入的一个博文自动备份到Github上的脚本，让我没有再为这个费头脑。所以此文记录自动备份Hexo博客源文件到Github的过程。\n原文出自：自动备份Hexo博客源文件\n原理 通过通过监听Hexo的其它事件来完成自动执行Git命令完成自动备份。 通过查阅Hexo文档，找到了Hexo的主要事件，见下表：\n   事件名  事件发生时间     deployBefore 在部署完成前发布   deployAfter 在部署成功后发布   exit 在 Hexo 结束前发布   generateBefore 在静态文件生成前发布   generateAfter 在静态文件生成后发布   new 在文章文件建立后发布    于是我们就可以通过监听Hexo的deployAfter事件，待上传完成之后自动运行Git备份命令，从而达到自动备份的目的。\n实现 将Hexo目录加入Git仓库 1、在Github下创建一个新的repository，取名为HEXO。(与本地的Hexo源码文件夹同名即可)进入本地的Hexo文件夹，执行以下命令创建仓库:\ngit init  2、设置远程仓库地址，并更新:\ngit remote add origin git@github.com:XXX\/XXX.git git pull origin master  3、修改.gitignore文件（如果没有请手动创建一个），在里面加入*.log 和 public\/ 以及.deploy*\/。因为每次执行hexo generate命令时，上述目录都会被重写更新。因此忽略这两个目录下的文件更新，加快push速度。\n4、执行命令以下命令，完成Hexo源码在本地的提交:\ngit add .",
+    "inLanguage" : "en-us",
+    "author" : "Jiegao",
+    "creator" : "Jiegao",
+    "publisher": "Jiegao",
+    "accountablePerson" : "Jiegao",
+    "copyrightHolder" : "Jiegao",
+    "copyrightYear" : "2015",
+    "datePublished": "2015-12-06 08:38:24 \x2b0000 UTC",
+    "dateModified" : "2015-12-06 08:38:24 \x2b0000 UTC",
+    "url" : "https:\/\/hestation.com\/2015\/automatic-backup\/",
+    "wordCount" : "264",
+    "keywords" : [ "hexo", "Jiegao"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">自动备份Hexo博客源文件</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://hestation.com" rel="author">Jiegao</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2015-12-06 itemprop="datePublished">December 6, 2015</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hestation.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="前言">前言</h2>
+
+<p>这两天给电脑换上了SSD和内存，系统重装，一堆的软件和配置真是折腾死了。得益于之前加入的一个博文自动备份到Github上的脚本，让我没有再为这个费头脑。所以此文记录自动备份Hexo博客源文件到Github的过程。</p>
+
+<p>原文出自：<a href="http://notes.xiamo.tk/2015-07-06-%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BDHexo%E5%8D%9A%E5%AE%A2%E6%BA%90%E6%96%87%E4%BB%B6.html" rel="nofollow noreferrer" target="_blank">自动备份Hexo博客源文件</a></p>
+
+<h2 id="原理">原理</h2>
+
+<p>通过通过监听Hexo的其它事件来完成自动执行Git命令完成自动备份。
+通过查阅Hexo文档，找到了Hexo的主要事件，见下表：</p>
+
+<table>
+<thead>
+<tr>
+<th>事件名 　</th>
+<th>事件发生时间</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>deployBefore</td>
+<td>在部署完成前发布</td>
+</tr>
+
+<tr>
+<td>deployAfter</td>
+<td>在部署成功后发布</td>
+</tr>
+
+<tr>
+<td>exit</td>
+<td>在 Hexo 结束前发布</td>
+</tr>
+
+<tr>
+<td>generateBefore</td>
+<td>在静态文件生成前发布</td>
+</tr>
+
+<tr>
+<td>generateAfter</td>
+<td>在静态文件生成后发布</td>
+</tr>
+
+<tr>
+<td>new</td>
+<td>在文章文件建立后发布</td>
+</tr>
+</tbody>
+</table>
+
+<p>于是我们就可以通过监听Hexo的deployAfter事件，待上传完成之后自动运行Git备份命令，从而达到自动备份的目的。</p>
+
+<h2 id="实现">实现</h2>
+
+<h3 id="将hexo目录加入git仓库">将Hexo目录加入Git仓库</h3>
+
+<p>1、在Github下创建一个新的repository，取名为HEXO。(与本地的Hexo源码文件夹同名即可)进入本地的Hexo文件夹，执行以下命令创建仓库:</p>
+
+<pre><code class="language-bash"> git init
+</code></pre>
+
+<p>2、设置远程仓库地址，并更新:</p>
+
+<pre><code class="language-bash"> git remote add origin git@github.com:XXX/XXX.git
+ git pull origin master
+</code></pre>
+
+<p>3、修改<code>.gitignore</code>文件（如果没有请手动创建一个），在里面加入<code>*.log</code> 和 <code>public/</code> 以及<code>.deploy*/</code>。因为每次执行<code>hexo generate</code>命令时，上述目录都会被重写更新。因此忽略这两个目录下的文件更新，加快push速度。</p>
+
+<p>4、执行命令以下命令，完成Hexo源码在本地的提交:</p>
+
+<pre><code class="language-bash"> git add .
+ git commit -m &quot;添加hexo源码文件作为备份&quot;
+</code></pre>
+
+<p>5、执行以下命令，将本地的仓库文件推送到Github:</p>
+
+<pre><code class="language-bash"> git push origin master
+</code></pre>
+
+<h3 id="安装shelljs模块">安装shelljs模块</h3>
+
+<p>要实现这个自动备份功能，需要依赖<code>Node.js</code>的一个<code>shelljs</code>模块,该模块重新包装了child_process,调用系统命令更加的方便。该模块需要安装后使用。</p>
+
+<p>在命令中键入以下命令，完成shelljs模块的安装：</p>
+
+<pre><code class="language-bash">npm install --save shelljs
+</code></pre>
+
+<h3 id="编写自动备份脚本">编写自动备份脚本</h3>
+
+<p>待到模块安装完成，在Hexo根目录的scripts文件夹下新建一个js文件，文件名随意取。</p>
+
+<p>ps: 如果没有scripts目录，请新建一个。</p>
+
+<p>然后在脚本中，写入以下内容：</p>
+
+<pre><code class="language-javascript">require('shelljs/global');
+
+try {
+	hexo.on('deployAfter', function() {//当deploy完成后执行备份
+		run();
+	});
+} catch (e) {
+	console.log(&quot;产生了一个错误&lt;(￣3￣)&gt; !，错误详情为：&quot; + e.toString());
+}
+
+function run() {
+	if (!which('git')) {
+		echo('Sorry, this script requires git');
+		exit(1);
+	} else {
+		echo(&quot;======================Auto Backup Begin===========================&quot;);
+		cd('D:/hexo');    //此处修改为Hexo根目录路径
+		if (exec('git add --all').code !== 0) {
+			echo('Error: Git add failed');
+			exit(1);
+
+		}
+		if (exec('git commit -am &quot;Form auto backup script\'s commit&quot;').code !== 0) {
+			echo('Error: Git commit failed');
+			exit(1);
+
+		}
+		if (exec('git push origin master').code !== 0) {
+			echo('Error: Git push failed');
+			exit(1);
+
+		}
+		echo(&quot;==================Auto Backup Complete============================&quot;)
+	}
+}
+</code></pre>
+
+<p>其中，需要修改第17行的D:/hexo路径为Hexo的根目录路径。（脚本中的路径为博主的Hexo路径）</p>
+
+<p>如果你的Git远程仓库名称不为origin的话，还需要修改第28行执行的push命令，修改成自己的远程仓库名和相应的分支名。</p>
+
+<p>保存脚本并退出，然后执行hexo deploy命令，将会得到类似以下结果:</p>
+
+<pre><code class="language-bash">INFO  Deploying: git&gt;
+INFO  Clearing .deploy folder...
+INFO  Copying files from public folder...
+[master 3020788] Site updated: 2015-07-06 15:08:06
+ 5 files changed, 160 insertions(+), 58 deletions(-)
+Branch master set up to track remote branch gh-pages from git@github.com:smilexi
+amo/notes.git.
+To git@github.com:smilexiamo/notes.git
+   02adbe4..3020788  master -&gt; gh-pages
+On branch master
+nothing to commit, working directory clean
+Branch master set up to track remote branch gitcafe-pages from git@gitcafe.com:s
+milexiamo/smilexiamo.git.
+To git@gitcafe.com:smilexiamo/smilexiamo.git
+   02adbe4..3020788  master -&gt; gitcafe-pages
+INFO  Deploy done: git
+======================Auto Backup Begin===========================
+[master f044360] Form auto backup script's commit
+ 2 files changed, 35 insertions(+), 2 deletions(-)
+ rewrite db.json (100%)
+To git@github.com:smilexiamo/hexo.git
+   8f2b4b4..f044360  master -&gt; master
+==================Auto Backup Complete============================
+</code></pre>
+
+<p>这样子，每次更新博文并deploy到服务器上之后，备份就自动启动并完成备份啦</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Jiegao </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hestation.com/2015/automatic-backup/>https://hestation.com/2015/automatic-backup/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://hestation.com/tags/hexo/">
+                    #hexo</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hestation.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hestation.com/2015/centos-python/" class="prev" rel="prev" title="CentOS 6.6下源码编译安装Python"><i class="iconfont icon-left"></i>&nbsp;CentOS 6.6下源码编译安装Python</a>
+         
+        
+        <a href="https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/" class="next" rel="next" title="前端构建工具Gulp">前端构建工具Gulp&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2016 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hestation.com">Jiegao</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQL Server on Jiegao</title>
+    <link>https://hestation.com/tags/sql-server/</link>
+    <description>Recent content in SQL Server on Jiegao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Sep 2015 23:25:12 +0000</lastBuildDate>
+    
+	<atom:link href="https://hestation.com/tags/sql-server/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>安装SQL Server出现29506错误的解决方案</title>
+      <link>https://hestation.com/2015/sql-server-error/</link>
+      <pubDate>Fri, 25 Sep 2015 23:25:12 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/sql-server-error/</guid>
+      <description> 前言 此文记录Win8.1(64位)安装SQL Server Management Studio Express时出现[error 29506]错误的解决方案。
+文章  Microsoft SQL Server Management Studio Express: 下载地址：Microsoft SQL Server Management Studio Express
+ 解决方案原文地址: SQL Server Management, error 29506
+  正文  把SQLServer2005_SSMSEE_x64.msi拷贝到C盘根目录下（不一定，随后需要DOS方便进入这个目录就行）。 开始(左下角的Windows徽标) -&amp;gt; 所有程序 -&amp;gt; 附件 -&amp;gt; 命令提示符，选中后右键 -&amp;gt; 以管理员身份运行。 进入DOS界面后，通过cd命令转到SQLServer2005_SSMSEE_x64.msi的目录下，输入SQLServer2005_SSMSEE_x64.msi回车即可安装。  </description>
+    </item>
+    
+  </channel>
+</rss>

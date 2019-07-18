@@ -109,5 +109,252 @@ Markdown Markdown is a lightweight and easy-to-use syntax for styling your writi
 Syntax highlighted code block # Header 1 ## Header 2 ### Header 3 - Bulleted - List 1.</description>
     </item>
     
+    <item>
+      <title>React学习笔记</title>
+      <link>https://hestation.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 11 Jun 2016 14:23:41 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>前言 前段时间看了一下React和react-router的文档，这几天用它们在做一个实时投票的Web App，这篇文章记录里面遇到的坑及其解决方法。
+获取真实DOM节点的引用 添加ref属性
+ref={(ref) =&amp;gt; this.name = ref}  Demo:
+export default class Join extends React.Component { constructor(props) { super(props); this.handleSubmit = (e) =&amp;gt; { e.preventDefault(); let memberName = this.name.value; console.log(&amp;quot;TODO: Join member &amp;quot; + memberName); } } render() { return ( &amp;lt;form onSubmit={this.handleSubmit}&amp;gt; &amp;lt;label&amp;gt;Full Name&amp;lt;/label&amp;gt; &amp;lt;input ref={(ref) =&amp;gt; this.name = ref} className=&amp;quot;form-control&amp;quot; placeholder=&amp;quot;Enter your full name...&amp;quot; required /&amp;gt; &amp;lt;button className=&amp;quot;btn btn-primary&amp;quot;&amp;gt;Join&amp;lt;/button&amp;gt; &amp;lt;/form&amp;gt; ); } }  使用React-Router时父组件向子组件传递props 原本渲染所有路由组件的写法为：</description>
+    </item>
+    
+    <item>
+      <title>Webpack--令人困惑的地方</title>
+      <link>https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</link>
+      <pubDate>Mon, 16 May 2016 09:15:00 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</guid>
+      <description>原文  Webpack—The Confusing Parts 【翻译】Webpack——令人困惑的地方  Webpack是目前基于React和Redux开发的应用的主要打包工具。我想使用Angular 2或其他框架开发的应用也有很多在使用Webpack。
+当我第一次看到Webpack的配置文件时，它看起来非常的陌生，我非常的疑惑。经过一段时间的尝试之后我认为这是因为Webpack只是使用了比较特别的语法和引入了新的原理，因此会让使用者感到疑惑。这些也是导致Webpack不被人熟悉的原因。
+因为刚开始使用Webpack很让人疑惑，我觉得有必要写几篇介绍Webpack的功能和特性的文章以帮助初学者快速理解。此文是最开始的一篇。
+Webpack的核心原理 Webpack的两个最核心的原理分别是：
+ 一切皆模块 正如js文件可以是一个“模块（module）”一样，其他的（如css、image或html）文件也可视作模 块。因此，你可以require(&#39;myJSfile.js&#39;)亦可以require(&#39;myCSSfile.css&#39;)。这意味着我们可以将事物（业务）分割成更小的易于管理的片段，从而达到重复利用等的目的。
+ 按需加载 传统的模块打包工具（module bundlers）最终将所有的模块编译生成一个庞大的bundle.js文件。但是在真实的app里边，“bundle.js”文件可能有10M到15M之大可能会导致应用一直处于加载中状态。因此Webpack使用许多特性来分割代码然后生成多个“bundle”文件，而且异步加载部分代码以实现按需加载。
+  好了，下面来看看那些令人困惑的部分吧。
+1.开发模式和生产模式 首先要知道的是Webpack有许许多多的特性，一些是”开发模式“下才有的，一些是”生产模式“下才有的，还有一些是两种模式下都有的。
+ 通常使用到Webpack如此多特性的项目都会有两个比较大的Webpack配置文件
+ 为了生成bundles文件你可能在package.json文件加入如下的scripts项：
+&amp;quot;scripts&amp;quot;: { // 运行npm run build 来编译生成生产模式下的bundles &amp;quot;build&amp;quot;: &amp;quot;webpack --config webpack.config.prod.js&amp;quot;, // 运行npm run dev来生成开发模式下的bundles以及启动本地server &amp;quot;dev&amp;quot;: &amp;quot;webpack-dev-server&amp;quot; }  2.webpack CLI 和webpack-dev-server 值得注意的是，Webpack作为模块打包工具，提供两种用户交互接口：
+ Webpack CLI tool：默认的交互方式（已随Webpack本身安装到本地）
+ webpack-dev-server：一个Node.js服务器（需要开发者从npm自行安装）
+  Webpack CLI（有利于生产模式下打包） 这种方式可以从命令行获取参数也可以从配置文件（默认叫webpack.config.js）获取，将获取到的参数传入Webpack来打包。
+ 当然你也可以从命令行（CLI）开始学习Webpack，以后你可能主要在生产模式下使用到它。
+ 用法：
+方式1: // 全局模式安装webpack npm install webpack --g // 在终端输入 $ webpack // &amp;lt;--使用webpack.</description>
+    </item>
+    
+    <item>
+      <title>npm学习笔记</title>
+      <link>https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 16 May 2016 08:59:00 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>前言 近期在做一个投票项目的应用时，突然发现对npm的认识很少，故查询了一些资料，现将自己的笔记总结在此。
+介绍 npm是Node.js的包管理工具
+命令  查看用户手册
+npm -h   生成package.json bash npm init    &amp;ndash;save-dev与&amp;ndash;save的区别  npm install module-name --save-dev // 把模块和版本号添加到dependencies部分 npm install module-name --save // 把模块和版本号添加到devDependencies部分  devDependencies下列出的模块，是我们开发时用的，比如grunt-contrib-uglify，我们用它混淆js文件，它们不会被部署到生产环境。dependencies下的模块，则是我们生产环境中需要的依赖。</description>
+    </item>
+    
+    <item>
+      <title>前端学习笔记</title>
+      <link>https://hestation.com/2016/xiachufang/</link>
+      <pubDate>Wed, 13 Apr 2016 22:42:28 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/xiachufang/</guid>
+      <description>问题一：外容器的尺寸未知,内容器已知，实现水平垂直居中 html结构: &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;item&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  方法一：绝对定位 + 负外边距 .container { position: relative; } .item { width: 200px; height: 200px; position: absolute; top: 50%; left: 50%; margin: -100px 0 0 -100px; }  方法二：绝对定位 + 四周偏移量定位0， 外边距为auto .container { position: relative; } .item { width: 200px; height: 200px; position: absolute; margin: auto; top: 0; bottom: 0; left: 0; right: 0; }  方法三：Flex定位 .container { display: flex; justify-content: center; align-items: center; } .</description>
+    </item>
+    
+    <item>
+      <title>Webpack使用</title>
+      <link>https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sat, 09 Apr 2016 11:55:55 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+      <description>前言 最近在做百度前端技术学院的任务时，尝试接触使用了ES6新的语法糖，在这过程中，也顺便学习了一下近期很火的webpac的使用，以下是对近期学习的一个总结与归纳。
+概要 Webpack不同于Gulp或者Grunt，后者是一种自动化处理工具，而Webpack是一个种模块化解决方案，名为MODULE BUNDLER。
+在 webpack 里，所有类型的文件都可以是模块，包含最常见的 JavaScript，以及 css 文件、图片、json 文件等等。通过 webpack 的各种加载器，可以更有效地管理这些文件。
+安装  全局安装
+npm install webpack -g   本地安装 bash npm init npm install webpack --save-dev   查看所有命令
+webpack --help  Webpack配置 Webpack默认的配置文件名称为webpack.config.js，其中包含了一个entry入口和一个output出口
+// webpack.config.js module.exports = { entry: &#39;./main.js&#39;, output: { filename: &#39;bundle.js&#39; } };   在创建好webpack.config.js文件后，直接使用webpack命令即可，下面是命令的几种模式：
+webpack // 构建为开发环境输出 webpack -p // 构建为生产环境输出（压缩混淆脚本） webpack --watch // 监听变动并自动打包 webpack -d // 生成map映射文件，告知哪些模块被最终打包到哪里了  模块化 模块化JavaScript  安装babel-loader</description>
+    </item>
+    
+    <item>
+      <title>ES6学习笔记（一）：Set和Map</title>
+      <link>https://hestation.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</link>
+      <pubDate>Tue, 05 Apr 2016 20:58:41 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</guid>
+      <description>Set ES6利用Set数组去重：  方法一：  function dedupe(array) { return Array.from(new Set(array)); } dedupe([1, 1, 2, 3]); // [1, 2, 3]   方法二(利用扩展运算符)：  let arr = [3, 5, 2, 2, 5, 5]; let unique = [...new Set(arr)]; // [3, 5, 2]  特性  Set结构没有键名，只有键值，所以keys()和values()的行为完全一致。  let set = new Set([&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;]); for (let item of set.keys()) { console.log(item); } // red // green // blue for (let item of set.</description>
+    </item>
+    
+    <item>
+      <title>前端构建工具Gulp</title>
+      <link>https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</link>
+      <pubDate>Thu, 24 Mar 2016 22:32:00 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</guid>
+      <description>第一步：安装Node 首先需要搭建node环境。访问Node.js官网，然后点击大大的绿色的install按钮，下载完成后直接运行程序，就一切准备就绪。npm会随着安装包一起安装，稍后会用到它。
+第二步：使用命令行 查看node版本号
+node -v  查看npm版本
+npm -v  第三步：安装gulp NPM是基于命令行的node包管理工具，它可以将node的程序模块安装到项目中，在它的官网中可以查看和搜索所有可用的程序模块。 在命令行中输入
+sudo npm install -g gulp   sudo是以管理员身份执行命令，一般会要求输入电脑密码 npm是安装node模块的工具，执行install命令 -g表示在全局环境安装，以便任何项目都能使用它 最后，gulp是将要安装的node模块的名字  运行时注意查看命令行有没有错误信息，安装完成后，你可以使用下面的命令查看gulp的版本号以确保gulp已经被正确安装。
+gulp -v  接下来，我们需要将gulp安装到项目本地
+npm install —-save-dev gulp  这里，我们使用*&amp;ndash;save-dev*来更新package.json文件，更新*devDependencies*值，以表明项目需要依赖gulp。
+Dependencies可以向其他参与项目的人指明项目在开发环境和生产环境中的node模块依懒关系，想要更加深入的了解它可以看看package.json文档。
+第四步：新建Gulpfile文件，运行gulp 安装好gulp后我们需要告诉它要为我们执行哪些任务，首先，我们自己需要弄清楚项目需要哪些任务。
+ 检查Javascript 编译Sass（或Less之类的）文件 合并Javascript 压缩并重命名合并后的Javascript  安装依赖 npm install gulp-jshint gulp-sass gulp-concat gulp-uglify gulp-rename --save-dev   提醒下，如果以上命令提示权限错误，需要添加sudo再次尝试。
+ 新建gulpfile文件 现在，组件都安装完毕，我们需要新建gulpfile文件以指定gulp需要为我们完成什么任务。
+gulp只有五个方法： *task*，*run*，*watch*，*src*，和*dest*，在项目根目录新建一个js文件并命名为*gulpfile.js*，把下面的代码粘贴进去：
+gulpfile.js // 引入 gulp var gulp = require(&#39;gulp&#39;); // 引入组件 var jshint = require(&#39;gulp-jshint&#39;); var sass = require(&#39;gulp-sass&#39;); var concat = require(&#39;gulp-concat&#39;); var uglify = require(&#39;gulp-uglify&#39;); var rename = require(&#39;gulp-rename&#39;); // 检查脚本 gulp.</description>
+    </item>
+    
+    <item>
+      <title>自动备份Hexo博客源文件</title>
+      <link>https://hestation.com/2015/automatic-backup/</link>
+      <pubDate>Sun, 06 Dec 2015 08:38:24 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/automatic-backup/</guid>
+      <description>前言 这两天给电脑换上了SSD和内存，系统重装，一堆的软件和配置真是折腾死了。得益于之前加入的一个博文自动备份到Github上的脚本，让我没有再为这个费头脑。所以此文记录自动备份Hexo博客源文件到Github的过程。
+原文出自：自动备份Hexo博客源文件
+原理 通过通过监听Hexo的其它事件来完成自动执行Git命令完成自动备份。 通过查阅Hexo文档，找到了Hexo的主要事件，见下表：
+   事件名  事件发生时间     deployBefore 在部署完成前发布   deployAfter 在部署成功后发布   exit 在 Hexo 结束前发布   generateBefore 在静态文件生成前发布   generateAfter 在静态文件生成后发布   new 在文章文件建立后发布    于是我们就可以通过监听Hexo的deployAfter事件，待上传完成之后自动运行Git备份命令，从而达到自动备份的目的。
+实现 将Hexo目录加入Git仓库 1、在Github下创建一个新的repository，取名为HEXO。(与本地的Hexo源码文件夹同名即可)进入本地的Hexo文件夹，执行以下命令创建仓库:
+git init  2、设置远程仓库地址，并更新:
+git remote add origin git@github.com:XXX/XXX.git git pull origin master  3、修改.gitignore文件（如果没有请手动创建一个），在里面加入*.log 和 public/ 以及.deploy*/。因为每次执行hexo generate命令时，上述目录都会被重写更新。因此忽略这两个目录下的文件更新，加快push速度。
+4、执行命令以下命令，完成Hexo源码在本地的提交:
+git add .</description>
+    </item>
+    
+    <item>
+      <title>CentOS 6.6下源码编译安装Python</title>
+      <link>https://hestation.com/2015/centos-python/</link>
+      <pubDate>Thu, 19 Nov 2015 20:35:12 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/centos-python/</guid>
+      <description>准备安装模块 yum groupinstall &amp;quot;Development tools&amp;quot; yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel  Python3.4 安装下载代码 configure → make → make altinstall cd /usr/local/src wget https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tgz tar -zxvf Python-3.4.3.tgz cd Python-3.4.3 ./configure --prefix=/usr/local/python make &amp;amp;&amp;amp; make altinstall  安装Python3.4 ：公用库的安装 echo &amp;quot;/usr/local/python/lib&amp;quot; &amp;gt;&amp;gt; /etc/ld.so.conf ldconfig  安装Python3.4： 4. /usr/local/bin/ ln -s /usr/local/python/bin/python3.4 /usr/local/bin/python  安装Python3.4 ：5. 确认是否安装正确 /usr/local/python/bin/python3.4 -V python -V  安装Python3.4 Easy_Install cd /usr/local/src wget https://pypi.python.org/…/s/setuptools/setuptools-18.0.1.zip unzip setuptools-18.</description>
+    </item>
+    
+    <item>
+      <title>Vim 常用命令总结</title>
+      <link>https://hestation.com/2015/markdown-table/</link>
+      <pubDate>Sun, 25 Oct 2015 10:06:28 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/markdown-table/</guid>
+      <description>光标移动(Cursor Movement)    命令 作用（解释）     h,j,k,l h表示往左，j表示往下，k表示往右，l表示往上   Ctrl+f 上一页   Ctrl+b 下一页   w, e, W, E 跳到单词的后面，小写包括标点   b, B 以单词为单位往前跳动光标，小写包含标点   O 开启新的一行   ^ 一行的开始   $ 一行的结尾   gg 文档的第一行   [N]G 文档的第N行或者最后一行    
+插入模式(Insert Mode)    命令  　作用（解释)     i  插入到光标前面   I  插入到行的开始位置   a  插入到光标的后面   A  插入到行的最后位置   o, O  　新开一行   Esc  　关闭插入模式</description>
+    </item>
+    
+    <item>
+      <title>Linux vim设置tab缩进</title>
+      <link>https://hestation.com/2015/linux-tab/</link>
+      <pubDate>Sat, 24 Oct 2015 10:59:12 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/linux-tab/</guid>
+      <description>前言 由于本周操作系统实验是使用Linux vim实现短作业优先算法，而在编辑过程中发现vim没有默认缩进以及代码行号等功能，故搜索后设置。
+正文 1、在自己的家目录下建立.vimrc文件。终端输入vi ~/.vimrc 回车。
+2、在.vimrc文件中输入如下文本
+set tabstop=4 set softtabstop=4 set shiftwidth=4 set noexpandtab set nu set autoindent set cindent  代码解释：  Tabstop:表示一个 tab 显示出来是多少个空格的长度,默认为8，我设置为4。 Softtabstop:表示在编辑模式的时候按退格键的时候退回缩进的长度，当使用 expandtab 时特别有用。 Shiftwidth:表示每一级缩进的长度，一般设置成跟 softtabstop 一样。 当设置成 expandtab 时，缩进用空格来表示noexpandtab 则是用制表符表示一个缩进。 Nu:表示 显示行号 。 Autoindent:表示 自动缩进 。 Cindent:是特别针对 C语言 自动缩进。  3、设置完后保存退出。运行 source ~/.vimrc 使配置文件生效。即可体验按tab键时缩进4个空格的宽度，C编程时换行自动缩进。</description>
+    </item>
+    
+    <item>
+      <title>图解HTTP学习笔记</title>
+      <link>https://hestation.com/2015/http-learning/</link>
+      <pubDate>Sat, 17 Oct 2015 15:44:12 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/http-learning/</guid>
+      <description>参考资料： 经典的Web应用网络模型
+在地址栏中输入某个网址，简要讲下整个页面呈现的过程? 客户端  用户想浏览 http://www.chen9.info 页面，浏览器需要通过DNS找到对应域名下的IP地址：10X.XXX.XXX.XXX 。
+ HTTP协议的职责：生成针对目标Web服务器的HTTP请求报文 —— “请给我http://www.chen9.info 页面资源”。
+ TCP协议的职责：经过三次握手，建立双方之间的连接。为了方便通信，将HTTP请求报文分割成报文段，按序号分为多个报文段，把每个报文段可靠地传送给对方。
+  一般来说，浏览器会先询问本地DNS缓存，如果没有记录过这个域名的映射IP，那就向本地的DNS网关询问，如果网关也不知道，就继续向上一层的DNS服务器询问，直到拿到这个IP地址。
+服务端  IP协议的职责：从对方那里接收到的报文段，重组到达的报文段，按序号以原来的顺序重组请求的报文。
+ HTTP协议的职责：对Web服务器请求的内容的处理 —— “是想要地址为10X.XXX.XXX.XXX的计算机上的资源啊”
+ 请求的处理结果也同样利用TCP/IP通信协议项用户进行回传。通过四次握手，确认连接断开，终止通信。
+    一般来说，一台服务器处理的请求是有限的，因此大型的应用都会有多台proxy机器，我们可以让DNS服务器在第一个请求返回IP1，第二个请求返回IP2…这样用户的请求就会均匀的落在这些机器上，这个就是DNS负载均衡。
+ CDN就是通过智能DNS算出离用户最近的CDN节点的IP地址，这样用户可以访问一台离他最近的机器，大大节约连接时间。
+ 一般来说，浏览器跟真正提供Web服务器的机器是没有直接连接的，他们中间会有代理跟反向代理。
+ 代理服务器的作用是所有内部的网络请求都是通过代理去连接对方的服务器，可以在代理服务器这里做恶意请求/相应的拦截，还可以缓存内部网络所需的公共资源。
+ 反向代理就是以代理服务器来接受网络连接请求，Proxy机器指的就是反向代理机器，Proxy机器收到请求后会经过一定的分析最后把请求内容转发给内网对应的Web服务器，Web服务器的HTTP响应包会先到Proxy机器，然后再到用户机器。这样可以负载平衡、拦截恶意请求、维持长连接。
+   返回结果的HTTP状态码 HTTP状态码负责表示客户端HTTP请求的返回结果、标记服务器端的处理是否正常、通知出现的错误等工作。
+状态码的类别  1XX： Information (信息性状态码) —— 接收的请求正在处理
+ 2XX： Success (成功状态码) —— 请求正常处理完毕 &amp;gt; 200 OK 表示从客户端发来的请求在服务器端被正常处理了。 &amp;gt; &amp;gt; 204 No Content 代表服务器接收到请求已处理成功，但在返回的响应报文中不含实体的主体部分。即浏览器显示的页面不发生更新。</description>
+    </item>
+    
+    <item>
+      <title>搭建Hexo博客过程</title>
+      <link>https://hestation.com/2015/build-a-blog/</link>
+      <pubDate>Sun, 04 Oct 2015 21:07:12 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/build-a-blog/</guid>
+      <description>搭建前的准备  安装Hexo前，电脑上需要有下面两个应用程序：  Node.js Git   Git和Node.js的安装过程在此不详细展开，可参照官网的教程。
+搭建过程 使用npm安装Hexo $ npm install -g hexo-cli ```` ps：此过程如果没有翻墙可能会出现一直在下载安装但很久都没有有提示成功的情况，这时候可以换一种方式： 采用淘宝街镜像源安装： ``` bash npm install -g hexo-cli --registry=https://registry.npm.taobao.org  建站 mkdir &amp;lt;folder&amp;gt; cd hexo hexo init npm install  新建完成后，制定文件夹的目录如下：
+. ├── _config.yml ├── package.json ├── scaffolds ├── scripts ├── source | ├── _drafts | └── _posts └── themes  （ps：此目录来自官网：Hexo建站）
+3. 本地生成和查看 hexo server  然后直接登录 http://localhost:4000 就可以看到本地的默认风格的 Hexo Blog 了。</description>
+    </item>
+    
+    <item>
+      <title>Chrome下Flash崩溃的解决方案</title>
+      <link>https://hestation.com/2015/chrome-flash-collapse/</link>
+      <pubDate>Sun, 04 Oct 2015 16:51:28 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/chrome-flash-collapse/</guid>
+      <description> 前言 最近使用Chrome看视频的时候，时常出现Flash崩溃的情况，Google一下解决后，现将解决方案记录下来。
+正文  地址栏输入chrome://plugins/进入插件管理页。 打开详细信息。  把两个Shockwave Flash中类型为PPAPI(独立程序)的那个停用。   PS. 有的人是关掉chrome自带的flash(PPAPI)，开启系统自带的flash(NPAPI)才比较稳定，请根据具体情况设置。如果没有NPAPI，可以前往Adobe Flash Player下载。
+如果还不能解决：
+ 尝试更新显卡驱动。 在设置界面的最后将“使用硬件加速模式（如果可用）”取消选中。  </description>
+    </item>
+    
+    <item>
+      <title>安装SQL Server出现29506错误的解决方案</title>
+      <link>https://hestation.com/2015/sql-server-error/</link>
+      <pubDate>Fri, 25 Sep 2015 23:25:12 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/sql-server-error/</guid>
+      <description> 前言 此文记录Win8.1(64位)安装SQL Server Management Studio Express时出现[error 29506]错误的解决方案。
+文章  Microsoft SQL Server Management Studio Express: 下载地址：Microsoft SQL Server Management Studio Express
+ 解决方案原文地址: SQL Server Management, error 29506
+  正文  把SQLServer2005_SSMSEE_x64.msi拷贝到C盘根目录下（不一定，随后需要DOS方便进入这个目录就行）。 开始(左下角的Windows徽标) -&amp;gt; 所有程序 -&amp;gt; 附件 -&amp;gt; 命令提示符，选中后右键 -&amp;gt; 以管理员身份运行。 进入DOS界面后，通过cd命令转到SQLServer2005_SSMSEE_x64.msi的目录下，输入SQLServer2005_SSMSEE_x64.msi回车即可安装。  </description>
+    </item>
+    
+    <item>
+      <title>Html5之Canvas</title>
+      <link>https://hestation.com/2015/canvas/</link>
+      <pubDate>Wed, 26 Aug 2015 18:34:25 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/canvas/</guid>
+      <description> 绘制2D图形：  var canvas = document.getElementById(&#39;canvas&#39;); var context = canvas.getContext(&#39;2d&#39;);  一条路径开始：  context.beginPath(); //状态开始  结束：  context.closePath(); //状态结束  线段起始位置：  context.moveTo(100, 100); //起点坐标 context.lineTo(400, 400); //终点坐标  如果有多条相连的线段，可用多个lineTo直接首尾相连：  context.moveTo(100, 100); context.lineTo(400, 400); context.lineTo(100, 400); context.lineTo(100, 100);  设置线条属性：  context.lineWidth = 5; //线条宽度 context.strokeStyle = &#39;red&#39;; //线条颜色  对于一个封闭图形，可以填充颜色：  context.fillStyle = &#39;rbg(2, 100, 30)&#39;; //填充颜色 context.fill();  绘制图形：  context.stroke();  </description>
+    </item>
+    
+    <item>
+      <title>关于样式重置：normalize.css</title>
+      <link>https://hestation.com/2015/about-normalize-css/</link>
+      <pubDate>Tue, 04 Aug 2015 20:56:28 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/about-normalize-css/</guid>
+      <description>前言 这几天在Udacity上学习Front-End Web Developer Nanodegree的课程，从里面发现了很多很实用又以前未接触的东西，包括今天看到的css resetting，之前一直用的* {margin:0; padding: 0;}来简单处理这个问题，看到Udacity的工程师提到Normalize，查询资料后才知道其妙用。
+关于reset.css 关于CSS样式重置问题，一直都存在很多争议，有人觉得可以直接使用前言所说的* {margin:0; padding: 0;}，而有人则觉得这种方法会对性能有影响，而提倡使用比较流行的Eric Meyer和YUI的重置样式。 但貌似随着CSS的发展，更多人开始觉得此种样式重置没有必要。下面贴两篇同一个作者时隔一年提出两种截然相反的观点的文章：
+ 打造自己的RESET.CSS 真的还需要RESET.CSS么？  关于normalize.css 而今天要说的则是目前很多人支持并且广泛使用的normalize.css。 它 只是一个很小的CSS文件，但在默认的HTML元素样式上提供了跨浏览器的高度一致性。相比于传统的CSS reset，Normalize.css是一种现代的、为HTML5准备的优质替代方案。Normalize.css现在已经被用于Twitter Bootstrap、HTML5 Boilerplate、GOV.UK、Rdio、CSS Tricks 以及许许多多其他框架、工具和网站上。
+Normalize vs Reset 知道Normalize.css和传统Reset的区别是非常有价值的。
+normalize.css 保护了有价值的默认值 Reset通过为几乎所有的元素施加默认样式，强行使得元素有相同的视觉效果。相比之下，Normalize.css保持了许多默认的浏览器样式。这就意味着你不用再为所有公共的排版元素重新设置样式。当一个元素在不同的浏览器中有不同的默认值时，Normalize.css会力求让这些样式保持一致并尽可能与现代标准相符合。
+normalize.css 修复了浏览器的bug 它修复了常见的桌面端和移动端浏览器的bug。这往往超出了Reset所能做到的范畴。关于这一点，Normalize.css修复的问题包含了HTML5元素的显示设置、预格式化文字的font-size问题、在IE9中SVG的溢出、许多出现在各浏览器和操作系统中的与表单相关的bug。
+可以看以下这个例子，看看对于HTML5中新出现的input类型search，Normalize.css是如何保证跨浏览器的一致性的。
+/** * 1. Addresses appearance set to searchfield in S5, Chrome * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof) */ input[type=&amp;quot;search&amp;quot;] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; } /** * Removes inner padding and search cancel button in S5, Chrome on OS X */ input[type=&amp;quot;search&amp;quot;]::-webkit-search-decoration, input[type=&amp;quot;search&amp;quot;]::-webkit-search-cancel-button { -webkit-appearance: none; }  normalize.</description>
+    </item>
+    
+    <item>
+      <title>Chrome主页被劫持为2345的解决方案</title>
+      <link>https://hestation.com/2015/2345/</link>
+      <pubDate>Mon, 03 Aug 2015 15:27:28 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/2345/</guid>
+      <description>下午打开Chrome准备看看Gmail新邮件，突然主页跳出来这个，瞬间吓尿了。。。 打开他们的官网，是这样： 我就知道这是怎样的一个商家了。。。
+解决步骤  有一部分人只是桌面的快捷方式被篡改，请右键桌面上的快捷方式查找到文件的安装目录，尝试从安装目录双击启动浏览器，如果首页正常说明是快捷方式的问题，删掉快捷方式重新生成一个快捷方式到桌面就解决了。 如果上述未解决，请尝试从任务管理器里面运行浏览器程序，如果首页仍然被修改说明浏览器程序有问题，建议重新安装。 如果用任务管理器运行后首页就恢复正常了，说明问题很可能跟explorer进程有关，那么先看C:\Windows下面的explorer.exe程序有无异常，比如修改日期是否异常，有问题的话建议找相同系统的电脑上拷贝一个explorer.exe文件，或者直接重装系统。 如果explorer.exe也无问题，那么看进程钩子有无异常，一般是DLL文件出问题，不用会看代码什么的，我是用火绒软件里面的“火绒剑”功能查看的，用钩子扫描扫描explorer.exe进程，我在目标位置这一栏会有一条指向2345.lc文件的，按着这个路径在电脑找到这个文件并删除即可。 如果以上都未解决，那么看有没有奇怪的自启动项，或者是奇怪的进程，禁用或关闭后试试。  以上，参考自：chrome 主页被篡改为hao123？</description>
+    </item>
+    
   </channel>
 </rss>

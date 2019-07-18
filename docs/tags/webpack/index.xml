@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webpack on Jiegao</title>
+    <link>https://hestation.com/tags/webpack/</link>
+    <description>Recent content in Webpack on Jiegao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 May 2016 09:15:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hestation.com/tags/webpack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Webpack--令人困惑的地方</title>
+      <link>https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</link>
+      <pubDate>Mon, 16 May 2016 09:15:00 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</guid>
+      <description>原文  Webpack—The Confusing Parts 【翻译】Webpack——令人困惑的地方  Webpack是目前基于React和Redux开发的应用的主要打包工具。我想使用Angular 2或其他框架开发的应用也有很多在使用Webpack。
+当我第一次看到Webpack的配置文件时，它看起来非常的陌生，我非常的疑惑。经过一段时间的尝试之后我认为这是因为Webpack只是使用了比较特别的语法和引入了新的原理，因此会让使用者感到疑惑。这些也是导致Webpack不被人熟悉的原因。
+因为刚开始使用Webpack很让人疑惑，我觉得有必要写几篇介绍Webpack的功能和特性的文章以帮助初学者快速理解。此文是最开始的一篇。
+Webpack的核心原理 Webpack的两个最核心的原理分别是：
+ 一切皆模块 正如js文件可以是一个“模块（module）”一样，其他的（如css、image或html）文件也可视作模 块。因此，你可以require(&#39;myJSfile.js&#39;)亦可以require(&#39;myCSSfile.css&#39;)。这意味着我们可以将事物（业务）分割成更小的易于管理的片段，从而达到重复利用等的目的。
+ 按需加载 传统的模块打包工具（module bundlers）最终将所有的模块编译生成一个庞大的bundle.js文件。但是在真实的app里边，“bundle.js”文件可能有10M到15M之大可能会导致应用一直处于加载中状态。因此Webpack使用许多特性来分割代码然后生成多个“bundle”文件，而且异步加载部分代码以实现按需加载。
+  好了，下面来看看那些令人困惑的部分吧。
+1.开发模式和生产模式 首先要知道的是Webpack有许许多多的特性，一些是”开发模式“下才有的，一些是”生产模式“下才有的，还有一些是两种模式下都有的。
+ 通常使用到Webpack如此多特性的项目都会有两个比较大的Webpack配置文件
+ 为了生成bundles文件你可能在package.json文件加入如下的scripts项：
+&amp;quot;scripts&amp;quot;: { // 运行npm run build 来编译生成生产模式下的bundles &amp;quot;build&amp;quot;: &amp;quot;webpack --config webpack.config.prod.js&amp;quot;, // 运行npm run dev来生成开发模式下的bundles以及启动本地server &amp;quot;dev&amp;quot;: &amp;quot;webpack-dev-server&amp;quot; }  2.webpack CLI 和webpack-dev-server 值得注意的是，Webpack作为模块打包工具，提供两种用户交互接口：
+ Webpack CLI tool：默认的交互方式（已随Webpack本身安装到本地）
+ webpack-dev-server：一个Node.js服务器（需要开发者从npm自行安装）
+  Webpack CLI（有利于生产模式下打包） 这种方式可以从命令行获取参数也可以从配置文件（默认叫webpack.config.js）获取，将获取到的参数传入Webpack来打包。
+ 当然你也可以从命令行（CLI）开始学习Webpack，以后你可能主要在生产模式下使用到它。
+ 用法：
+方式1: // 全局模式安装webpack npm install webpack --g // 在终端输入 $ webpack // &amp;lt;--使用webpack.</description>
+    </item>
+    
+    <item>
+      <title>Webpack使用</title>
+      <link>https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sat, 09 Apr 2016 11:55:55 +0000</pubDate>
+      
+      <guid>https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+      <description>前言 最近在做百度前端技术学院的任务时，尝试接触使用了ES6新的语法糖，在这过程中，也顺便学习了一下近期很火的webpac的使用，以下是对近期学习的一个总结与归纳。
+概要 Webpack不同于Gulp或者Grunt，后者是一种自动化处理工具，而Webpack是一个种模块化解决方案，名为MODULE BUNDLER。
+在 webpack 里，所有类型的文件都可以是模块，包含最常见的 JavaScript，以及 css 文件、图片、json 文件等等。通过 webpack 的各种加载器，可以更有效地管理这些文件。
+安装  全局安装
+npm install webpack -g   本地安装 bash npm init npm install webpack --save-dev   查看所有命令
+webpack --help  Webpack配置 Webpack默认的配置文件名称为webpack.config.js，其中包含了一个entry入口和一个output出口
+// webpack.config.js module.exports = { entry: &#39;./main.js&#39;, output: { filename: &#39;bundle.js&#39; } };   在创建好webpack.config.js文件后，直接使用webpack命令即可，下面是命令的几种模式：
+webpack // 构建为开发环境输出 webpack -p // 构建为生产环境输出（压缩混淆脚本） webpack --watch // 监听变动并自动打包 webpack -d // 生成map映射文件，告知哪些模块被最终打包到哪里了  模块化 模块化JavaScript  安装babel-loader</description>
+    </item>
+    
+  </channel>
+</rss>

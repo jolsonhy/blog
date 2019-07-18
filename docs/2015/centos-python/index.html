@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Jiegao">
+  
+  
+  
+  <link rel="prev" href="https://hestation.com/2015/markdown-table/" />
+  <link rel="next" href="https://hestation.com/2015/automatic-backup/" />
+  <link rel="canonical" href="https://hestation.com/2015/centos-python/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           CentOS 6.6下源码编译安装Python | Jiegao
+       
+  </title>
+  <meta name="title" content="CentOS 6.6下源码编译安装Python | Jiegao">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hestation.com"
+    },
+    "articleSection" : "posts",
+    "name" : "CentOS 6.6下源码编译安装Python",
+    "headline" : "CentOS 6.6下源码编译安装Python",
+    "description" : "准备安装模块 yum groupinstall \x26quot;Development tools\x26quot; yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel  Python3.4 安装下载代码 configure → make → make altinstall cd \/usr\/local\/src wget https:\/\/www.python.org\/ftp\/python\/3.4.3\/Python-3.4.3.tgz tar -zxvf Python-3.4.3.tgz cd Python-3.4.3 .\/configure --prefix=\/usr\/local\/python make \x26amp;\x26amp; make altinstall  安装Python3.4 ：公用库的安装 echo \x26quot;\/usr\/local\/python\/lib\x26quot; \x26gt;\x26gt; \/etc\/ld.so.conf ldconfig  安装Python3.4： 4. \/usr\/local\/bin\/ ln -s \/usr\/local\/python\/bin\/python3.4 \/usr\/local\/bin\/python  安装Python3.4 ：5. 确认是否安装正确 \/usr\/local\/python\/bin\/python3.4 -V python -V  安装Python3.4 Easy_Install cd \/usr\/local\/src wget https:\/\/pypi.python.org\/…\/s\/setuptools\/setuptools-18.0.1.zip unzip setuptools-18.",
+    "inLanguage" : "en-us",
+    "author" : "Jiegao",
+    "creator" : "Jiegao",
+    "publisher": "Jiegao",
+    "accountablePerson" : "Jiegao",
+    "copyrightHolder" : "Jiegao",
+    "copyrightYear" : "2015",
+    "datePublished": "2015-11-19 20:35:12 \x2b0000 UTC",
+    "dateModified" : "2015-11-19 20:35:12 \x2b0000 UTC",
+    "url" : "https:\/\/hestation.com\/2015\/centos-python\/",
+    "wordCount" : "112",
+    "keywords" : [ "Linux","Python", "Jiegao"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">CentOS 6.6下源码编译安装Python</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://hestation.com" rel="author">Jiegao</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2015-11-19 itemprop="datePublished">November 19, 2015</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hestation.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h3 id="准备安装模块">准备安装模块</h3>
+
+<pre><code class="language-bash">yum groupinstall &quot;Development tools&quot;
+yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel
+</code></pre>
+
+<h3 id="python3-4-安装下载代码-configure-make-make-altinstall">Python3.4 安装下载代码 configure → make → make altinstall</h3>
+
+<pre><code class="language-bash"> cd /usr/local/src
+ wget https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tgz
+ tar -zxvf Python-3.4.3.tgz 
+ cd Python-3.4.3
+ ./configure --prefix=/usr/local/python
+ make &amp;&amp; make altinstall
+</code></pre>
+
+<h3 id="安装python3-4-公用库的安装">安装Python3.4 ：公用库的安装</h3>
+
+<pre><code class="language-bash"> echo &quot;/usr/local/python/lib&quot; &gt;&gt; /etc/ld.so.conf
+ ldconfig
+</code></pre>
+
+<h3 id="安装python3-4-4-usr-local-bin">安装Python3.4： 4. /usr/local/bin/</h3>
+
+<pre><code class="language-bash"> ln -s /usr/local/python/bin/python3.4 /usr/local/bin/python
+</code></pre>
+
+<h3 id="安装python3-4-5-确认是否安装正确">安装Python3.4  ：5. 确认是否安装正确</h3>
+
+<pre><code class="language-bash"> /usr/local/python/bin/python3.4 -V
+ python -V
+</code></pre>
+
+<h3 id="安装python3-4-easy-install">安装Python3.4  Easy_Install</h3>
+
+<pre><code class="language-bash"> cd /usr/local/src
+ wget https://pypi.python.org/…/s/setuptools/setuptools-18.0.1.zip
+ unzip setuptools-18.0.1.zip
+ cd setuptools-18.0.1
+ /usr/local/bin/python setup.py install
+ ln -s /usr/local/python/bin/easy_install /usr/local/bin/easy_install
+</code></pre>
+
+<h3 id="安装python3-4-pip">安装Python3.4 ：Pip</h3>
+
+<pre><code class="language-bash"> /usr/local/bin/easy_install pip
+ ln -s /usr/local/python/bin/pip /usr/local/bin/pip
+</code></pre>
+
+<h3 id="安装python3-4-virtualenv">安装Python3.4： Virtualenv</h3>
+
+<pre><code class="language-bash"> pip install virtualenv
+ ln -s /usr/local/python/bin/virtualenv /usr/local/bin/virtualenv
+</code></pre>
+
+<h3 id="安装python3-4-virtualenvwrapper">安装Python3.4 ：Virtualenvwrapper</h3>
+
+<pre><code class="language-bash"> pip install virtualenvwrapper
+</code></pre>
+
+<h3 id="安装python3-4-参数设定">安装Python3.4 ：参数设定$</h3>
+
+<pre><code class="language-bash">vim ~/.bashrc
+if [ -f /usr/local/python/bin/virtualenvwrapper.sh ]; then
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/python/bin/virtualenvwrapper.sh
+fi
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Jiegao </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hestation.com/2015/centos-python/>https://hestation.com/2015/centos-python/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://hestation.com/tags/linux/">
+                    #Linux</a></span>
+            
+            <span class="tag"><a href="https://hestation.com/tags/python/">
+                    #Python</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hestation.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hestation.com/2015/markdown-table/" class="prev" rel="prev" title="Vim 常用命令总结"><i class="iconfont icon-left"></i>&nbsp;Vim 常用命令总结</a>
+         
+        
+        <a href="https://hestation.com/2015/automatic-backup/" class="next" rel="next" title="自动备份Hexo博客源文件">自动备份Hexo博客源文件&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2016 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hestation.com">Jiegao</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

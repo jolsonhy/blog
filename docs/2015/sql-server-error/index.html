@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Jiegao">
+  
+  
+  
+  <link rel="prev" href="https://hestation.com/2015/canvas/" />
+  <link rel="next" href="https://hestation.com/2015/chrome-flash-collapse/" />
+  <link rel="canonical" href="https://hestation.com/2015/sql-server-error/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           安装SQL Server出现29506错误的解决方案 | Jiegao
+       
+  </title>
+  <meta name="title" content="安装SQL Server出现29506错误的解决方案 | Jiegao">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hestation.com"
+    },
+    "articleSection" : "posts",
+    "name" : "安装SQL Server出现29506错误的解决方案",
+    "headline" : "安装SQL Server出现29506错误的解决方案",
+    "description" : " 前言 此文记录Win8.1(64位)安装SQL Server Management Studio Express时出现[error 29506]错误的解决方案。\n文章  Microsoft SQL Server Management Studio Express: 下载地址：Microsoft SQL Server Management Studio Express\n 解决方案原文地址: SQL Server Management, error 29506\n  正文  把SQLServer2005_SSMSEE_x64.msi拷贝到C盘根目录下（不一定，随后需要DOS方便进入这个目录就行）。 开始(左下角的Windows徽标) -\x26gt; 所有程序 -\x26gt; 附件 -\x26gt; 命令提示符，选中后右键 -\x26gt; 以管理员身份运行。 进入DOS界面后，通过cd命令转到SQLServer2005_SSMSEE_x64.msi的目录下，输入SQLServer2005_SSMSEE_x64.msi回车即可安装。  ",
+    "inLanguage" : "en-us",
+    "author" : "Jiegao",
+    "creator" : "Jiegao",
+    "publisher": "Jiegao",
+    "accountablePerson" : "Jiegao",
+    "copyrightHolder" : "Jiegao",
+    "copyrightYear" : "2015",
+    "datePublished": "2015-09-25 23:25:12 \x2b0000 UTC",
+    "dateModified" : "2015-09-25 23:25:12 \x2b0000 UTC",
+    "url" : "https:\/\/hestation.com\/2015\/sql-server-error\/",
+    "wordCount" : "38",
+    "keywords" : [ "SQL Server","安装", "Jiegao"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">安装SQL Server出现29506错误的解决方案</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://hestation.com" rel="author">Jiegao</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2015-09-25 itemprop="datePublished">September 25, 2015</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hestation.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="前言">前言</h2>
+
+<p>此文记录Win8.1(64位)安装SQL Server Management Studio Express时出现[error 29506]错误的解决方案。</p>
+
+<h2 id="文章">文章</h2>
+
+<ol>
+<li><p>Microsoft SQL Server Management Studio Express:
+下载地址：<a href="http://www.microsoft.com/downloads/details.aspx?displaylang=zh-cn&amp;FamilyID=c243a5ae-4bd1-4e3d-94b8-5a0f62bf7796" rel="nofollow noreferrer" target="_blank">Microsoft SQL Server Management Studio Express</a></p></li>
+
+<li><p>解决方案原文地址:
+<a href="http://social.msdn.microsoft.com/Forums/en/sqlexpress/thread/3a8b79a2-9258-464f-bdb8-70e77d5f0f1a" rel="nofollow noreferrer" target="_blank">SQL Server Management, error 29506</a></p></li>
+</ol>
+
+<h2 id="正文">正文</h2>
+
+<ol>
+<li>把<code>SQLServer2005_SSMSEE_x64.msi</code>拷贝到<code>C盘根目录</code>下（不一定，随后需要DOS方便进入这个目录就行）。</li>
+<li>开始(左下角的Windows徽标) -&gt; 所有程序 -&gt; 附件 -&gt; 命令提示符，选中后右键 -&gt; 以管理员身份运行。</li>
+<li>进入DOS界面后，通过cd命令转到SQLServer2005_SSMSEE_x64.msi的目录下，输入<code>SQLServer2005_SSMSEE_x64.msi</code>回车即可安装。</li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Jiegao </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hestation.com/2015/sql-server-error/>https://hestation.com/2015/sql-server-error/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://hestation.com/tags/sql-server/">
+                    #SQL Server</a></span>
+            
+            <span class="tag"><a href="https://hestation.com/tags/%E5%AE%89%E8%A3%85/">
+                    #安装</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hestation.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hestation.com/2015/canvas/" class="prev" rel="prev" title="Html5之Canvas"><i class="iconfont icon-left"></i>&nbsp;Html5之Canvas</a>
+         
+        
+        <a href="https://hestation.com/2015/chrome-flash-collapse/" class="next" rel="next" title="Chrome下Flash崩溃的解决方案">Chrome下Flash崩溃的解决方案&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2016 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hestation.com">Jiegao</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

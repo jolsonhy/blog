@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Jiegao">
+  
+  
+  
+  <link rel="prev" href="https://hestation.com/2015/about-normalize-css/" />
+  <link rel="next" href="https://hestation.com/2015/sql-server-error/" />
+  <link rel="canonical" href="https://hestation.com/2015/canvas/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Html5之Canvas | Jiegao
+       
+  </title>
+  <meta name="title" content="Html5之Canvas | Jiegao">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hestation.com"
+    },
+    "articleSection" : "posts",
+    "name" : "Html5之Canvas",
+    "headline" : "Html5之Canvas",
+    "description" : " 绘制2D图形：  var canvas = document.getElementById(\x27canvas\x27); var context = canvas.getContext(\x272d\x27);  一条路径开始：  context.beginPath(); \/\/状态开始  结束：  context.closePath(); \/\/状态结束  线段起始位置：  context.moveTo(100, 100); \/\/起点坐标 context.lineTo(400, 400); \/\/终点坐标  如果有多条相连的线段，可用多个lineTo直接首尾相连：  context.moveTo(100, 100); context.lineTo(400, 400); context.lineTo(100, 400); context.lineTo(100, 100);  设置线条属性：  context.lineWidth = 5; \/\/线条宽度 context.strokeStyle = \x27red\x27; \/\/线条颜色  对于一个封闭图形，可以填充颜色：  context.fillStyle = \x27rbg(2, 100, 30)\x27; \/\/填充颜色 context.fill();  绘制图形：  context.stroke();  ",
+    "inLanguage" : "en-us",
+    "author" : "Jiegao",
+    "creator" : "Jiegao",
+    "publisher": "Jiegao",
+    "accountablePerson" : "Jiegao",
+    "copyrightHolder" : "Jiegao",
+    "copyrightYear" : "2015",
+    "datePublished": "2015-08-26 18:34:25 \x2b0000 UTC",
+    "dateModified" : "2015-08-26 18:34:25 \x2b0000 UTC",
+    "url" : "https:\/\/hestation.com\/2015\/canvas\/",
+    "wordCount" : "50",
+    "keywords" : [ "Html5", "Jiegao"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Html5之Canvas</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://hestation.com" rel="author">Jiegao</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2015-08-26 itemprop="datePublished">August 26, 2015</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hestation.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<hr />
+
+<h3 id="绘制2d图形">绘制2D图形：</h3>
+
+<ul>
+<li><code>var canvas = document.getElementById('canvas');</code></li>
+<li><code>var context = canvas.getContext('2d');</code></li>
+</ul>
+
+<h3 id="一条路径开始">一条路径开始：</h3>
+
+<ul>
+<li><code>context.beginPath();  //状态开始</code></li>
+</ul>
+
+<h3 id="结束">结束：</h3>
+
+<ul>
+<li><code>context.closePath();  //状态结束</code></li>
+</ul>
+
+<h3 id="线段起始位置">线段起始位置：</h3>
+
+<ul>
+<li><code>context.moveTo(100, 100); //起点坐标</code></li>
+<li><code>context.lineTo(400, 400); //终点坐标</code></li>
+</ul>
+
+<h3 id="如果有多条相连的线段-可用多个lineto直接首尾相连">如果有多条相连的线段，可用多个lineTo直接首尾相连：</h3>
+
+<ul>
+<li><code>context.moveTo(100, 100);</code></li>
+<li><code>context.lineTo(400, 400);</code></li>
+<li><code>context.lineTo(100, 400);</code></li>
+<li><code>context.lineTo(100, 100);</code></li>
+</ul>
+
+<h3 id="设置线条属性">设置线条属性：</h3>
+
+<ul>
+<li><code>context.lineWidth = 5; //线条宽度</code></li>
+<li><code>context.strokeStyle = 'red'; //线条颜色</code></li>
+</ul>
+
+<h3 id="对于一个封闭图形-可以填充颜色">对于一个封闭图形，可以填充颜色：</h3>
+
+<ul>
+<li><code>context.fillStyle = 'rbg(2, 100, 30)'; //填充颜色</code></li>
+<li><code>context.fill();</code></li>
+</ul>
+
+<h3 id="绘制图形">绘制图形：</h3>
+
+<ul>
+<li><code>context.stroke();</code></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Jiegao </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hestation.com/2015/canvas/>https://hestation.com/2015/canvas/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://hestation.com/tags/html5/">
+                    #Html5</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hestation.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://hestation.com/2015/about-normalize-css/" class="prev" rel="prev" title="关于样式重置：normalize.css"><i class="iconfont icon-left"></i>&nbsp;关于样式重置：normalize.css</a>
+         
+        
+        <a href="https://hestation.com/2015/sql-server-error/" class="next" rel="next" title="安装SQL Server出现29506错误的解决方案">安装SQL Server出现29506错误的解决方案&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2016 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hestation.com">Jiegao</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

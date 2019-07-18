@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTTP on Jiegao</title>
+    <link>https://hestation.com/tags/http/</link>
+    <description>Recent content in HTTP on Jiegao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Oct 2015 15:44:12 +0000</lastBuildDate>
+    
+	<atom:link href="https://hestation.com/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>图解HTTP学习笔记</title>
+      <link>https://hestation.com/2015/http-learning/</link>
+      <pubDate>Sat, 17 Oct 2015 15:44:12 +0000</pubDate>
+      
+      <guid>https://hestation.com/2015/http-learning/</guid>
+      <description>参考资料： 经典的Web应用网络模型
+在地址栏中输入某个网址，简要讲下整个页面呈现的过程? 客户端  用户想浏览 http://www.chen9.info 页面，浏览器需要通过DNS找到对应域名下的IP地址：10X.XXX.XXX.XXX 。
+ HTTP协议的职责：生成针对目标Web服务器的HTTP请求报文 —— “请给我http://www.chen9.info 页面资源”。
+ TCP协议的职责：经过三次握手，建立双方之间的连接。为了方便通信，将HTTP请求报文分割成报文段，按序号分为多个报文段，把每个报文段可靠地传送给对方。
+  一般来说，浏览器会先询问本地DNS缓存，如果没有记录过这个域名的映射IP，那就向本地的DNS网关询问，如果网关也不知道，就继续向上一层的DNS服务器询问，直到拿到这个IP地址。
+服务端  IP协议的职责：从对方那里接收到的报文段，重组到达的报文段，按序号以原来的顺序重组请求的报文。
+ HTTP协议的职责：对Web服务器请求的内容的处理 —— “是想要地址为10X.XXX.XXX.XXX的计算机上的资源啊”
+ 请求的处理结果也同样利用TCP/IP通信协议项用户进行回传。通过四次握手，确认连接断开，终止通信。
+    一般来说，一台服务器处理的请求是有限的，因此大型的应用都会有多台proxy机器，我们可以让DNS服务器在第一个请求返回IP1，第二个请求返回IP2…这样用户的请求就会均匀的落在这些机器上，这个就是DNS负载均衡。
+ CDN就是通过智能DNS算出离用户最近的CDN节点的IP地址，这样用户可以访问一台离他最近的机器，大大节约连接时间。
+ 一般来说，浏览器跟真正提供Web服务器的机器是没有直接连接的，他们中间会有代理跟反向代理。
+ 代理服务器的作用是所有内部的网络请求都是通过代理去连接对方的服务器，可以在代理服务器这里做恶意请求/相应的拦截，还可以缓存内部网络所需的公共资源。
+ 反向代理就是以代理服务器来接受网络连接请求，Proxy机器指的就是反向代理机器，Proxy机器收到请求后会经过一定的分析最后把请求内容转发给内网对应的Web服务器，Web服务器的HTTP响应包会先到Proxy机器，然后再到用户机器。这样可以负载平衡、拦截恶意请求、维持长连接。
+   返回结果的HTTP状态码 HTTP状态码负责表示客户端HTTP请求的返回结果、标记服务器端的处理是否正常、通知出现的错误等工作。
+状态码的类别  1XX： Information (信息性状态码) —— 接收的请求正在处理
+ 2XX： Success (成功状态码) —— 请求正常处理完毕 &amp;gt; 200 OK 表示从客户端发来的请求在服务器端被正常处理了。 &amp;gt; &amp;gt; 204 No Content 代表服务器接收到请求已处理成功，但在返回的响应报文中不含实体的主体部分。即浏览器显示的页面不发生更新。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Jiegao">
+  
+  
+  
+  
+  <link rel="next" href="https://hestation.com/2015/about-normalize-css/" />
+  <link rel="canonical" href="https://hestation.com/2015/2345/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Chrome主页被劫持为2345的解决方案 | Jiegao
+       
+  </title>
+  <meta name="title" content="Chrome主页被劫持为2345的解决方案 | Jiegao">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/hestation.com"
+    },
+    "articleSection" : "posts",
+    "name" : "Chrome主页被劫持为2345的解决方案",
+    "headline" : "Chrome主页被劫持为2345的解决方案",
+    "description" : "下午打开Chrome准备看看Gmail新邮件，突然主页跳出来这个，瞬间吓尿了。。。 打开他们的官网，是这样： 我就知道这是怎样的一个商家了。。。\n解决步骤  有一部分人只是桌面的快捷方式被篡改，请右键桌面上的快捷方式查找到文件的安装目录，尝试从安装目录双击启动浏览器，如果首页正常说明是快捷方式的问题，删掉快捷方式重新生成一个快捷方式到桌面就解决了。 如果上述未解决，请尝试从任务管理器里面运行浏览器程序，如果首页仍然被修改说明浏览器程序有问题，建议重新安装。 如果用任务管理器运行后首页就恢复正常了，说明问题很可能跟explorer进程有关，那么先看C:\\Windows下面的explorer.exe程序有无异常，比如修改日期是否异常，有问题的话建议找相同系统的电脑上拷贝一个explorer.exe文件，或者直接重装系统。 如果explorer.exe也无问题，那么看进程钩子有无异常，一般是DLL文件出问题，不用会看代码什么的，我是用火绒软件里面的“火绒剑”功能查看的，用钩子扫描扫描explorer.exe进程，我在目标位置这一栏会有一条指向2345.lc文件的，按着这个路径在电脑找到这个文件并删除即可。 如果以上都未解决，那么看有没有奇怪的自启动项，或者是奇怪的进程，禁用或关闭后试试。  以上，参考自：chrome 主页被篡改为hao123？",
+    "inLanguage" : "en-us",
+    "author" : "Jiegao",
+    "creator" : "Jiegao",
+    "publisher": "Jiegao",
+    "accountablePerson" : "Jiegao",
+    "copyrightHolder" : "Jiegao",
+    "copyrightYear" : "2015",
+    "datePublished": "2015-08-03 15:27:28 \x2b0000 UTC",
+    "dateModified" : "2015-08-03 15:27:28 \x2b0000 UTC",
+    "url" : "https:\/\/hestation.com\/2015\/2345\/",
+    "wordCount" : "11",
+    "keywords" : [ "问题解决", "Jiegao"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://hestation.com">Jiegao</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Chrome主页被劫持为2345的解决方案</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://hestation.com" rel="author">Jiegao</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2015-08-03 itemprop="datePublished">August 3, 2015</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://hestation.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"> 学习笔记 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<hr />
+
+<p>下午打开Chrome准备看看Gmail新邮件，突然主页跳出来这个，瞬间吓尿了。。。
+<figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://7xkus6.com1.z0.glb.clouddn.com/2345_01.png" alt="此处输入图片的描述" class="lazyload"><figcaption class="image-caption">此处输入图片的描述</figcaption></figure></p>
+
+<p>打开他们的官网，是这样：
+  <figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://7xkus6.com1.z0.glb.clouddn.com/2345_02.png" alt="此处输入图片的描述" class="lazyload"><figcaption class="image-caption">此处输入图片的描述</figcaption></figure></p>
+
+<p>我就知道这是怎样的一个商家了。。。</p>
+
+<h2 id="解决步骤">解决步骤</h2>
+
+<ol>
+<li>有一部分人只是桌面的快捷方式被篡改，请右键桌面上的快捷方式查找到文件的安装目录，尝试从安装目录双击启动浏览器，如果首页正常说明是快捷方式的问题，删掉快捷方式重新生成一个快捷方式到桌面就解决了。</li>
+<li>如果上述未解决，请尝试从任务管理器里面运行浏览器程序，如果首页仍然被修改说明浏览器程序有问题，建议重新安装。</li>
+<li>如果用任务管理器运行后首页就恢复正常了，说明问题很可能跟explorer进程有关，那么先看C:\Windows下面的explorer.exe程序有无异常，比如修改日期是否异常，有问题的话建议找相同系统的电脑上拷贝一个explorer.exe文件，或者直接重装系统。</li>
+<li>如果explorer.exe也无问题，那么看进程钩子有无异常，一般是DLL文件出问题，不用会看代码什么的，我是用火绒软件里面的“火绒剑”功能查看的，用钩子扫描扫描explorer.exe进程，我在目标位置这一栏会有一条指向2345.lc文件的，按着这个路径在电脑找到这个文件并删除即可。</li>
+<li>如果以上都未解决，那么看有没有奇怪的自启动项，或者是奇怪的进程，禁用或关闭后试试。</li>
+</ol>
+
+<p>以上，参考自：<a href="http://www.zhihu.com/question/21883209" rel="nofollow noreferrer" target="_blank">chrome 主页被篡改为hao123？</a></p>
+
+<hr />
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Jiegao </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://hestation.com/2015/2345/>https://hestation.com/2015/2345/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://hestation.com/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+                    #问题解决</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://hestation.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+         
+        
+        <a href="https://hestation.com/2015/about-normalize-css/" class="next" rel="next" title="关于样式重置：normalize.css">关于样式重置：normalize.css&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2016 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://hestation.com">Jiegao</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
