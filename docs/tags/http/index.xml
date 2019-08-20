@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>HTTP on Jiegao</title>
-    <link>https://hestation.com/tags/http/</link>
+    <link>https://oeate.com/tags/http/</link>
     <description>Recent content in HTTP on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 17 Oct 2015 15:44:12 +0000</lastBuildDate>
     
-	<atom:link href="https://hestation.com/tags/http/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oeate.com/tags/http/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>图解HTTP学习笔记</title>
-      <link>https://hestation.com/2015/http-learning/</link>
+      <link>https://oeate.com/2015/http-learning/</link>
       <pubDate>Sat, 17 Oct 2015 15:44:12 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/http-learning/</guid>
+      <guid>https://oeate.com/2015/http-learning/</guid>
       <description>参考资料： 经典的Web应用网络模型
 在地址栏中输入某个网址，简要讲下整个页面呈现的过程? 客户端  用户想浏览 http://www.chen9.info 页面，浏览器需要通过DNS找到对应域名下的IP地址：10X.XXX.XXX.XXX 。
  HTTP协议的职责：生成针对目标Web服务器的HTTP请求报文 —— “请给我http://www.chen9.info 页面资源”。

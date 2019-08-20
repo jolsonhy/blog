@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ES6 on Jiegao</title>
-    <link>https://hestation.com/tags/es6/</link>
+    <link>https://oeate.com/tags/es6/</link>
     <description>Recent content in ES6 on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 05 Apr 2016 20:58:41 +0000</lastBuildDate>
     
-	<atom:link href="https://hestation.com/tags/es6/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oeate.com/tags/es6/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ES6学习笔记（一）：Set和Map</title>
-      <link>https://hestation.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</link>
+      <link>https://oeate.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</link>
       <pubDate>Tue, 05 Apr 2016 20:58:41 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</guid>
+      <guid>https://oeate.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</guid>
       <description>Set ES6利用Set数组去重：  方法一：  function dedupe(array) { return Array.from(new Set(array)); } dedupe([1, 1, 2, 3]); // [1, 2, 3]   方法二(利用扩展运算符)：  let arr = [3, 5, 2, 2, 5, 5]; let unique = [...new Set(arr)]; // [3, 5, 2]  特性  Set结构没有键名，只有键值，所以keys()和values()的行为完全一致。  let set = new Set([&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;]); for (let item of set.keys()) { console.log(item); } // red // green // blue for (let item of set.</description>
     </item>
     

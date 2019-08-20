@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorial on Jiegao</title>
-    <link>https://hestation.com/categories/tutorial/</link>
+    <link>https://oeate.com/categories/tutorial/</link>
     <description>Recent content in Tutorial on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Jul 2019 10:47:06 +0800</lastBuildDate>
     
-	<atom:link href="https://hestation.com/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oeate.com/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hello, Hugo</title>
-      <link>https://hestation.com/2019/hugo/</link>
+      <link>https://oeate.com/2019/hugo/</link>
       <pubDate>Wed, 17 Jul 2019 10:47:06 +0800</pubDate>
       
-      <guid>https://hestation.com/2019/hugo/</guid>
+      <guid>https://oeate.com/2019/hugo/</guid>
       <description>前言 记得是 16 年还在学校的时候开始折腾博客这个东西，而当时就觉得市面上所有现成的博客系统都做得不大好，要么太丑，要么太重。所以从一开始就走上了自建这么一条不归路，从买服务器，买域名，到接触不同的 Linux 系统，折腾过程中踩了很多坑，但也因此学会了很多东西。如今工作之后，由于没有继续干开发的工作，也很少花时间在这上面了，而以前写的一些东西也因此丢了，心里还是有点难过的。前两天突然心血来潮，觉着这种方式相比朋友圈、微博 Twitter 等东西，更能将过去的一些经验、日常沉淀下来，日后来看，说不定别有另一番滋味，于是，开搞。
 记得之前最后一个版本的博客是基于 Hexo 搞的，整体来讲还是不错的，不过记忆中那一堆 Nodejs 的依赖，各种乱七八糟的小问题，折腾了好久，再加上确实当内容多起来之后，每次编译生成的速度会比较慢，所以想着换一个试试，网上搜了一大圈，不少人都推荐 Hugo，于是做了下尝试，确实不错，暂时就用它了。以下是重新用它搭建的整体流程记录。
 本地安装 整个流程如下： 安装 Hugo -&amp;gt; 新建站点 -&amp;gt; 选择并拷贝主题到 themes 目录 -&amp;gt; 修改站点配置文件 -&amp;gt; 本地测试运行 -&amp;gt; 完成
@@ -27,10 +27,10 @@
     
     <item>
       <title>多设备使用 Hexo 写博客的解决方案</title>
-      <link>https://hestation.com/2019/hexo-multi-devices/</link>
+      <link>https://oeate.com/2019/hexo-multi-devices/</link>
       <pubDate>Sun, 16 Jun 2019 15:39:47 +0800</pubDate>
       
-      <guid>https://hestation.com/2019/hexo-multi-devices/</guid>
+      <guid>https://oeate.com/2019/hexo-multi-devices/</guid>
       <description>最近弄了一台 XPS 13，但同时原来的 MacBook Pro也在使用，就涉及到两台设备需要同时使用 Hexo 编辑、上传 Blog 文件的问题，所以想到把源文件放到服务器上，以下解决方案的记录。
 了解 Hexo 机制 首先，要搞清楚使用 Hexo 搭建博客的基本机制，本地 git clone 自 Hexo 的并非我们要部署的文件，而通过 hexo d 上传部署到 GitHub 的其实是它编译之后的文件，基本就是一个纯静态的 html + css + js 页面，不包括源文件，实际体现在我们本地就是 .deploy_git 这个文件夹里的。
 了解其机制之后就好办了，一般情况通过 GitHub 作为中转站有两种方式，一种是在你 name.github.io 基础上直接新建一个 hexo 分支，并将它设置为默认分支，这样每次先将源文件推到 hexo 默认分支上，再编译部署实际内容到 master 分支，从而实现一个仓库同时管理源文件与博客文件。
@@ -42,10 +42,10 @@ git init git commit -m “first commit” git remote add origin git@github.</des
     
     <item>
       <title>如何注册并使用美区 Apple ID</title>
-      <link>https://hestation.com/2018/reg-appleid/</link>
+      <link>https://oeate.com/2018/reg-appleid/</link>
       <pubDate>Thu, 15 Nov 2018 12:30:03 +0800</pubDate>
       
-      <guid>https://hestation.com/2018/reg-appleid/</guid>
+      <guid>https://oeate.com/2018/reg-appleid/</guid>
       <description>前言 因为每个人的使用需求不同，比如 SS、SSR、V2 等都需要相对应的网络代理工具 App。但由于某些特殊原因，中国区 App Store 基本上下架了大部分的网络代理工具 App（例如用的比较多的小火箭 Shadowrocket 和圈 Quantumult 等等）。
 因为中国区无法下载到自己所需要使用的App，则大部分人都需要注册非中国区（如美区、港区等）的应用商店付费进行下载（出于尊重作者的角度出发，请尽量不要使用共享 Apple ID 账号下载软件，正版 App 其实也就几十块钱）。
 本文以注册美区 Apple ID 账号为例（其他地区账号同理），但关于美区 Apple ID 账号和绑定 PayPal 自行 Google 搜索相关教程，如需求较大后续我可以再出相关教程。
@@ -55,10 +55,10 @@ git init git commit -m “first commit” git remote add origin git@github.</des
     
     <item>
       <title>华硕 RT-AC86U 刷梅林改版系统</title>
-      <link>https://hestation.com/2018/merlin/</link>
+      <link>https://oeate.com/2018/merlin/</link>
       <pubDate>Thu, 01 Nov 2018 11:18:03 +0800</pubDate>
       
-      <guid>https://hestation.com/2018/merlin/</guid>
+      <guid>https://oeate.com/2018/merlin/</guid>
       <description>前几天刚把 K2P 换成 86U，以下是 86U 刷梅林系统的步骤，非常简单：
 刷机前的准备  EXT 格式的 1G 以上 U盘一个，如果不知道怎么格式化，可以查看此文章附录。 改版梅林安装包，下载地址为：这里，或直接到Coolshare论坛下载：这里 科学上网工具离线安装包，下载地址为这里，或直接到GitHub上找到与你机器相匹配的 一根网线，用于连接电脑与路由器 一杯茶，用于等待的时候喝哈哈哈  正式开刷 系统初始化  拿到机器后，打开机器背后开关键，然后连上电源，开机。
  找到一根网线，一头接自己的电脑，另一头接路由器的LAN口。
@@ -75,10 +75,10 @@ git init git commit -m “first commit” git remote add origin git@github.</des
     
     <item>
       <title>第一篇文章用于测试</title>
-      <link>https://hestation.com/2017/my-first-post/</link>
+      <link>https://oeate.com/2017/my-first-post/</link>
       <pubDate>Fri, 14 Jul 2017 18:31:53 +0800</pubDate>
       
-      <guid>https://hestation.com/2017/my-first-post/</guid>
+      <guid>https://oeate.com/2017/my-first-post/</guid>
       <description>Welcome to GitHub Pages You can use the editor on GitHub to maintain and preview the content for your website in Markdown files.
 Whenever you commit to this repository, GitHub Pages will run Jekyll to rebuild the pages in your site, from the content in your Markdown files.
 Markdown Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for

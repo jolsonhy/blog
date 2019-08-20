@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>教程 on Jiegao</title>
-    <link>https://hestation.com/tags/%E6%95%99%E7%A8%8B/</link>
+    <link>https://oeate.com/tags/%E6%95%99%E7%A8%8B/</link>
     <description>Recent content in 教程 on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 15 Nov 2018 12:30:03 +0800</lastBuildDate>
     
-	<atom:link href="https://hestation.com/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oeate.com/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>如何注册并使用美区 Apple ID</title>
-      <link>https://hestation.com/2018/reg-appleid/</link>
+      <link>https://oeate.com/2018/reg-appleid/</link>
       <pubDate>Thu, 15 Nov 2018 12:30:03 +0800</pubDate>
       
-      <guid>https://hestation.com/2018/reg-appleid/</guid>
+      <guid>https://oeate.com/2018/reg-appleid/</guid>
       <description>前言 因为每个人的使用需求不同，比如 SS、SSR、V2 等都需要相对应的网络代理工具 App。但由于某些特殊原因，中国区 App Store 基本上下架了大部分的网络代理工具 App（例如用的比较多的小火箭 Shadowrocket 和圈 Quantumult 等等）。
 因为中国区无法下载到自己所需要使用的App，则大部分人都需要注册非中国区（如美区、港区等）的应用商店付费进行下载（出于尊重作者的角度出发，请尽量不要使用共享 Apple ID 账号下载软件，正版 App 其实也就几十块钱）。
 本文以注册美区 Apple ID 账号为例（其他地区账号同理），但关于美区 Apple ID 账号和绑定 PayPal 自行 Google 搜索相关教程，如需求较大后续我可以再出相关教程。
@@ -26,10 +26,10 @@
     
     <item>
       <title>华硕 RT-AC86U 刷梅林改版系统</title>
-      <link>https://hestation.com/2018/merlin/</link>
+      <link>https://oeate.com/2018/merlin/</link>
       <pubDate>Thu, 01 Nov 2018 11:18:03 +0800</pubDate>
       
-      <guid>https://hestation.com/2018/merlin/</guid>
+      <guid>https://oeate.com/2018/merlin/</guid>
       <description>前几天刚把 K2P 换成 86U，以下是 86U 刷梅林系统的步骤，非常简单：
 刷机前的准备  EXT 格式的 1G 以上 U盘一个，如果不知道怎么格式化，可以查看此文章附录。 改版梅林安装包，下载地址为：这里，或直接到Coolshare论坛下载：这里 科学上网工具离线安装包，下载地址为这里，或直接到GitHub上找到与你机器相匹配的 一根网线，用于连接电脑与路由器 一杯茶，用于等待的时候喝哈哈哈  正式开刷 系统初始化  拿到机器后，打开机器背后开关键，然后连上电源，开机。
  找到一根网线，一头接自己的电脑，另一头接路由器的LAN口。
@@ -46,10 +46,10 @@
     
     <item>
       <title>Webpack使用</title>
-      <link>https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+      <link>https://oeate.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
       <pubDate>Sat, 09 Apr 2016 11:55:55 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://oeate.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
       <description>前言 最近在做百度前端技术学院的任务时，尝试接触使用了ES6新的语法糖，在这过程中，也顺便学习了一下近期很火的webpac的使用，以下是对近期学习的一个总结与归纳。
 概要 Webpack不同于Gulp或者Grunt，后者是一种自动化处理工具，而Webpack是一个种模块化解决方案，名为MODULE BUNDLER。
 在 webpack 里，所有类型的文件都可以是模块，包含最常见的 JavaScript，以及 css 文件、图片、json 文件等等。通过 webpack 的各种加载器，可以更有效地管理这些文件。
@@ -62,10 +62,10 @@ webpack // 构建为开发环境输出 webpack -p // 构建为生产环境输出
     
     <item>
       <title>前端构建工具Gulp</title>
-      <link>https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</link>
+      <link>https://oeate.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</link>
       <pubDate>Thu, 24 Mar 2016 22:32:00 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</guid>
+      <guid>https://oeate.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</guid>
       <description>第一步：安装Node 首先需要搭建node环境。访问Node.js官网，然后点击大大的绿色的install按钮，下载完成后直接运行程序，就一切准备就绪。npm会随着安装包一起安装，稍后会用到它。
 第二步：使用命令行 查看node版本号
 node -v  查看npm版本
@@ -83,10 +83,10 @@ gulpfile.js // 引入 gulp var gulp = require(&#39;gulp&#39;); // 引入组件 v
     
     <item>
       <title>搭建Hexo博客过程</title>
-      <link>https://hestation.com/2015/build-a-blog/</link>
+      <link>https://oeate.com/2015/build-a-blog/</link>
       <pubDate>Sun, 04 Oct 2015 21:07:12 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/build-a-blog/</guid>
+      <guid>https://oeate.com/2015/build-a-blog/</guid>
       <description>搭建前的准备  安装Hexo前，电脑上需要有下面两个应用程序：  Node.js Git   Git和Node.js的安装过程在此不详细展开，可参照官网的教程。
 搭建过程 使用npm安装Hexo $ npm install -g hexo-cli ```` ps：此过程如果没有翻墙可能会出现一直在下载安装但很久都没有有提示成功的情况，这时候可以换一种方式： 采用淘宝街镜像源安装： ``` bash npm install -g hexo-cli --registry=https://registry.npm.taobao.org  建站 mkdir &amp;lt;folder&amp;gt; cd hexo hexo init npm install  新建完成后，制定文件夹的目录如下：
 . ├── _config.yml ├── package.json ├── scaffolds ├── scripts ├── source | ├── _drafts | └── _posts └── themes  （ps：此目录来自官网：Hexo建站）

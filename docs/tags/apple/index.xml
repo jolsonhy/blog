@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apple on Jiegao</title>
-    <link>https://hestation.com/tags/apple/</link>
+    <link>https://oeate.com/tags/apple/</link>
     <description>Recent content in Apple on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 15 Nov 2018 12:30:03 +0800</lastBuildDate>
     
-	<atom:link href="https://hestation.com/tags/apple/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oeate.com/tags/apple/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>如何注册并使用美区 Apple ID</title>
-      <link>https://hestation.com/2018/reg-appleid/</link>
+      <link>https://oeate.com/2018/reg-appleid/</link>
       <pubDate>Thu, 15 Nov 2018 12:30:03 +0800</pubDate>
       
-      <guid>https://hestation.com/2018/reg-appleid/</guid>
+      <guid>https://oeate.com/2018/reg-appleid/</guid>
       <description>前言 因为每个人的使用需求不同，比如 SS、SSR、V2 等都需要相对应的网络代理工具 App。但由于某些特殊原因，中国区 App Store 基本上下架了大部分的网络代理工具 App（例如用的比较多的小火箭 Shadowrocket 和圈 Quantumult 等等）。
 因为中国区无法下载到自己所需要使用的App，则大部分人都需要注册非中国区（如美区、港区等）的应用商店付费进行下载（出于尊重作者的角度出发，请尽量不要使用共享 Apple ID 账号下载软件，正版 App 其实也就几十块钱）。
 本文以注册美区 Apple ID 账号为例（其他地区账号同理），但关于美区 Apple ID 账号和绑定 PayPal 自行 Google 搜索相关教程，如需求较大后续我可以再出相关教程。

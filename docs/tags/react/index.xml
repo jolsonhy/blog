@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>React on Jiegao</title>
-    <link>https://hestation.com/tags/react/</link>
+    <link>https://oeate.com/tags/react/</link>
     <description>Recent content in React on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 Jun 2016 14:23:41 +0000</lastBuildDate>
     
-	<atom:link href="https://hestation.com/tags/react/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oeate.com/tags/react/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>React学习笔记</title>
-      <link>https://hestation.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://oeate.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sat, 11 Jun 2016 14:23:41 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://oeate.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description>前言 前段时间看了一下React和react-router的文档，这几天用它们在做一个实时投票的Web App，这篇文章记录里面遇到的坑及其解决方法。
 获取真实DOM节点的引用 添加ref属性
 ref={(ref) =&amp;gt; this.name = ref}  Demo:

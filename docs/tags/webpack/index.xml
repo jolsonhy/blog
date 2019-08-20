@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Webpack on Jiegao</title>
-    <link>https://hestation.com/tags/webpack/</link>
-    <description>Recent content in Webpack on Jiegao</description>
+    <title>webpack on Jiegao</title>
+    <link>https://oeate.com/tags/webpack/</link>
+    <description>Recent content in webpack on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 16 May 2016 09:15:00 +0000</lastBuildDate>
     
-	<atom:link href="https://hestation.com/tags/webpack/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oeate.com/tags/webpack/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Webpack--令人困惑的地方</title>
-      <link>https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</link>
+      <link>https://oeate.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</link>
       <pubDate>Mon, 16 May 2016 09:15:00 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</guid>
+      <guid>https://oeate.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</guid>
       <description>原文  Webpack—The Confusing Parts 【翻译】Webpack——令人困惑的地方  Webpack是目前基于React和Redux开发的应用的主要打包工具。我想使用Angular 2或其他框架开发的应用也有很多在使用Webpack。
 当我第一次看到Webpack的配置文件时，它看起来非常的陌生，我非常的疑惑。经过一段时间的尝试之后我认为这是因为Webpack只是使用了比较特别的语法和引入了新的原理，因此会让使用者感到疑惑。这些也是导致Webpack不被人熟悉的原因。
 因为刚开始使用Webpack很让人疑惑，我觉得有必要写几篇介绍Webpack的功能和特性的文章以帮助初学者快速理解。此文是最开始的一篇。
@@ -38,10 +38,10 @@ Webpack的核心原理 Webpack的两个最核心的原理分别是：
     
     <item>
       <title>Webpack使用</title>
-      <link>https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+      <link>https://oeate.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
       <pubDate>Sat, 09 Apr 2016 11:55:55 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://oeate.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
       <description>前言 最近在做百度前端技术学院的任务时，尝试接触使用了ES6新的语法糖，在这过程中，也顺便学习了一下近期很火的webpac的使用，以下是对近期学习的一个总结与归纳。
 概要 Webpack不同于Gulp或者Grunt，后者是一种自动化处理工具，而Webpack是一个种模块化解决方案，名为MODULE BUNDLER。
 在 webpack 里，所有类型的文件都可以是模块，包含最常见的 JavaScript，以及 css 文件、图片、json 文件等等。通过 webpack 的各种加载器，可以更有效地管理这些文件。

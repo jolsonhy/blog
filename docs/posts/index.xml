@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Jiegao</title>
-    <link>https://hestation.com/posts/</link>
+    <link>https://oeate.com/posts/</link>
     <description>Recent content in Posts on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Jul 2019 10:47:06 +0800</lastBuildDate>
     
-	<atom:link href="https://hestation.com/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oeate.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hello, Hugo</title>
-      <link>https://hestation.com/2019/hugo/</link>
+      <link>https://oeate.com/2019/hugo/</link>
       <pubDate>Wed, 17 Jul 2019 10:47:06 +0800</pubDate>
       
-      <guid>https://hestation.com/2019/hugo/</guid>
+      <guid>https://oeate.com/2019/hugo/</guid>
       <description>前言 记得是 16 年还在学校的时候开始折腾博客这个东西，而当时就觉得市面上所有现成的博客系统都做得不大好，要么太丑，要么太重。所以从一开始就走上了自建这么一条不归路，从买服务器，买域名，到接触不同的 Linux 系统，折腾过程中踩了很多坑，但也因此学会了很多东西。如今工作之后，由于没有继续干开发的工作，也很少花时间在这上面了，而以前写的一些东西也因此丢了，心里还是有点难过的。前两天突然心血来潮，觉着这种方式相比朋友圈、微博 Twitter 等东西，更能将过去的一些经验、日常沉淀下来，日后来看，说不定别有另一番滋味，于是，开搞。
 记得之前最后一个版本的博客是基于 Hexo 搞的，整体来讲还是不错的，不过记忆中那一堆 Nodejs 的依赖，各种乱七八糟的小问题，折腾了好久，再加上确实当内容多起来之后，每次编译生成的速度会比较慢，所以想着换一个试试，网上搜了一大圈，不少人都推荐 Hugo，于是做了下尝试，确实不错，暂时就用它了。以下是重新用它搭建的整体流程记录。
 本地安装 整个流程如下： 安装 Hugo -&amp;gt; 新建站点 -&amp;gt; 选择并拷贝主题到 themes 目录 -&amp;gt; 修改站点配置文件 -&amp;gt; 本地测试运行 -&amp;gt; 完成
@@ -27,10 +27,10 @@
     
     <item>
       <title>多设备使用 Hexo 写博客的解决方案</title>
-      <link>https://hestation.com/2019/hexo-multi-devices/</link>
+      <link>https://oeate.com/2019/hexo-multi-devices/</link>
       <pubDate>Sun, 16 Jun 2019 15:39:47 +0800</pubDate>
       
-      <guid>https://hestation.com/2019/hexo-multi-devices/</guid>
+      <guid>https://oeate.com/2019/hexo-multi-devices/</guid>
       <description>最近弄了一台 XPS 13，但同时原来的 MacBook Pro也在使用，就涉及到两台设备需要同时使用 Hexo 编辑、上传 Blog 文件的问题，所以想到把源文件放到服务器上，以下解决方案的记录。
 了解 Hexo 机制 首先，要搞清楚使用 Hexo 搭建博客的基本机制，本地 git clone 自 Hexo 的并非我们要部署的文件，而通过 hexo d 上传部署到 GitHub 的其实是它编译之后的文件，基本就是一个纯静态的 html + css + js 页面，不包括源文件，实际体现在我们本地就是 .deploy_git 这个文件夹里的。
 了解其机制之后就好办了，一般情况通过 GitHub 作为中转站有两种方式，一种是在你 name.github.io 基础上直接新建一个 hexo 分支，并将它设置为默认分支，这样每次先将源文件推到 hexo 默认分支上，再编译部署实际内容到 master 分支，从而实现一个仓库同时管理源文件与博客文件。
@@ -42,10 +42,10 @@ git init git commit -m “first commit” git remote add origin git@github.</des
     
     <item>
       <title>如何注册并使用美区 Apple ID</title>
-      <link>https://hestation.com/2018/reg-appleid/</link>
+      <link>https://oeate.com/2018/reg-appleid/</link>
       <pubDate>Thu, 15 Nov 2018 12:30:03 +0800</pubDate>
       
-      <guid>https://hestation.com/2018/reg-appleid/</guid>
+      <guid>https://oeate.com/2018/reg-appleid/</guid>
       <description>前言 因为每个人的使用需求不同，比如 SS、SSR、V2 等都需要相对应的网络代理工具 App。但由于某些特殊原因，中国区 App Store 基本上下架了大部分的网络代理工具 App（例如用的比较多的小火箭 Shadowrocket 和圈 Quantumult 等等）。
 因为中国区无法下载到自己所需要使用的App，则大部分人都需要注册非中国区（如美区、港区等）的应用商店付费进行下载（出于尊重作者的角度出发，请尽量不要使用共享 Apple ID 账号下载软件，正版 App 其实也就几十块钱）。
 本文以注册美区 Apple ID 账号为例（其他地区账号同理），但关于美区 Apple ID 账号和绑定 PayPal 自行 Google 搜索相关教程，如需求较大后续我可以再出相关教程。
@@ -55,10 +55,10 @@ git init git commit -m “first commit” git remote add origin git@github.</des
     
     <item>
       <title>华硕 RT-AC86U 刷梅林改版系统</title>
-      <link>https://hestation.com/2018/merlin/</link>
+      <link>https://oeate.com/2018/merlin/</link>
       <pubDate>Thu, 01 Nov 2018 11:18:03 +0800</pubDate>
       
-      <guid>https://hestation.com/2018/merlin/</guid>
+      <guid>https://oeate.com/2018/merlin/</guid>
       <description>前几天刚把 K2P 换成 86U，以下是 86U 刷梅林系统的步骤，非常简单：
 刷机前的准备  EXT 格式的 1G 以上 U盘一个，如果不知道怎么格式化，可以查看此文章附录。 改版梅林安装包，下载地址为：这里，或直接到Coolshare论坛下载：这里 科学上网工具离线安装包，下载地址为这里，或直接到GitHub上找到与你机器相匹配的 一根网线，用于连接电脑与路由器 一杯茶，用于等待的时候喝哈哈哈  正式开刷 系统初始化  拿到机器后，打开机器背后开关键，然后连上电源，开机。
  找到一根网线，一头接自己的电脑，另一头接路由器的LAN口。
@@ -75,10 +75,10 @@ git init git commit -m “first commit” git remote add origin git@github.</des
     
     <item>
       <title>《野火集》语录-第30页</title>
-      <link>https://hestation.com/2017/yehuoji-30/</link>
+      <link>https://oeate.com/2017/yehuoji-30/</link>
       <pubDate>Sun, 16 Jul 2017 16:10:21 +0800</pubDate>
       
-      <guid>https://hestation.com/2017/yehuoji-30/</guid>
+      <guid>https://oeate.com/2017/yehuoji-30/</guid>
       <description> 一个不公的体制压着人民，能够长久地压着，因为它有一个社会哲学的托词：逆来顺受、明哲保身的社会哲学。看穿了体制不公的人知道事不可为而转向冷漠；不曾看穿的人则早被教育了忍耐是美德、忍受是义务。 但是闷啊，这是一个有冤无处申的社会。
 《野火集》–龙应台
  </description>
@@ -86,10 +86,10 @@ git init git commit -m “first commit” git remote add origin git@github.</des
     
     <item>
       <title>龙应台《 野火集》摘录</title>
-      <link>https://hestation.com/2017/yehuoji/</link>
+      <link>https://oeate.com/2017/yehuoji/</link>
       <pubDate>Sun, 16 Jul 2017 16:08:12 +0800</pubDate>
       
-      <guid>https://hestation.com/2017/yehuoji/</guid>
+      <guid>https://oeate.com/2017/yehuoji/</guid>
       <description> 我们的上一代，受战乱和贫穷之苦，期望我们这一代温饱安定。
 我们这一代温饱安定了，但是受威权统治之苦，
 期望下一代在没有恐惧、没有控制的自由环境中成长。
@@ -99,10 +99,10 @@ git init git commit -m “first commit” git remote add origin git@github.</des
     
     <item>
       <title>第一篇文章用于测试</title>
-      <link>https://hestation.com/2017/my-first-post/</link>
+      <link>https://oeate.com/2017/my-first-post/</link>
       <pubDate>Fri, 14 Jul 2017 18:31:53 +0800</pubDate>
       
-      <guid>https://hestation.com/2017/my-first-post/</guid>
+      <guid>https://oeate.com/2017/my-first-post/</guid>
       <description>Welcome to GitHub Pages You can use the editor on GitHub to maintain and preview the content for your website in Markdown files.
 Whenever you commit to this repository, GitHub Pages will run Jekyll to rebuild the pages in your site, from the content in your Markdown files.
 Markdown Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
@@ -111,10 +111,10 @@ Syntax highlighted code block # Header 1 ## Header 2 ### Header 3 - Bulleted - L
     
     <item>
       <title>React学习笔记</title>
-      <link>https://hestation.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://oeate.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sat, 11 Jun 2016 14:23:41 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://oeate.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description>前言 前段时间看了一下React和react-router的文档，这几天用它们在做一个实时投票的Web App，这篇文章记录里面遇到的坑及其解决方法。
 获取真实DOM节点的引用 添加ref属性
 ref={(ref) =&amp;gt; this.name = ref}  Demo:
@@ -123,10 +123,10 @@ export default class Join extends React.Component { constructor(props) { super(p
     
     <item>
       <title>Webpack--令人困惑的地方</title>
-      <link>https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</link>
+      <link>https://oeate.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</link>
       <pubDate>Mon, 16 May 2016 09:15:00 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</guid>
+      <guid>https://oeate.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</guid>
       <description>原文  Webpack—The Confusing Parts 【翻译】Webpack——令人困惑的地方  Webpack是目前基于React和Redux开发的应用的主要打包工具。我想使用Angular 2或其他框架开发的应用也有很多在使用Webpack。
 当我第一次看到Webpack的配置文件时，它看起来非常的陌生，我非常的疑惑。经过一段时间的尝试之后我认为这是因为Webpack只是使用了比较特别的语法和引入了新的原理，因此会让使用者感到疑惑。这些也是导致Webpack不被人熟悉的原因。
 因为刚开始使用Webpack很让人疑惑，我觉得有必要写几篇介绍Webpack的功能和特性的文章以帮助初学者快速理解。此文是最开始的一篇。
@@ -148,10 +148,10 @@ Webpack的核心原理 Webpack的两个最核心的原理分别是：
     
     <item>
       <title>npm学习笔记</title>
-      <link>https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://oeate.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 16 May 2016 08:59:00 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://oeate.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description>前言 近期在做一个投票项目的应用时，突然发现对npm的认识很少，故查询了一些资料，现将自己的笔记总结在此。
 介绍 npm是Node.js的包管理工具
 命令  查看用户手册
@@ -160,19 +160,19 @@ npm -h   生成package.json bash npm init    &amp;ndash;save-dev与&amp;ndash;sa
     
     <item>
       <title>前端学习笔记</title>
-      <link>https://hestation.com/2016/xiachufang/</link>
+      <link>https://oeate.com/2016/xiachufang/</link>
       <pubDate>Wed, 13 Apr 2016 22:42:28 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/xiachufang/</guid>
+      <guid>https://oeate.com/2016/xiachufang/</guid>
       <description>问题一：外容器的尺寸未知,内容器已知，实现水平垂直居中 html结构: &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;item&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  方法一：绝对定位 + 负外边距 .container { position: relative; } .item { width: 200px; height: 200px; position: absolute; top: 50%; left: 50%; margin: -100px 0 0 -100px; }  方法二：绝对定位 + 四周偏移量定位0， 外边距为auto .container { position: relative; } .item { width: 200px; height: 200px; position: absolute; margin: auto; top: 0; bottom: 0; left: 0; right: 0; }  方法三：Flex定位 .container { display: flex; justify-content: center; align-items: center; } .</description>
     </item>
     
     <item>
       <title>Webpack使用</title>
-      <link>https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+      <link>https://oeate.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
       <pubDate>Sat, 09 Apr 2016 11:55:55 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://oeate.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
       <description>前言 最近在做百度前端技术学院的任务时，尝试接触使用了ES6新的语法糖，在这过程中，也顺便学习了一下近期很火的webpac的使用，以下是对近期学习的一个总结与归纳。
 概要 Webpack不同于Gulp或者Grunt，后者是一种自动化处理工具，而Webpack是一个种模块化解决方案，名为MODULE BUNDLER。
 在 webpack 里，所有类型的文件都可以是模块，包含最常见的 JavaScript，以及 css 文件、图片、json 文件等等。通过 webpack 的各种加载器，可以更有效地管理这些文件。
@@ -185,19 +185,19 @@ webpack // 构建为开发环境输出 webpack -p // 构建为生产环境输出
     
     <item>
       <title>ES6学习笔记（一）：Set和Map</title>
-      <link>https://hestation.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</link>
+      <link>https://oeate.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</link>
       <pubDate>Tue, 05 Apr 2016 20:58:41 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</guid>
+      <guid>https://oeate.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</guid>
       <description>Set ES6利用Set数组去重：  方法一：  function dedupe(array) { return Array.from(new Set(array)); } dedupe([1, 1, 2, 3]); // [1, 2, 3]   方法二(利用扩展运算符)：  let arr = [3, 5, 2, 2, 5, 5]; let unique = [...new Set(arr)]; // [3, 5, 2]  特性  Set结构没有键名，只有键值，所以keys()和values()的行为完全一致。  let set = new Set([&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;]); for (let item of set.keys()) { console.log(item); } // red // green // blue for (let item of set.</description>
     </item>
     
     <item>
       <title>前端构建工具Gulp</title>
-      <link>https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</link>
+      <link>https://oeate.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</link>
       <pubDate>Thu, 24 Mar 2016 22:32:00 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</guid>
+      <guid>https://oeate.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</guid>
       <description>第一步：安装Node 首先需要搭建node环境。访问Node.js官网，然后点击大大的绿色的install按钮，下载完成后直接运行程序，就一切准备就绪。npm会随着安装包一起安装，稍后会用到它。
 第二步：使用命令行 查看node版本号
 node -v  查看npm版本
@@ -215,10 +215,10 @@ gulpfile.js // 引入 gulp var gulp = require(&#39;gulp&#39;); // 引入组件 v
     
     <item>
       <title>自动备份Hexo博客源文件</title>
-      <link>https://hestation.com/2015/automatic-backup/</link>
+      <link>https://oeate.com/2015/automatic-backup/</link>
       <pubDate>Sun, 06 Dec 2015 08:38:24 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/automatic-backup/</guid>
+      <guid>https://oeate.com/2015/automatic-backup/</guid>
       <description>前言 这两天给电脑换上了SSD和内存，系统重装，一堆的软件和配置真是折腾死了。得益于之前加入的一个博文自动备份到Github上的脚本，让我没有再为这个费头脑。所以此文记录自动备份Hexo博客源文件到Github的过程。
 原文出自：自动备份Hexo博客源文件
 原理 通过通过监听Hexo的其它事件来完成自动执行Git命令完成自动备份。 通过查阅Hexo文档，找到了Hexo的主要事件，见下表：
@@ -232,29 +232,29 @@ git add .</description>
     
     <item>
       <title>CentOS 6.6下源码编译安装Python</title>
-      <link>https://hestation.com/2015/centos-python/</link>
+      <link>https://oeate.com/2015/centos-python/</link>
       <pubDate>Thu, 19 Nov 2015 20:35:12 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/centos-python/</guid>
+      <guid>https://oeate.com/2015/centos-python/</guid>
       <description>准备安装模块 yum groupinstall &amp;quot;Development tools&amp;quot; yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel  Python3.4 安装下载代码 configure → make → make altinstall cd /usr/local/src wget https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tgz tar -zxvf Python-3.4.3.tgz cd Python-3.4.3 ./configure --prefix=/usr/local/python make &amp;amp;&amp;amp; make altinstall  安装Python3.4 ：公用库的安装 echo &amp;quot;/usr/local/python/lib&amp;quot; &amp;gt;&amp;gt; /etc/ld.so.conf ldconfig  安装Python3.4： 4. /usr/local/bin/ ln -s /usr/local/python/bin/python3.4 /usr/local/bin/python  安装Python3.4 ：5. 确认是否安装正确 /usr/local/python/bin/python3.4 -V python -V  安装Python3.4 Easy_Install cd /usr/local/src wget https://pypi.python.org/…/s/setuptools/setuptools-18.0.1.zip unzip setuptools-18.</description>
     </item>
     
     <item>
       <title>Vim 常用命令总结</title>
-      <link>https://hestation.com/2015/markdown-table/</link>
+      <link>https://oeate.com/2015/markdown-table/</link>
       <pubDate>Sun, 25 Oct 2015 10:06:28 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/markdown-table/</guid>
+      <guid>https://oeate.com/2015/markdown-table/</guid>
       <description>光标移动(Cursor Movement)    命令 作用（解释）     h,j,k,l h表示往左，j表示往下，k表示往右，l表示往上   Ctrl+f 上一页   Ctrl+b 下一页   w, e, W, E 跳到单词的后面，小写包括标点   b, B 以单词为单位往前跳动光标，小写包含标点   O 开启新的一行   ^ 一行的开始   $ 一行的结尾   gg 文档的第一行   [N]G 文档的第N行或者最后一行    
 插入模式(Insert Mode)    命令  　作用（解释)     i  插入到光标前面   I  插入到行的开始位置   a  插入到光标的后面   A  插入到行的最后位置   o, O  　新开一行   Esc  　关闭插入模式</description>
     </item>
     
     <item>
       <title>Linux vim设置tab缩进</title>
-      <link>https://hestation.com/2015/linux-tab/</link>
+      <link>https://oeate.com/2015/linux-tab/</link>
       <pubDate>Sat, 24 Oct 2015 10:59:12 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/linux-tab/</guid>
+      <guid>https://oeate.com/2015/linux-tab/</guid>
       <description>前言 由于本周操作系统实验是使用Linux vim实现短作业优先算法，而在编辑过程中发现vim没有默认缩进以及代码行号等功能，故搜索后设置。
 正文 1、在自己的家目录下建立.vimrc文件。终端输入vi ~/.vimrc 回车。
 2、在.vimrc文件中输入如下文本
@@ -263,10 +263,10 @@ set tabstop=4 set softtabstop=4 set shiftwidth=4 set noexpandtab set nu set auto
     
     <item>
       <title>图解HTTP学习笔记</title>
-      <link>https://hestation.com/2015/http-learning/</link>
+      <link>https://oeate.com/2015/http-learning/</link>
       <pubDate>Sat, 17 Oct 2015 15:44:12 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/http-learning/</guid>
+      <guid>https://oeate.com/2015/http-learning/</guid>
       <description>参考资料： 经典的Web应用网络模型
 在地址栏中输入某个网址，简要讲下整个页面呈现的过程? 客户端  用户想浏览 http://www.chen9.info 页面，浏览器需要通过DNS找到对应域名下的IP地址：10X.XXX.XXX.XXX 。
  HTTP协议的职责：生成针对目标Web服务器的HTTP请求报文 —— “请给我http://www.chen9.info 页面资源”。
@@ -287,10 +287,10 @@ set tabstop=4 set softtabstop=4 set shiftwidth=4 set noexpandtab set nu set auto
     
     <item>
       <title>搭建Hexo博客过程</title>
-      <link>https://hestation.com/2015/build-a-blog/</link>
+      <link>https://oeate.com/2015/build-a-blog/</link>
       <pubDate>Sun, 04 Oct 2015 21:07:12 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/build-a-blog/</guid>
+      <guid>https://oeate.com/2015/build-a-blog/</guid>
       <description>搭建前的准备  安装Hexo前，电脑上需要有下面两个应用程序：  Node.js Git   Git和Node.js的安装过程在此不详细展开，可参照官网的教程。
 搭建过程 使用npm安装Hexo $ npm install -g hexo-cli ```` ps：此过程如果没有翻墙可能会出现一直在下载安装但很久都没有有提示成功的情况，这时候可以换一种方式： 采用淘宝街镜像源安装： ``` bash npm install -g hexo-cli --registry=https://registry.npm.taobao.org  建站 mkdir &amp;lt;folder&amp;gt; cd hexo hexo init npm install  新建完成后，制定文件夹的目录如下：
 . ├── _config.yml ├── package.json ├── scaffolds ├── scripts ├── source | ├── _drafts | └── _posts └── themes  （ps：此目录来自官网：Hexo建站）
@@ -299,10 +299,10 @@ set tabstop=4 set softtabstop=4 set shiftwidth=4 set noexpandtab set nu set auto
     
     <item>
       <title>Chrome下Flash崩溃的解决方案</title>
-      <link>https://hestation.com/2015/chrome-flash-collapse/</link>
+      <link>https://oeate.com/2015/chrome-flash-collapse/</link>
       <pubDate>Sun, 04 Oct 2015 16:51:28 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/chrome-flash-collapse/</guid>
+      <guid>https://oeate.com/2015/chrome-flash-collapse/</guid>
       <description> 前言 最近使用Chrome看视频的时候，时常出现Flash崩溃的情况，Google一下解决后，现将解决方案记录下来。
 正文  地址栏输入chrome://plugins/进入插件管理页。 打开详细信息。  把两个Shockwave Flash中类型为PPAPI(独立程序)的那个停用。   PS. 有的人是关掉chrome自带的flash(PPAPI)，开启系统自带的flash(NPAPI)才比较稳定，请根据具体情况设置。如果没有NPAPI，可以前往Adobe Flash Player下载。
 如果还不能解决：
@@ -311,10 +311,10 @@ set tabstop=4 set softtabstop=4 set shiftwidth=4 set noexpandtab set nu set auto
     
     <item>
       <title>安装SQL Server出现29506错误的解决方案</title>
-      <link>https://hestation.com/2015/sql-server-error/</link>
+      <link>https://oeate.com/2015/sql-server-error/</link>
       <pubDate>Fri, 25 Sep 2015 23:25:12 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/sql-server-error/</guid>
+      <guid>https://oeate.com/2015/sql-server-error/</guid>
       <description> 前言 此文记录Win8.1(64位)安装SQL Server Management Studio Express时出现[error 29506]错误的解决方案。
 文章  Microsoft SQL Server Management Studio Express: 下载地址：Microsoft SQL Server Management Studio Express
  解决方案原文地址: SQL Server Management, error 29506
@@ -323,19 +323,19 @@ set tabstop=4 set softtabstop=4 set shiftwidth=4 set noexpandtab set nu set auto
     
     <item>
       <title>Html5之Canvas</title>
-      <link>https://hestation.com/2015/canvas/</link>
+      <link>https://oeate.com/2015/canvas/</link>
       <pubDate>Wed, 26 Aug 2015 18:34:25 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/canvas/</guid>
+      <guid>https://oeate.com/2015/canvas/</guid>
       <description> 绘制2D图形：  var canvas = document.getElementById(&#39;canvas&#39;); var context = canvas.getContext(&#39;2d&#39;);  一条路径开始：  context.beginPath(); //状态开始  结束：  context.closePath(); //状态结束  线段起始位置：  context.moveTo(100, 100); //起点坐标 context.lineTo(400, 400); //终点坐标  如果有多条相连的线段，可用多个lineTo直接首尾相连：  context.moveTo(100, 100); context.lineTo(400, 400); context.lineTo(100, 400); context.lineTo(100, 100);  设置线条属性：  context.lineWidth = 5; //线条宽度 context.strokeStyle = &#39;red&#39;; //线条颜色  对于一个封闭图形，可以填充颜色：  context.fillStyle = &#39;rbg(2, 100, 30)&#39;; //填充颜色 context.fill();  绘制图形：  context.stroke();  </description>
     </item>
     
     <item>
       <title>关于样式重置：normalize.css</title>
-      <link>https://hestation.com/2015/about-normalize-css/</link>
+      <link>https://oeate.com/2015/about-normalize-css/</link>
       <pubDate>Tue, 04 Aug 2015 20:56:28 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/about-normalize-css/</guid>
+      <guid>https://oeate.com/2015/about-normalize-css/</guid>
       <description>前言 这几天在Udacity上学习Front-End Web Developer Nanodegree的课程，从里面发现了很多很实用又以前未接触的东西，包括今天看到的css resetting，之前一直用的* {margin:0; padding: 0;}来简单处理这个问题，看到Udacity的工程师提到Normalize，查询资料后才知道其妙用。
 关于reset.css 关于CSS样式重置问题，一直都存在很多争议，有人觉得可以直接使用前言所说的* {margin:0; padding: 0;}，而有人则觉得这种方法会对性能有影响，而提倡使用比较流行的Eric Meyer和YUI的重置样式。 但貌似随着CSS的发展，更多人开始觉得此种样式重置没有必要。下面贴两篇同一个作者时隔一年提出两种截然相反的观点的文章：
  打造自己的RESET.CSS 真的还需要RESET.CSS么？  关于normalize.css 而今天要说的则是目前很多人支持并且广泛使用的normalize.css。 它 只是一个很小的CSS文件，但在默认的HTML元素样式上提供了跨浏览器的高度一致性。相比于传统的CSS reset，Normalize.css是一种现代的、为HTML5准备的优质替代方案。Normalize.css现在已经被用于Twitter Bootstrap、HTML5 Boilerplate、GOV.UK、Rdio、CSS Tricks 以及许许多多其他框架、工具和网站上。
@@ -348,10 +348,10 @@ normalize.css 修复了浏览器的bug 它修复了常见的桌面端和移动�
     
     <item>
       <title>Chrome主页被劫持为2345的解决方案</title>
-      <link>https://hestation.com/2015/2345/</link>
+      <link>https://oeate.com/2015/2345/</link>
       <pubDate>Mon, 03 Aug 2015 15:27:28 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/2345/</guid>
+      <guid>https://oeate.com/2015/2345/</guid>
       <description>下午打开Chrome准备看看Gmail新邮件，突然主页跳出来这个，瞬间吓尿了。。。 打开他们的官网，是这样： 我就知道这是怎样的一个商家了。。。
 解决步骤  有一部分人只是桌面的快捷方式被篡改，请右键桌面上的快捷方式查找到文件的安装目录，尝试从安装目录双击启动浏览器，如果首页正常说明是快捷方式的问题，删掉快捷方式重新生成一个快捷方式到桌面就解决了。 如果上述未解决，请尝试从任务管理器里面运行浏览器程序，如果首页仍然被修改说明浏览器程序有问题，建议重新安装。 如果用任务管理器运行后首页就恢复正常了，说明问题很可能跟explorer进程有关，那么先看C:\Windows下面的explorer.exe程序有无异常，比如修改日期是否异常，有问题的话建议找相同系统的电脑上拷贝一个explorer.exe文件，或者直接重装系统。 如果explorer.exe也无问题，那么看进程钩子有无异常，一般是DLL文件出问题，不用会看代码什么的，我是用火绒软件里面的“火绒剑”功能查看的，用钩子扫描扫描explorer.exe进程，我在目标位置这一栏会有一条指向2345.lc文件的，按着这个路径在电脑找到这个文件并删除即可。 如果以上都未解决，那么看有没有奇怪的自启动项，或者是奇怪的进程，禁用或关闭后试试。  以上，参考自：chrome 主页被篡改为hao123？</description>
     </item>

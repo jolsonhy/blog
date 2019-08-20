@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>笔记 on Jiegao</title>
-    <link>https://hestation.com/tags/%E7%AC%94%E8%AE%B0/</link>
+    <link>https://oeate.com/tags/%E7%AC%94%E8%AE%B0/</link>
     <description>Recent content in 笔记 on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Jul 2017 16:10:21 +0800</lastBuildDate>
     
-	<atom:link href="https://hestation.com/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oeate.com/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>《野火集》语录-第30页</title>
-      <link>https://hestation.com/2017/yehuoji-30/</link>
+      <link>https://oeate.com/2017/yehuoji-30/</link>
       <pubDate>Sun, 16 Jul 2017 16:10:21 +0800</pubDate>
       
-      <guid>https://hestation.com/2017/yehuoji-30/</guid>
+      <guid>https://oeate.com/2017/yehuoji-30/</guid>
       <description> 一个不公的体制压着人民，能够长久地压着，因为它有一个社会哲学的托词：逆来顺受、明哲保身的社会哲学。看穿了体制不公的人知道事不可为而转向冷漠；不曾看穿的人则早被教育了忍耐是美德、忍受是义务。 但是闷啊，这是一个有冤无处申的社会。
 《野火集》–龙应台
  </description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>龙应台《 野火集》摘录</title>
-      <link>https://hestation.com/2017/yehuoji/</link>
+      <link>https://oeate.com/2017/yehuoji/</link>
       <pubDate>Sun, 16 Jul 2017 16:08:12 +0800</pubDate>
       
-      <guid>https://hestation.com/2017/yehuoji/</guid>
+      <guid>https://oeate.com/2017/yehuoji/</guid>
       <description> 我们的上一代，受战乱和贫穷之苦，期望我们这一代温饱安定。
 我们这一代温饱安定了，但是受威权统治之苦，
 期望下一代在没有恐惧、没有控制的自由环境中成长。
@@ -37,10 +37,10 @@
     
     <item>
       <title>第一篇文章用于测试</title>
-      <link>https://hestation.com/2017/my-first-post/</link>
+      <link>https://oeate.com/2017/my-first-post/</link>
       <pubDate>Fri, 14 Jul 2017 18:31:53 +0800</pubDate>
       
-      <guid>https://hestation.com/2017/my-first-post/</guid>
+      <guid>https://oeate.com/2017/my-first-post/</guid>
       <description>Welcome to GitHub Pages You can use the editor on GitHub to maintain and preview the content for your website in Markdown files.
 Whenever you commit to this repository, GitHub Pages will run Jekyll to rebuild the pages in your site, from the content in your Markdown files.
 Markdown Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for

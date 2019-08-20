@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chrome on Jiegao</title>
-    <link>https://hestation.com/tags/chrome/</link>
+    <link>https://oeate.com/tags/chrome/</link>
     <description>Recent content in Chrome on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Oct 2015 16:51:28 +0000</lastBuildDate>
     
-	<atom:link href="https://hestation.com/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oeate.com/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Chrome下Flash崩溃的解决方案</title>
-      <link>https://hestation.com/2015/chrome-flash-collapse/</link>
+      <link>https://oeate.com/2015/chrome-flash-collapse/</link>
       <pubDate>Sun, 04 Oct 2015 16:51:28 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/chrome-flash-collapse/</guid>
+      <guid>https://oeate.com/2015/chrome-flash-collapse/</guid>
       <description> 前言 最近使用Chrome看视频的时候，时常出现Flash崩溃的情况，Google一下解决后，现将解决方案记录下来。
 正文  地址栏输入chrome://plugins/进入插件管理页。 打开详细信息。  把两个Shockwave Flash中类型为PPAPI(独立程序)的那个停用。   PS. 有的人是关掉chrome自带的flash(PPAPI)，开启系统自带的flash(NPAPI)才比较稳定，请根据具体情况设置。如果没有NPAPI，可以前往Adobe Flash Player下载。
 如果还不能解决：

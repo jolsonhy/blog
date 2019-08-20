@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>问题解决 on Jiegao</title>
-    <link>https://hestation.com/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
+    <link>https://oeate.com/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
     <description>Recent content in 问题解决 on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 Aug 2015 15:27:28 +0000</lastBuildDate>
     
-	<atom:link href="https://hestation.com/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oeate.com/tags/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Chrome主页被劫持为2345的解决方案</title>
-      <link>https://hestation.com/2015/2345/</link>
+      <link>https://oeate.com/2015/2345/</link>
       <pubDate>Mon, 03 Aug 2015 15:27:28 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/2345/</guid>
+      <guid>https://oeate.com/2015/2345/</guid>
       <description>下午打开Chrome准备看看Gmail新邮件，突然主页跳出来这个，瞬间吓尿了。。。 打开他们的官网，是这样： 我就知道这是怎样的一个商家了。。。
 解决步骤  有一部分人只是桌面的快捷方式被篡改，请右键桌面上的快捷方式查找到文件的安装目录，尝试从安装目录双击启动浏览器，如果首页正常说明是快捷方式的问题，删掉快捷方式重新生成一个快捷方式到桌面就解决了。 如果上述未解决，请尝试从任务管理器里面运行浏览器程序，如果首页仍然被修改说明浏览器程序有问题，建议重新安装。 如果用任务管理器运行后首页就恢复正常了，说明问题很可能跟explorer进程有关，那么先看C:\Windows下面的explorer.exe程序有无异常，比如修改日期是否异常，有问题的话建议找相同系统的电脑上拷贝一个explorer.exe文件，或者直接重装系统。 如果explorer.exe也无问题，那么看进程钩子有无异常，一般是DLL文件出问题，不用会看代码什么的，我是用火绒软件里面的“火绒剑”功能查看的，用钩子扫描扫描explorer.exe进程，我在目标位置这一栏会有一条指向2345.lc文件的，按着这个路径在电脑找到这个文件并删除即可。 如果以上都未解决，那么看有没有奇怪的自启动项，或者是奇怪的进程，禁用或关闭后试试。  以上，参考自：chrome 主页被篡改为hao123？</description>
     </item>

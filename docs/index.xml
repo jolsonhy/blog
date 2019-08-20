@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jiegao on Jiegao</title>
-    <link>https://hestation.com/</link>
+    <link>https://oeate.com/</link>
     <description>Recent content in Jiegao on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,10 +10,10 @@
     
     <item>
       <title>Hello, Hugo</title>
-      <link>https://hestation.com/2019/hugo/</link>
+      <link>https://oeate.com/2019/hugo/</link>
       <pubDate>Wed, 17 Jul 2019 10:47:06 +0800</pubDate>
       
-      <guid>https://hestation.com/2019/hugo/</guid>
+      <guid>https://oeate.com/2019/hugo/</guid>
       <description>
 
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -74,10 +74,10 @@
     
     <item>
       <title>About</title>
-      <link>https://hestation.com/about/</link>
+      <link>https://oeate.com/about/</link>
       <pubDate>Mon, 15 Jul 2019 12:08:23 +0800</pubDate>
       
-      <guid>https://hestation.com/about/</guid>
+      <guid>https://oeate.com/about/</guid>
       <description>
 
 &lt;h3 id=&#34;关于我&#34;&gt;关于我&lt;/h3&gt;
@@ -88,10 +88,10 @@
     
     <item>
       <title>多设备使用 Hexo 写博客的解决方案</title>
-      <link>https://hestation.com/2019/hexo-multi-devices/</link>
+      <link>https://oeate.com/2019/hexo-multi-devices/</link>
       <pubDate>Sun, 16 Jun 2019 15:39:47 +0800</pubDate>
       
-      <guid>https://hestation.com/2019/hexo-multi-devices/</guid>
+      <guid>https://oeate.com/2019/hexo-multi-devices/</guid>
       <description>
 
 &lt;p&gt;最近弄了一台 XPS 13，但同时原来的 MacBook Pro也在使用，就涉及到两台设备需要同时使用 Hexo 编辑、上传 Blog 文件的问题，所以想到把源文件放到服务器上，以下解决方案的记录。&lt;/p&gt;
@@ -213,10 +213,10 @@ git clone https://github.com/iissnan/hexo-theme-next themes/next
     
     <item>
       <title>如何注册并使用美区 Apple ID</title>
-      <link>https://hestation.com/2018/reg-appleid/</link>
+      <link>https://oeate.com/2018/reg-appleid/</link>
       <pubDate>Thu, 15 Nov 2018 12:30:03 +0800</pubDate>
       
-      <guid>https://hestation.com/2018/reg-appleid/</guid>
+      <guid>https://oeate.com/2018/reg-appleid/</guid>
       <description>
 
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -348,10 +348,10 @@ git clone https://github.com/iissnan/hexo-theme-next themes/next
     
     <item>
       <title>华硕 RT-AC86U 刷梅林改版系统</title>
-      <link>https://hestation.com/2018/merlin/</link>
+      <link>https://oeate.com/2018/merlin/</link>
       <pubDate>Thu, 01 Nov 2018 11:18:03 +0800</pubDate>
       
-      <guid>https://hestation.com/2018/merlin/</guid>
+      <guid>https://oeate.com/2018/merlin/</guid>
       <description>
 
 &lt;p&gt;前几天刚把 K2P 换成 86U，以下是 86U 刷梅林系统的步骤，非常简单：&lt;/p&gt;
@@ -476,10 +476,10 @@ sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk2s1
     
     <item>
       <title>《野火集》语录-第30页</title>
-      <link>https://hestation.com/2017/yehuoji-30/</link>
+      <link>https://oeate.com/2017/yehuoji-30/</link>
       <pubDate>Sun, 16 Jul 2017 16:10:21 +0800</pubDate>
       
-      <guid>https://hestation.com/2017/yehuoji-30/</guid>
+      <guid>https://oeate.com/2017/yehuoji-30/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;一个不公的体制压着人民，能够长久地压着，因为它有一个社会哲学的托词：逆来顺受、明哲保身的社会哲学。看穿了体制不公的人知道事不可为而转向冷漠；不曾看穿的人则早被教育了忍耐是美德、忍受是义务。 但是闷啊，这是一个有冤无处申的社会。&lt;/p&gt;
 
@@ -490,10 +490,10 @@ sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk2s1
     
     <item>
       <title>龙应台《 野火集》摘录</title>
-      <link>https://hestation.com/2017/yehuoji/</link>
+      <link>https://oeate.com/2017/yehuoji/</link>
       <pubDate>Sun, 16 Jul 2017 16:08:12 +0800</pubDate>
       
-      <guid>https://hestation.com/2017/yehuoji/</guid>
+      <guid>https://oeate.com/2017/yehuoji/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;我们的上一代，受战乱和贫穷之苦，期望我们这一代温饱安定。&lt;/p&gt;
 
@@ -508,10 +508,10 @@ sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk2s1
     
     <item>
       <title>第一篇文章用于测试</title>
-      <link>https://hestation.com/2017/my-first-post/</link>
+      <link>https://oeate.com/2017/my-first-post/</link>
       <pubDate>Fri, 14 Jul 2017 18:31:53 +0800</pubDate>
       
-      <guid>https://hestation.com/2017/my-first-post/</guid>
+      <guid>https://oeate.com/2017/my-first-post/</guid>
       <description>
 
 &lt;h2 id=&#34;welcome-to-github-pages&#34;&gt;Welcome to GitHub Pages&lt;/h2&gt;
@@ -555,10 +555,10 @@ sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk2s1
     
     <item>
       <title>React学习笔记</title>
-      <link>https://hestation.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://oeate.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sat, 11 Jun 2016 14:23:41 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://oeate.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description>
 
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -644,10 +644,10 @@ sudo $(brew --prefix e2fsprogs)/sbin/mkfs.ext3 /dev/disk2s1
     
     <item>
       <title>Webpack--令人困惑的地方</title>
-      <link>https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</link>
+      <link>https://oeate.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</link>
       <pubDate>Mon, 16 May 2016 09:15:00 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</guid>
+      <guid>https://oeate.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</guid>
       <description>
 
 &lt;h2 id=&#34;原文&#34;&gt;原文&lt;/h2&gt;
@@ -1013,10 +1013,10 @@ plugins: [
     
     <item>
       <title>npm学习笔记</title>
-      <link>https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://oeate.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 16 May 2016 08:59:00 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://oeate.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description>
 
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -1056,10 +1056,10 @@ npm init
     
     <item>
       <title>前端学习笔记</title>
-      <link>https://hestation.com/2016/xiachufang/</link>
+      <link>https://oeate.com/2016/xiachufang/</link>
       <pubDate>Wed, 13 Apr 2016 22:42:28 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/xiachufang/</guid>
+      <guid>https://oeate.com/2016/xiachufang/</guid>
       <description>
 
 &lt;h2 id=&#34;问题一-外容器的尺寸未知-内容器已知-实现水平垂直居中&#34;&gt;问题一：外容器的尺寸未知,内容器已知，实现水平垂直居中&lt;/h2&gt;
@@ -1278,10 +1278,10 @@ var ajax = function (url, method) {
     
     <item>
       <title>Webpack使用</title>
-      <link>https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+      <link>https://oeate.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
       <pubDate>Sat, 09 Apr 2016 11:55:55 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://oeate.com/2016/webpack%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
       <description>
 
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -1470,10 +1470,10 @@ module.exports = {
     
     <item>
       <title>ES6学习笔记（一）：Set和Map</title>
-      <link>https://hestation.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</link>
+      <link>https://oeate.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</link>
       <pubDate>Tue, 05 Apr 2016 20:58:41 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</guid>
+      <guid>https://oeate.com/2016/es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80set%E5%92%8Cmap/</guid>
       <description>
 
 &lt;h2 id=&#34;set&#34;&gt;Set&lt;/h2&gt;
@@ -1616,10 +1616,10 @@ objToStrMap({yes: true, no: false})
     
     <item>
       <title>前端构建工具Gulp</title>
-      <link>https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</link>
+      <link>https://oeate.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</link>
       <pubDate>Thu, 24 Mar 2016 22:32:00 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</guid>
+      <guid>https://oeate.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</guid>
       <description>
 
 &lt;h2 id=&#34;第一步-安装node&#34;&gt;第一步：安装Node&lt;/h2&gt;

@@ -1,4 +1,4 @@
-baseURL = "https://hestation.com"
+baseURL = "https://oeate.com"
 languageCode = "en-us"
 title = "Jiegao"
 theme = "LeaveIt"
@@ -65,9 +65,9 @@ publishDir = "docs"
 [params.social]
 #    GitHub = "xxoo"
     Twitter = "zhujg"
-    Email   = "blog@hestation.com"
+    Email   = "blog@oeate.com"
     Telegram = "iamerge"
-    Instagram = "jiegaozhu"
+    # Instagram = "xxoo"
 #    Wechat = "/images/me/wechat.png"  # Wechat QRcode image
 #    Facebook = "xxoo"
 #    Dribbble = "xxoo"

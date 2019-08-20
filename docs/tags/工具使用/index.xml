@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工具使用 on Jiegao</title>
-    <link>https://hestation.com/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/</link>
+    <link>https://oeate.com/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/</link>
     <description>Recent content in 工具使用 on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Mar 2016 22:32:00 +0000</lastBuildDate>
     
-	<atom:link href="https://hestation.com/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oeate.com/tags/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>前端构建工具Gulp</title>
-      <link>https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</link>
+      <link>https://oeate.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</link>
       <pubDate>Thu, 24 Mar 2016 22:32:00 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</guid>
+      <guid>https://oeate.com/2016/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7gulp/</guid>
       <description>第一步：安装Node 首先需要搭建node环境。访问Node.js官网，然后点击大大的绿色的install按钮，下载完成后直接运行程序，就一切准备就绪。npm会随着安装包一起安装，稍后会用到它。
 第二步：使用命令行 查看node版本号
 node -v  查看npm版本

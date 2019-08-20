@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>学习笔记 on Jiegao</title>
-    <link>https://hestation.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+    <link>https://oeate.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
     <description>Recent content in 学习笔记 on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 Jun 2016 14:23:41 +0000</lastBuildDate>
     
-	<atom:link href="https://hestation.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oeate.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>React学习笔记</title>
-      <link>https://hestation.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://oeate.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sat, 11 Jun 2016 14:23:41 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://oeate.com/2016/react%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description>前言 前段时间看了一下React和react-router的文档，这几天用它们在做一个实时投票的Web App，这篇文章记录里面遇到的坑及其解决方法。
 获取真实DOM节点的引用 添加ref属性
 ref={(ref) =&amp;gt; this.name = ref}  Demo:
@@ -25,10 +25,10 @@ export default class Join extends React.Component { constructor(props) { super(p
     
     <item>
       <title>Webpack--令人困惑的地方</title>
-      <link>https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</link>
+      <link>https://oeate.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</link>
       <pubDate>Mon, 16 May 2016 09:15:00 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</guid>
+      <guid>https://oeate.com/2016/webpack-%E4%BB%A4%E4%BA%BA%E5%9B%B0%E6%83%91%E7%9A%84%E5%9C%B0%E6%96%B9/</guid>
       <description>原文  Webpack—The Confusing Parts 【翻译】Webpack——令人困惑的地方  Webpack是目前基于React和Redux开发的应用的主要打包工具。我想使用Angular 2或其他框架开发的应用也有很多在使用Webpack。
 当我第一次看到Webpack的配置文件时，它看起来非常的陌生，我非常的疑惑。经过一段时间的尝试之后我认为这是因为Webpack只是使用了比较特别的语法和引入了新的原理，因此会让使用者感到疑惑。这些也是导致Webpack不被人熟悉的原因。
 因为刚开始使用Webpack很让人疑惑，我觉得有必要写几篇介绍Webpack的功能和特性的文章以帮助初学者快速理解。此文是最开始的一篇。
@@ -50,10 +50,10 @@ Webpack的核心原理 Webpack的两个最核心的原理分别是：
     
     <item>
       <title>npm学习笔记</title>
-      <link>https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://oeate.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 16 May 2016 08:59:00 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://oeate.com/2016/npm%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description>前言 近期在做一个投票项目的应用时，突然发现对npm的认识很少，故查询了一些资料，现将自己的笔记总结在此。
 介绍 npm是Node.js的包管理工具
 命令  查看用户手册
@@ -62,19 +62,19 @@ npm -h   生成package.json bash npm init    &amp;ndash;save-dev与&amp;ndash;sa
     
     <item>
       <title>前端学习笔记</title>
-      <link>https://hestation.com/2016/xiachufang/</link>
+      <link>https://oeate.com/2016/xiachufang/</link>
       <pubDate>Wed, 13 Apr 2016 22:42:28 +0000</pubDate>
       
-      <guid>https://hestation.com/2016/xiachufang/</guid>
+      <guid>https://oeate.com/2016/xiachufang/</guid>
       <description>问题一：外容器的尺寸未知,内容器已知，实现水平垂直居中 html结构: &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;item&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;  方法一：绝对定位 + 负外边距 .container { position: relative; } .item { width: 200px; height: 200px; position: absolute; top: 50%; left: 50%; margin: -100px 0 0 -100px; }  方法二：绝对定位 + 四周偏移量定位0， 外边距为auto .container { position: relative; } .item { width: 200px; height: 200px; position: absolute; margin: auto; top: 0; bottom: 0; left: 0; right: 0; }  方法三：Flex定位 .container { display: flex; justify-content: center; align-items: center; } .</description>
     </item>
     
     <item>
       <title>图解HTTP学习笔记</title>
-      <link>https://hestation.com/2015/http-learning/</link>
+      <link>https://oeate.com/2015/http-learning/</link>
       <pubDate>Sat, 17 Oct 2015 15:44:12 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/http-learning/</guid>
+      <guid>https://oeate.com/2015/http-learning/</guid>
       <description>参考资料： 经典的Web应用网络模型
 在地址栏中输入某个网址，简要讲下整个页面呈现的过程? 客户端  用户想浏览 http://www.chen9.info 页面，浏览器需要通过DNS找到对应域名下的IP地址：10X.XXX.XXX.XXX 。
  HTTP协议的职责：生成针对目标Web服务器的HTTP请求报文 —— “请给我http://www.chen9.info 页面资源”。

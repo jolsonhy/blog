@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CSS on Jiegao</title>
-    <link>https://hestation.com/tags/css/</link>
+    <link>https://oeate.com/tags/css/</link>
     <description>Recent content in CSS on Jiegao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 04 Aug 2015 20:56:28 +0000</lastBuildDate>
     
-	<atom:link href="https://hestation.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://oeate.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>关于样式重置：normalize.css</title>
-      <link>https://hestation.com/2015/about-normalize-css/</link>
+      <link>https://oeate.com/2015/about-normalize-css/</link>
       <pubDate>Tue, 04 Aug 2015 20:56:28 +0000</pubDate>
       
-      <guid>https://hestation.com/2015/about-normalize-css/</guid>
+      <guid>https://oeate.com/2015/about-normalize-css/</guid>
       <description>前言 这几天在Udacity上学习Front-End Web Developer Nanodegree的课程，从里面发现了很多很实用又以前未接触的东西，包括今天看到的css resetting，之前一直用的* {margin:0; padding: 0;}来简单处理这个问题，看到Udacity的工程师提到Normalize，查询资料后才知道其妙用。
 关于reset.css 关于CSS样式重置问题，一直都存在很多争议，有人觉得可以直接使用前言所说的* {margin:0; padding: 0;}，而有人则觉得这种方法会对性能有影响，而提倡使用比较流行的Eric Meyer和YUI的重置样式。 但貌似随着CSS的发展，更多人开始觉得此种样式重置没有必要。下面贴两篇同一个作者时隔一年提出两种截然相反的观点的文章：
  打造自己的RESET.CSS 真的还需要RESET.CSS么？  关于normalize.css 而今天要说的则是目前很多人支持并且广泛使用的normalize.css。 它 只是一个很小的CSS文件，但在默认的HTML元素样式上提供了跨浏览器的高度一致性。相比于传统的CSS reset，Normalize.css是一种现代的、为HTML5准备的优质替代方案。Normalize.css现在已经被用于Twitter Bootstrap、HTML5 Boilerplate、GOV.UK、Rdio、CSS Tricks 以及许许多多其他框架、工具和网站上。
